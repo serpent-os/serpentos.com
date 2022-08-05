@@ -3,16 +3,19 @@
 - alias NavigationItem = Tuple!(string, "path", string, "name");
 - static NavigationItem[] navItems = [
 -   NavigationItem("/", "Home"),
+-   NavigationItem("#", "Community"),
+-   NavigationItem("#", "Dashboard"),
 - ];
 
 nav.navbar.navbar-expand-lg.navbar-light.border-bottom.shadow-sm
     div.container
         // Logo
-        a.navbar-brand.logo(href="/") Serpent OS
+        a.navbar-brand.logo(href="/")
+            img(src="/static/logo.png", width="32px", height="32px")
         button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#primaryNavigation", aria-controls="primaryNavigation", aria-expanded="false")
             span.navbar-toggler-icon.text-white
         div.collapse.navbar-collapse(id="primaryNavigation")
-            ul.navbar-nav
+            ul.navbar-nav.mx-3
                 - foreach (item; navItems)
                 - {
                     - string className = (req.path == item.path || req.path.startsWith(item.path ~ "/")) ? "nav-link active" : "nav-link";

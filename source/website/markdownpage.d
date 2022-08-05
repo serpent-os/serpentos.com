@@ -46,7 +46,8 @@ public final class MarkdownPage
     this() @safe
     {
         settings = new MarkdownSettings();
-        settings.flags = MarkdownFlags.forumDefault;
+        settings.flags = MarkdownFlags.backtickCodeBlocks
+            | MarkdownFlags.figures | MarkdownFlags.tables;
     }
 
     /**
@@ -90,6 +91,16 @@ public final class MarkdownPage
     }
 
     /**
+     * Icon property
+     * 
+     * Returns: icon as set in yml
+     */
+    pure @property string icon() @safe @nogc nothrow const
+    {
+        return _icon;
+    }
+
+    /**
      * Load the page from a file
      */
     void loadFile(in string filename) @safe
@@ -104,6 +115,11 @@ public final class MarkdownPage
         auto metadata = Loader.fromString(meta).load();
         _title = metadata["title"].get!string;
 
+        if ("icon" in metadata)
+        {
+            _icon = metadata["icon"].get!string;
+        }
+
         _content = filterMarkdown(ret[DocumentGroup.Contents], settings);
     }
 
@@ -114,4 +130,5 @@ private:
     SysTime _creation;
     string _slug;
     string _content;
+    string _icon = "";
 }

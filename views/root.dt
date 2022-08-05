@@ -14,7 +14,7 @@ html
         block banner
         main
             div.container-fluid.py-0.px-0.my-0.mx-0
-                div.container-fluid.py-5
+                div.container-fluid.py-4
                     block content
                         h1 undefined content
         include footer

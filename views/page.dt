@@ -1,9 +1,20 @@
 extends root
 
 block title
-    title #{page.title}
+    title #{page.title} | Serpent OS
+
+block banner
+    div.container-fluid.bg-azure.shadow-sm.border-bottom
+        div.container.pt-2.pb-2.justify-content-center
+            div.row.d-flex.align-items-center.justify-content-center
+                // div.col-auto.align-self-center
+                //   svg.text-light.p-0.m-0(style="stroke-width: 1.0;", width="48px", height="48px"): use(xlink:href="/static/tabler-sprite-nostroke.svg\##{page.icon}")
+                div.col-auto: h1.display-6.pt-1.align-self-center #{page.title}
 
 block content
-    div.container
-        div.row.d-flex.align-items-center.justify-content-center.mx-auto
-            div.markdown!= page.content
+    div.container.pt-5
+        div.row.d-flex.justify-content-center
+            div.col-12.col-md-8.col-sm-10
+                div.card
+                    div.card-body.p-5
+                        div.markdown!= page.content
