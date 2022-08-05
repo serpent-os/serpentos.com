@@ -1,0 +1,17 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/website
+website.so
+website.dylib
+website.dll
+website.a
+website.lib
+website-test-*
+*.exe
+*.o
+*.obj
+*.lst
+dub.selections.json
+/database
