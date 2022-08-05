@@ -1,5 +1,57 @@
 extends root
 
+block banner
+    div.container-fluid.bg-azure.text-light.shadow.border-bottom
+        div.container-xl.p-5
+            div.row.d-flex.align-items-center
+                div.col-auto
+                    img(src="/static/logo_white.png", width="141px", height="125px")
+                div.col.px-5
+                    h1.display-6.p-2 It's coming.
+                    p.p-2 After #[em two years] of engineering effort, we're almost ready to lift the curtains. 
+                        | Seriously, words, things, stuff, images and icons. Ermagahd, even dherguns.
+                    a.btn.btn-outline-light.btn-square.mx-1 Read more
+                    a.btn.btn-outline-light.btn-square.mx-1 Support us
 block content
 
-    h1 Fill me in bruh
+    - struct Feature
+    - {
+    -    string icon;
+    -    string label;
+    -    string text;  
+    - }
+    - static Feature[] features = [
+    -   Feature("tabler-massage", "Smart", "Our Smart System Management takes care of Serpent OS while you sit back and relax."),
+    -   Feature("tabler-speedboat", "Fast", "Pushing the limits of what's possible by making binaries more efficient in all configurations."),
+    -   Feature("tabler-friends", "Community", "A fun and welcoming environment for users, contributors and the team."),
+    -   Feature("tabler-heart-handshake", "Dependable", "Built on top of the robust Linux kernel. Our mission is to keep you running without the hassle."),
+    -   Feature("tabler-jump-rope", "Flexible", "Empowering users to make their own decisions, without getting in their way."),
+    -   Feature("tabler-free-rights", "Free", "Serpent OS will always be free to download and use. This extends to all of the tools we use to build the project.")
+    - ];
+
+    // Main section of goals
+    div.container-fluid.bg-white.text-dark.border-bottom
+        div.container
+            div.row.justify-content-center
+                div.col-11.col-md-11
+
+                    div.row.d-flex.justify-content-center
+                        - import std.range : chunks;
+                        - foreach (featureSet; features.chunks(features.length / 2))
+                        - {
+                            div.col-6.col-lg-6
+                                - foreach (f; featureSet)
+                                - {
+                                    div.p-4
+                                        div.row.d-flex
+                                            div.col-auto: svg.text-azure.mx-3(width="48px", height="48px"): use(xlink:href="/static/tabler/tabler-sprite.svg\##{f.icon}")
+                                            div.col:
+                                                h3 #{f.label}
+                                                div.text-muted= f.text
+                                - }
+                        - }
+
+    div.container-fluid
+        div.container.py-5
+            div.row.text-center
+                h1.display-6 add stuff here..
