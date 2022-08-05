@@ -43,6 +43,13 @@ public final class Website
         router.get("/static/*", serveStaticFiles("static", fileSettings));
 
         router.get("/", staticTemplate!"index.dt");
+        router.get("/test", (req, res) {
+            import website.markdownpage : MarkdownPage;
+
+            auto page = new MarkdownPage();
+            page.loadFile("content/about.md");
+            res.render!("page.dt", page, req, res);
+        });
 
         router.rebuild();
     }
