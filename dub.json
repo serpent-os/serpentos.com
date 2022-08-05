@@ -4,6 +4,7 @@
 	],
 	"copyright": "Copyright © 2022, Serpent OS Developers",
 	"dependencies": {
+		"arsd-official:dom": "~>10.8.4",
 		"dyaml": "~>0.9.1",
 		"moss-db": "~>0.0.3",
 		"vibe-d": "~>0.9"
