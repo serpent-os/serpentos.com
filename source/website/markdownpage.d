@@ -19,11 +19,16 @@ import std.mmfile;
 import std.regex;
 import vibe.d;
 import dyaml;
+import arsd.dom;
+import std.range : take;
+import std.algorithm : each;
 
 /**
  * Hugo document separation regex.
  */
-private static auto metaRe = ctRegex!`\-\-\-((?s).*)\-\-\-((?s).*)`;
+private static auto metaRe = ctRegex!(`\-\-\-([\s\S]*)^\-\-\-([\s\S]*)`, [
+        'g', 'm'
+        ]);
 
 /**
  * Access metaRe groups
@@ -43,6 +48,9 @@ private static enum DocumentGroup
  */
 public final class MarkdownPage
 {
+    /**
+     * Construct a new MarkdownPage
+     */
     this() @safe
     {
         settings = new MarkdownSettings();
@@ -120,10 +128,59 @@ public final class MarkdownPage
             _icon = metadata["icon"].get!string;
         }
 
+        /* Load it, and postfix the basic markdown */
         _content = filterMarkdown(ret[DocumentGroup.Contents], settings);
+        fixMarkdown();
     }
 
 private:
+
+    /**
+     * Fix the markdown returned from filterMarkdown, pipe
+     * it through arsd.dom and sanitize it for inclusion in our site
+     */
+    void fixMarkdown() @safe
+    {
+        import std.stdio : writeln;
+
+        auto newText = "<!DOCTYPE html><html><body><div id=\"markdownFixed\">"
+            ~ _content ~ "</div></body></html>";
+        Document doc = () @trusted { return new Document(newText, false, false); }();
+        fixTables(doc);
+        _content = () @trusted {
+            return doc.getElementById("markdownFixed").toString;
+        }();
+    }
+
+    /**
+     * Fix all the tables in the document to work properly
+     *
+     * Fix row[0] in any table to be <thead> - add the correct
+     * style classes.
+     */
+    void fixTables(scope Document doc) @safe
+    {
+        () @trusted {
+            /* Fix tables. */
+            foreach (ref table; doc.getElementsByTagName("table"))
+            {
+                /* Convert first <TR> into a <THEAD> */
+                table.getElementsByTagName("tr").take(1).each!((row) => row.tagName = "thead");
+
+                /* Add missing classes */
+                static foreach (clz; [
+                        "table", "table-responsive", "border", "shadow-sm",
+                        "rounded"
+                    ])
+                {
+                    table.addClass(clz);
+                }
+
+                /* Remove alignment hacks from td */
+                table.getElementsByTagName("td").each!((td) => td.removeAttribute("align"));
+            }
+        }();
+    }
 
     MarkdownSettings settings;
     string _title;
