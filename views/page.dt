@@ -1,0 +1,6 @@
+extends root
+
+block content
+    div.container
+        div.row.d-flex.align-items-center.justify-content-center.mx-auto
+            div.markdown!= page.content
