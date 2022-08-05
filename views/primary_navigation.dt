@@ -3,6 +3,7 @@
 - alias NavigationItem = Tuple!(string, "path", string, "name");
 - static NavigationItem[] navItems = [
 -   NavigationItem("/", "Home"),
+-   NavigationItem("#", "Blog"),
 -   NavigationItem("#", "Community"),
 -   NavigationItem("#", "Dashboard"),
 - ];
