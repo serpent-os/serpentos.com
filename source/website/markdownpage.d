@@ -18,6 +18,7 @@ import std.datetime.systime;
 import std.mmfile;
 import std.regex;
 import vibe.d;
+import dyaml;
 
 /**
  * Hugo document separation regex.
@@ -97,6 +98,11 @@ public final class MarkdownPage
         auto data = () @trusted { return cast(string) map[0 .. $]; }();
         auto ret = matchFirst(data, metaRe);
         enforceHTTP(!ret.empty, HTTPStatus.internalServerError);
+
+        /* load the YAML */
+        immutable meta = ret[DocumentGroup.Meta];
+        auto metadata = Loader.fromString(meta).load();
+        _title = metadata["title"].get!string;
 
         _content = filterMarkdown(ret[DocumentGroup.Contents], settings);
     }
