@@ -14,13 +14,13 @@ block banner
                     a.btn.btn-outline-light.btn-square.mx-1 Support us
 block content
 
-    - struct Feature
+    - static struct Feature
     - {
     -    string icon;
     -    string label;
     -    string text;  
     - }
-    - static Feature[] features = [
+    - static enum features = [
     -   Feature("tabler-massage", "Smart", "Our Smart System Management takes care of Serpent OS while you sit back and relax."),
     -   Feature("tabler-speedboat", "Fast", "Pushing the limits of what's possible by making binaries more efficient in all configurations."),
     -   Feature("tabler-friends", "Community", "A fun and welcoming environment for users, contributors and the team."),
@@ -37,8 +37,8 @@ block content
 
                     div.row.d-flex.justify-content-center
                         - import std.range : chunks;
-                        - foreach (featureSet; features.chunks(features.length / 2))
-                        - {
+                        - static foreach (featureSet; features.chunks(features.length / 2))
+                        - { {
                             div.col-6.col-lg-6
                                 - foreach (f; featureSet)
                                 - {
@@ -49,7 +49,7 @@ block content
                                                 h3 #{f.label}
                                                 div.text-muted= f.text
                                 - }
-                        - }
+                        - } }
 
     div.container-fluid
         div.container.py-5
