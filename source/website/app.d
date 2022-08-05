@@ -25,7 +25,7 @@ public final class Website
     /**
      * Construct a new Website instance
      */
-    this()
+    @noRoute this()
     {
         settings = new HTTPServerSettings();
         settings.bindAddresses = ["localhost"];
@@ -41,6 +41,8 @@ public final class Website
         fileSettings = new HTTPFileServerSettings();
         fileSettings.serverPathPrefix = "/static";
         router.get("/static/*", serveStaticFiles("static", fileSettings));
+
+        router.get("/", staticTemplate!"index.dt");
 
         router.rebuild();
     }

@@ -1,0 +1,26 @@
+doctype html
+
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        block title
+            title Serpent OS
+    
+        // TODO: Use a site prefix
+        link(rel="stylesheet", href="/static/tabler/css/tabler.min.css")
+    body.d-flex.flex-column.min-vh-100.theme-dark-auto
+        include primary_navigation
+        block banner
+        main
+            div.container-fluid.py-0.px-0.my-0.mx-0
+                div.container-fluid.py-5
+                    block content
+                        h1 undefined content
+        include footer
+
+    // TODO: Use a site prefix
+    script(src="/static/tabler/js/tabler.min.js", defer, async)
+
+    block scripts
+        // add scripts here
