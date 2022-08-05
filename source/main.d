@@ -4,16 +4,15 @@
  * SPDX-License-Identifier: Zlib
  */
 
+module main;
 /**
- * Module Name (use e.g. 'moss.core.foo.bar')
+ * main
  *
  * Main entry to our web app
  *
  * Authors: Copyright © 2020-2022 Serpent OS Developers
  * License: Zlib
  */
-
-module main;
 
 import vibe.d;
 import website.app;
