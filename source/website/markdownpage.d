@@ -27,7 +27,7 @@ import vibe.d;
 /**
  * Hugo document separation regex.
  */
-private static auto metaRe = ctRegex!(`\-\-\-([\s\S]*)^\-\-\-([\s\S]*)`, [
+private static auto metaRe = ctRegex!(`\-\-\-([\s\S]*)^\-\-\-$([\s\S]*)`, [
         'g', 'm'
         ]);
 
