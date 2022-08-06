@@ -27,9 +27,14 @@ import vibe.d;
 /**
  * Hugo document separation regex.
  */
-private static auto metaRe = ctRegex!(`\-\-\-([\s\S]*?)\-\-\-([\s\S]*)`, ['m']);
+private static auto metaRe = ctRegex!(`\-\-\-([\s\S]*?)^\-\-\-$([\s\S]*)`, ['m']);
 
-private static auto metaCd = ctRegex!("^```([\\w]+)$", ['g', 'm']);
+private static auto codeRe = ctRegex!("^```([\\w]+)$", ['g', 'm']);
+
+/**
+ * In-document comments, remove *prior* to processing
+ */
+private static auto commentRe = ctRegex!(`(<!\-\-\-[\s\S]*?\-\-\->)`, ['m']);
 
 /**
  * Access metaRe groups
@@ -135,7 +140,10 @@ public final class MarkdownPage
         /* vibe.d screws up code handling badly w/ backticks.
            we temporarily insert lang=identifier for later processing.
          */
-        preMarkdown = replaceAll(preMarkdown, metaCd, "```\nlang=$1");
+        preMarkdown = replaceAll(preMarkdown, codeRe, "```\nlang=$1");
+
+        /* also need to remove in-document comments.. */
+        preMarkdown = replaceAll(preMarkdown, commentRe, "");
 
         auto postMarkdown = filterMarkdown(preMarkdown, settings);
         _content = postMarkdown;
