@@ -19,6 +19,6 @@
 		"VibeOutputCompactHTML"
 	],
 	"preBuildCommands": [
-		"chroma --html-styles -s xcode-dark > static/chroma.css"
+		"chroma --html-styles -s monokai > static/chroma.css"
 	]
 }
