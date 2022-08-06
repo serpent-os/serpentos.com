@@ -1,10 +1,18 @@
-- import std.typecons : Tuple;
 - import std.string : startsWith;
-- alias NavigationItem = Tuple!(string, "path", string, "name");
+- import std.range : empty;
+- static struct NavigationItem
+- {
+-   string path;
+-   string name;
+-   NavigationItem[] submenu;    
+- }
 - static enum navItems = [
 -   NavigationItem("/", "Home"),
 -   NavigationItem("#", "Blog"),
--   NavigationItem("#", "Community"),
+-   NavigationItem("#", "Community", [
+-       NavigationItem("#", "Forums"),
+-       NavigationItem("#", "Matrix")
+-   ]),    
 -   NavigationItem("#", "Dashboard"),
 - ];
 
@@ -20,6 +28,18 @@ nav.navbar.navbar-expand-lg.navbar-light.border-bottom.shadow-sm
                 - static foreach (item; navItems)
                 - { {
                     - string className = (req.path == item.path || req.path.startsWith(item.path ~ "/")) ? "nav-link active" : "nav-link";
-                    li.nav-item
-                        a(class=className, aria-current="page", href=item.path) #{item.name}
+                    - if (item.submenu.empty)
+                    - {
+                        li.nav-item
+                            a(class=className, aria-current="page", href=item.path) #{item.name}
+                    - } else {
+                        li.nav-item.dropdown
+                            - className ~= " dropdown-toggle";
+                            a(class=className, aria-current="page", href=item.path, role="button", id="navbar-#{item.name}", data-bs-toggle="dropdown", aria-expanded="false") #{item.name}
+                            ul.dropdown-menu(aria-labelledby="navbar-#{item.name}", id="dropdown-#{item.name}")
+                                - foreach (subitem; item.submenu)
+                                - {
+                                    li: a.dropdown-item(href=subitem.path)= subitem.name
+                                - }
+                    - }
                 - } }
