@@ -36,6 +36,16 @@ public import std.stdint : uint64_t;
     string[] tags;
 
     /**
+     * Display title
+     */
+    string title;
+
+    /**
+     * Pre-rendered content
+     */
+    string processedContent;
+
+    /**
      * Initial creation time
      */
     uint64_t tsCreated;

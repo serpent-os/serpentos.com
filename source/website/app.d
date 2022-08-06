@@ -25,7 +25,7 @@ import website.models;
 /**
  * Main instance, state et all
  */
-public final class Website
+@path("/") public final class Website
 {
     /**
      * Construct a new Website instance
@@ -56,22 +56,15 @@ public final class Website
         fileSettings.serverPathPrefix = "/static";
         router.get("/static/*", serveStaticFiles("static", fileSettings));
 
-        router.get("/", staticTemplate!"index.dt");
-        router.get("/test", (req, res) {
-            import website.markdownpage : MarkdownPage;
-
-            auto page = new MarkdownPage();
-            page.loadFile("content/about.md");
-            res.render!("page.dt", page, req, res);
-        });
-
+        router.registerWebInterface(this);
         router.rebuild();
+        preloadContent();
     }
 
     /**
      * Start the server
      */
-    void start()
+    @noRoute void start()
     {
         listener = listenHTTP(settings, router);
     }
@@ -79,13 +72,75 @@ public final class Website
     /**
      * Stop the server
      */
-    void stop()
+    @noRoute void stop()
     {
         listener.stopListening();
         appDB.close();
     }
 
+    /**
+     * Render the main landing page
+     */
+    void index() @safe
+    {
+        render!"index.dt";
+    }
+
+    /**
+     * Render a single top level page
+     */
+    @path("/:page") @method(HTTPMethod.GET)
+    void showPage(string _page) @safe
+    {
+        Post post;
+        immutable err = appDB.view((in tx) => post.load(tx, _page));
+        enforceHTTP(err.isNull, HTTPStatus.notFound, err.message);
+        render!("page.dt", post);
+    }
+
 private:
+
+    void preloadContent() @safe
+    {
+        import std.file : dirEntries, SpanMode;
+        import std.array : array;
+        import std.algorithm : map;
+        import website.markdownpage : MarkdownPage;
+        import std.path : baseName;
+        import std.string : split;
+        import std.conv : to;
+
+        auto pages = () @trusted {
+            return dirEntries("content", "*.md", SpanMode.shallow, false).map!(
+                    (i) => cast(string) i.name.dup).array();
+        }();
+
+        /* Try to load and save them all into a transaction. */
+        auto err = appDB.update((scope tx) @safe {
+            foreach (page; pages)
+            {
+                auto mdPost = new MarkdownPage();
+                mdPost.loadFile(page);
+                /* Force a page name, ignoring conventional slug rules */
+                immutable pageName = page.baseName.split(".")[0].asSlug.to!string;
+                auto tstamp = mdPost.date.toUnixTime;
+                Post p = Post();
+                p.slug = pageName;
+                p.title = mdPost.title;
+                p.tsCreated = tstamp;
+                p.tsModified = tstamp;
+                p.processedContent = mdPost.content;
+                auto e = p.save(tx);
+                if (!e.isNull)
+                {
+                    return e;
+                }
+            }
+            return NoDatabaseError;
+        });
+        enforceHTTP(err.isNull, HTTPStatus.internalServerError, "preloadContent(): " ~ err.message);
+
+    }
 
     HTTPListener listener;
     HTTPServerSettings settings;
