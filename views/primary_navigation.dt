@@ -10,7 +10,7 @@
 -   NavigationItem("/", "Home"),
 -   NavigationItem("#", "Blog"),
 -   NavigationItem("#", "Community", [
--       NavigationItem("#", "Forums"),
+-       NavigationItem("https://forums.serpentos.com", "Forums"),
 -       NavigationItem("#", "Matrix")
 -   ]),    
 -   NavigationItem("#", "Dashboard"),
