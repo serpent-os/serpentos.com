@@ -27,9 +27,7 @@ import vibe.d;
 /**
  * Hugo document separation regex.
  */
-private static auto metaRe = ctRegex!(`\-\-\-([\s\S]*?)\-\-\-([\s\S]*)`, [
-        'm'
-        ]);
+private static auto metaRe = ctRegex!(`\-\-\-([\s\S]*?)\-\-\-([\s\S]*)`, ['m']);
 
 private static auto metaCd = ctRegex!("^```([\\w]+)$", ['g', 'm']);
 
@@ -204,7 +202,8 @@ private:
             {
                 string txt = syn.innerText;
                 auto cmd = [
-                    "chroma", "--html", "--html-only", "--html-prevent-surrounding-pre"
+                    "chroma", "--html", "--html-only",
+                    "--html-prevent-surrounding-pre"
                 ];
 
                 if (txt.startsWith("lang="))
