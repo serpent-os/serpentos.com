@@ -16,6 +16,11 @@ module website.app;
  */
 
 import vibe.d;
+import moss.db.keyvalue;
+import moss.db.keyvalue.errors;
+import moss.db.keyvalue.interfaces;
+import moss.db.keyvalue.orm;
+import website.models;
 
 /**
  * Main instance, state et all
@@ -27,6 +32,15 @@ public final class Website
      */
     @noRoute this()
     {
+        /* Get the DB up and running */
+        Database.open("lmdb://database", DatabaseFlags.CreateIfNotExists).match!((db) {
+            appDB = db;
+        }, (err) { throw new Exception(err.toString); });
+
+        immutable err = appDB.update((scope tx) => tx.createModel!(Post, Tag));
+        enforceHTTP(err.isNull, HTTPStatus.internalServerError,
+                "Failed to create model: " ~ err.message);
+
         settings = new HTTPServerSettings();
         settings.bindAddresses = ["localhost"];
         settings.disableDistHost = true;
@@ -68,6 +82,7 @@ public final class Website
     void stop()
     {
         listener.stopListening();
+        appDB.close();
     }
 
 private:
@@ -76,4 +91,5 @@ private:
     HTTPServerSettings settings;
     HTTPFileServerSettings fileSettings;
     URLRouter router;
+    Database appDB;
 }
