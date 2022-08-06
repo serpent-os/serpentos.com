@@ -27,8 +27,8 @@ import vibe.d;
 /**
  * Hugo document separation regex.
  */
-private static auto metaRe = ctRegex!(`\-\-\-([\s\S]*)^\-\-\-$([\s\S]*)`, [
-        'g', 'm'
+private static auto metaRe = ctRegex!(`\-\-\-([\s\S]*?)\-\-\-([\s\S]*)`, [
+        'm'
         ]);
 
 private static auto metaCd = ctRegex!("^```([\\w]+)$", ['g', 'm']);
