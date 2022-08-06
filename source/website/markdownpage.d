@@ -14,14 +14,15 @@
  */
 module website.markdownpage;
 
+import arsd.dom;
+import dyaml;
+import std.algorithm : each;
 import std.datetime.systime;
 import std.mmfile;
+import std.process;
+import std.range : take;
 import std.regex;
 import vibe.d;
-import dyaml;
-import arsd.dom;
-import std.range : take;
-import std.algorithm : each;
 
 /**
  * Hugo document separation regex.
@@ -29,6 +30,8 @@ import std.algorithm : each;
 private static auto metaRe = ctRegex!(`\-\-\-([\s\S]*)^\-\-\-([\s\S]*)`, [
         'g', 'm'
         ]);
+
+private static auto metaCd = ctRegex!("^```([\\w]+)$", ['g', 'm']);
 
 /**
  * Access metaRe groups
@@ -129,7 +132,15 @@ public final class MarkdownPage
         }
 
         /* Load it, and postfix the basic markdown */
-        _content = filterMarkdown(ret[DocumentGroup.Contents], settings);
+        auto preMarkdown = ret[DocumentGroup.Contents];
+
+        /* vibe.d screws up code handling badly w/ backticks.
+           we temporarily insert lang=identifier for later processing.
+         */
+        preMarkdown = replaceAll(preMarkdown, metaCd, "```\nlang=$1");
+
+        auto postMarkdown = filterMarkdown(preMarkdown, settings);
+        _content = postMarkdown;
         fixMarkdown();
     }
 
@@ -141,12 +152,11 @@ private:
      */
     void fixMarkdown() @safe
     {
-        import std.stdio : writeln;
-
         auto newText = "<!DOCTYPE html><html><body><div id=\"markdownFixed\">"
             ~ _content ~ "</div></body></html>";
         Document doc = () @trusted { return new Document(newText, false, false); }();
         fixTables(doc);
+        syntaxHighlight(doc);
         _content = () @trusted {
             return doc.getElementById("markdownFixed").toString;
         }();
@@ -180,6 +190,48 @@ private:
                 table.getElementsByTagName("td").each!((td) => td.removeAttribute("align"));
             }
         }();
+    }
+
+    /**
+     * For every <pre><code> we find, smexify it.
+     */
+    void syntaxHighlight(scope Document doc) @trusted
+    {
+        foreach (elem; doc.getElementsByTagName("pre"))
+        {
+            bool found;
+            foreach (syn; elem.getElementsByTagName("code"))
+            {
+                string txt = syn.innerText;
+                auto cmd = [
+                    "chroma", "--html", "--html-only", "--html-lines",
+                    "--html-lines-table", "--html-prevent-surrounding-pre"
+                ];
+
+                if (txt.startsWith("lang="))
+                {
+                    auto lines = txt.split("\n");
+                    string[] lang = lines[0].split("=");
+                    string langCode = lang[1];
+                    txt = txt["lang=\n".length + langCode.length .. $];
+                    cmd ~= ["-l", lang[1]];
+                }
+
+                auto p = pipeProcess(cmd, Redirect.all);
+                p.stdin.writeln(txt);
+                p.stdin.flush();
+                p.stdin.close();
+                enforceHTTP(p.pid.wait() == 0, HTTPStatus.internalServerError,
+                        "Failed to render markdown");
+                syn.innerRawSource = p.stdout.byLineCopy.join("\n");
+                found = true;
+            }
+            if (found)
+            {
+                elem.removeClass("prettyprint");
+                elem.addClass("chroma");
+            }
+        }
     }
 
     MarkdownSettings settings;

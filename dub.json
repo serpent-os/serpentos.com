@@ -17,5 +17,8 @@
 		"VibeDisableCommandLineParsing",
 		"VibeNoDefaultArgs",
 		"VibeOutputCompactHTML"
+	],
+	"preBuildCommands": [
+		"chroma --html-styles -s xcode-dark > static/chroma.css"
 	]
 }
