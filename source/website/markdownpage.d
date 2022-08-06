@@ -204,8 +204,7 @@ private:
             {
                 string txt = syn.innerText;
                 auto cmd = [
-                    "chroma", "--html", "--html-only", "--html-lines",
-                    "--html-lines-table", "--html-prevent-surrounding-pre"
+                    "chroma", "--html", "--html-only", "--html-prevent-surrounding-pre"
                 ];
 
                 if (txt.startsWith("lang="))
