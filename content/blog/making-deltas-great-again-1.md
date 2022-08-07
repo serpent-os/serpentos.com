@@ -127,8 +127,6 @@ delta packages. Where this approach, and the use of `zstd`, really thrives is th
 the overhead, from creating the deltas to getting them installed locally. Next we explore some ideas of how we can
 minimize the caching time of delta files.
 
-<!--more-->
-
 #### Improving Delta Cache Time
 
 To get the best bang for your buck with deltas, it is essential to reduce the size of the larger files. My experience in
