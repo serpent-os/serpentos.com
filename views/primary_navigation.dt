@@ -14,6 +14,17 @@
 -       NavigationItem("#", "Matrix")
 -   ]),    
 -   NavigationItem("#", "Dashboard"),
+-   NavigationItem("#", "Discover", [
+-       NavigationItem("/community", "Community"),    
+-       NavigationItem("/dependable", "Dependable"),
+-       NavigationItem("/fast", "Fast"),
+-       NavigationItem("/flexible", "Flexible"),
+-       NavigationItem("/smart", "Smart"),
+-   ]),
+-   NavigationItem("#", "Tooling", [
+-       NavigationItem("/boulder", "boulder"),
+-       NavigationItem("/moss", "moss"),
+-   ]),
 - ];
 
 nav.navbar.navbar-expand-lg.navbar-light.border-bottom.shadow-sm
