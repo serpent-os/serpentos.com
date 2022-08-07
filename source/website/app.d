@@ -93,10 +93,13 @@ import website.blog;
      * Render a single top level page
      */
 
-    @noRoute void showPage(HTTPServerRequest req, HTTPServerResponse res, string _page) @safe
+    @noRoute void showPage(HTTPServerRequest req, HTTPServerResponse res) @safe
     {
+        import std.path : baseName;
+
+        string page = req.path.baseName;
         Post post;
-        immutable err = appDB.view((in tx) => post.load(tx, _page));
+        immutable err = appDB.view((in tx) => post.load(tx, page));
         enforceHTTP(err.isNull, HTTPStatus.notFound, err.message);
         res.render!("page.dt", post, req);
     }
@@ -139,7 +142,7 @@ private:
                 {
                     return e;
                 }
-                router.get(p.slug, (req, res) => showPage(req, res, p.slug));
+                router.get("/" ~ p.slug, (req, res) => showPage(req, res));
             }
             return NoDatabaseError;
         });
