@@ -135,6 +135,11 @@ public final class MarkdownPage
         return _icon;
     }
 
+    pure @property string featuredImage() @safe @nogc nothrow const
+    {
+        return _featuredImage;
+    }
+
     /**
      * Load the page from a file
      */
@@ -153,6 +158,11 @@ public final class MarkdownPage
         if ("icon" in metadata)
         {
             _icon = metadata["icon"].get!string;
+        }
+
+        if ("featuredImage" in metadata)
+        {
+            _featuredImage = metadata["featuredImage"].get!string;
         }
 
         _creation = metadata["date"].get!SysTime;
@@ -275,4 +285,5 @@ private:
     string _slug;
     string _content;
     string _icon = "";
+    string _featuredImage;
 }

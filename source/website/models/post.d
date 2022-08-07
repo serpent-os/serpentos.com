@@ -52,6 +52,11 @@ public enum PostType : uint8_t
     string processedContent;
 
     /**
+     * Featured image to render
+     */
+    string featuredImage;
+
+    /**
      * Initial creation time
      */
     uint64_t tsCreated;

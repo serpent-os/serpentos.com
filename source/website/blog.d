@@ -41,19 +41,7 @@ import std.string : format;
      */
     void index()
     {
-        import std.array : array;
-        import std.algorithm : sort, filter;
-
-        Post[] posts;
-        immutable err = appDB.view((in tx) @safe {
-            posts = tx.list!Post
-                .filter!((p) => p.type == PostType.RegularPost)
-                .array;
-            return NoDatabaseError;
-        });
-        posts.sort!"a.tsCreated > b.tsCreated"();
-        enforceHTTP(err.isNull, HTTPStatus.badRequest, err.message);
-        render!("blog/index.dt", posts);
+        render!("blog/index.dt");
     }
 
     /**
@@ -100,6 +88,7 @@ private:
                 p.tsCreated = tstamp;
                 p.tsModified = tstamp;
                 p.processedContent = mdPost.content;
+                p.featuredImage = mdPost.featuredImage;
                 auto e = p.save(tx);
                 if (!e.isNull)
                 {
