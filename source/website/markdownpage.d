@@ -37,6 +37,27 @@ private static auto codeRe = ctRegex!("^```([\\w]+)$", ['g', 'm']);
 private static auto commentRe = ctRegex!(`(<!\-\-\-[\s\S]*?\-\-\->)`, ['m']);
 
 /**
+ * Inline hugo style command, i.e {{<figure_screenshot_one args=*}}
+ */
+private static auto inlineCommandRe = ctRegex!(
+        `\{\{\<([a-zA-Z_]+)[\s\S]*?([\s\S]*?)>\}\}`, ['g', 'm']);
+
+/**
+ * "=" separated key value pairs
+ */
+private static auto commandArgsRe = ctRegex!(`([a-zA-Z]+)[\s]*?=[\s]*?\"([\s\S]*?)\"`, [
+        'g', 'm'
+        ]);
+private static enum CommandGroup
+{
+    Name = 1,
+    Args = 2, /* Not always present */
+
+
+
+}
+
+/**
  * Access metaRe groups
  */
 private static enum DocumentGroup
@@ -149,6 +170,9 @@ public final class MarkdownPage
 
         /* also need to remove in-document comments.. */
         preMarkdown = replaceAll(preMarkdown, commentRe, "");
+
+        /* We do need to support these commands but not just yet */
+        preMarkdown = replaceAll(preMarkdown, inlineCommandRe, "");
 
         auto postMarkdown = filterMarkdown(preMarkdown, settings);
         _content = postMarkdown;
