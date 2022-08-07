@@ -62,6 +62,7 @@ function renderError(error)
 function renderPost(post)
 {
     const dom = new DOMParser().parseFromString(post.summary, "text/html");
+    var when = new Date(post.tsCreated * 1000).toLocaleDateString();
 
     return `
 <div class="col-6 col-md-6 col-12 p-2">
@@ -70,6 +71,9 @@ function renderPost(post)
             <div class="row d-flex align-items-center">
                 <div class="col">
                     <h3><a class="stretched-link" href="/${post.slug}">${post.title}</a></h3>
+                </div>
+                <div class="col-auto">
+                    <small class="text-muted">${when}</small>
                 </div>
                 <div class="col-auto align-items-center">
                     <span class="avatar avatar-sm">ID</span>
@@ -100,24 +104,20 @@ function renderPaginator(object)
             return `<li class="page-item"><a class="page-link" href="#paginator" onclick="event.preventDefault(); refreshList(${elem}, true);">${elem + 1}</a></li>`
         }
     }).join("\n");
+    const backIcon = `<svg class="icon"><use xlink:href="/static/tabler-sprite-nostroke.svg#tabler-chevron-left"></use></svg>`;
+    const forwardIcon = `<svg class="icon"><use xlink:href="/static/tabler-sprite-nostroke.svg#tabler-chevron-right"></use></svg>`;
+    const backElement = object.page > 0 ? 
+        `<li class="page-item"><a class="page-link" href="#" onclick="event.preventDefault(); refreshList(${object.page - 1}, true);" tabindex="-1">${backIcon}</a></li>` :
+        `<li class="page-item disabled"><a class="page-link" href="#" onclick="event.preventDefault();" tabindex="-1" aria-disabled="true">${backIcon}</a></li>`;
+    const forwardElement = object.page <= object.numPages - 1 ? 
+        `<li class="page-item"><a class="page-link" href="#" onclick="event.preventDefault(); refreshList(${object.page + 1}, true);" tabindex="-1">${forwardIcon}</a></li>` :
+        `<li class="page-item disabled"><a class="page-link" href="#" onclick="event.preventDefault();" tabindex="-1" aria-disabled="true">${forwardIcon}</a></li>`;
     return `
 <nav aria-label="Navigation of posts" class="justify-content-center">
     <ul class="pagination flex-wrap">
-        <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
-                <svg class="icon">
-                    <use xlink:href="/static/tabler-sprite-nostroke.svg#tabler-chevron-left"></use>
-                </svg>
-            </a>
-        </li>
+        ${backElement}
         ${pickers}
-        <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
-                <svg class="icon">
-                    <use xlink:href="/static/tabler-sprite-nostroke.svg#tabler-chevron-right"></use>
-                </svg>
-            </a>
-        </li>
+        ${forwardElement}
     </ul>
 </nav>
 `;
