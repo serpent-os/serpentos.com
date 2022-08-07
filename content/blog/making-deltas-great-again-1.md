@@ -164,7 +164,7 @@ take to create. Lets take a look at the difference while also ensuring `--long` 
 the results above for only creating deltas for files larger than 10KB.
 
 | Individual Delta File Package        | zstd -12         | zstd -16         | zstd -19         | zstd -22         |
-|--------------------------------------|------------------| -----------------| -----------------|------------------|
+|--------------------------------------|------------------|------------------|------------------|------------------|
 | Time to Delta Files                  | 6.7s             | 113.9s           | 142.3s           | 148.3s           |
 | Time to Compress Payload             | 0.5s             | 3.2s             | 5.3s             | 4.0s             |
 | Size of Uncompressed Payload         | 41.1MB           | 30.6MB           | 28.9MB           | 28.9MB           |

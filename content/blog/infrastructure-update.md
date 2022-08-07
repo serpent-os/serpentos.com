@@ -49,7 +49,7 @@ Example API usage:
 
 ```d
 Database db;
-/* setup the DB with lmdb:// URI *
+/* setup the DB with lmdb:// URI */
 
 /* Write transaction */
 auto err = db.update((scope tx) @safe
