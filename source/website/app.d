@@ -56,6 +56,7 @@ import website.rest;
         /* All static assets */
         fileSettings = new HTTPFileServerSettings();
         fileSettings.serverPathPrefix = "/static";
+        fileSettings.maxAge = 30.days;
         router.get("/static/*", serveStaticFiles("static", fileSettings));
 
         router.registerWebInterface(this);
