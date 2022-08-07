@@ -64,7 +64,7 @@ function renderPost(post)
     return `
 <div class="col-6 col-md-6 col-12 p-2">
     <div class="card">
-        <div class="card-img-top img-fluid img-responsive img-responsive-16x9" style="background-color: grey; background-image: url('https://serpentos.com/${post.featuredImage}'); background-repeat: no-repeat; background-position: cover;">
+        <div class="card-img-top img-fluid img-responsive img-responsive-16x9" style="background-color: grey; background-image: url('/static${post.featuredImage}'); background-repeat: no-repeat; background-position: cover;">
         </div>
         <div class="card-body">
             <div class="row d-flex">

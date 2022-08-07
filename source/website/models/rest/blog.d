@@ -23,13 +23,38 @@ import std.array : array;
 import std.range : drop, take;
 import std.algorithm : filter, sort;
 
+/**
+ * Helper to wrap up an input slice and provide
+ * pagination for it via an offset and fixed page size
+ *
+ * Params:
+ *      T = Type to paginate
+ */
 struct Paginator(T)
 {
+    /**
+     * Slice of T
+     */
     alias TSlice = T[];
+
+    /**
+     * Sub storage
+     */
     TSlice items;
 
+    /**
+     * How big is each page?
+     */
     ulong pageSize = 4;
+
+    /**
+     * How many pages in this query?
+     */
     ulong numPages;
+
+    /**
+     * Page numner?
+     */
     ulong page;
 
     /**
@@ -46,6 +71,9 @@ struct Paginator(T)
     }
 }
 
+/**
+ * The basic posts API for listing
+ */
 @path("api/v1/posts") public interface PostsAPIv1
 {
     /**
