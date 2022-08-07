@@ -84,17 +84,17 @@ function renderPost(post)
 
 function renderPaginator(object)
 {
-    const pickers = Array.from({length: object.numPages}, (x, i) => i).map(elem => {
+    const pickers = Array.from({length: object.numPages + 1}, (x, i) => i).map(elem => {
         if (object.page == elem)
         {
-            return `<li class="page-item active"><a class="page-link" href="#">${elem + 1}</a></li>`;
+            return `<li class="page-item active"><a class="page-link" href="#paginator" onclick="event.preventDefault();">${elem + 1}</a></li>`;
         } else {
-            return `<li class="page-item"><a class="page-link" href="javascript:refreshList(${elem}, true);">${elem + 1}</a></li>`
+            return `<li class="page-item"><a class="page-link" href="#paginator" onclick="event.preventDefault(); refreshList(${elem}, true);">${elem + 1}</a></li>`
         }
     }).join("\n");
     return `
 <nav aria-label="Navigation of posts" class="justify-content-center">
-    <ul class="pagination">
+    <ul class="pagination flex-wrap">
         <li class="page-item disabled">
             <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
                 <svg class="icon">
@@ -122,7 +122,10 @@ function refreshList(offset = 0, jump = false)
 {
     const list = this.document.getElementById('recentPosts');
     const paginator = this.document.getElementById('paginator');
-    list.innerHTML = renderLoadingPosts();
+    if (!jump)
+    {
+        list.innerHTML = renderLoadingPosts();
+    }
     fetch(`/api/v1/posts/list?offset=${offset}`, {
         'method': 'GET',
         'credentials': 'include'
@@ -139,14 +142,8 @@ function refreshList(offset = 0, jump = false)
         });
         list.innerHTML = rawHTML;
         paginator.innerHTML = renderPaginator(object);
-        if (jump)
-        {
-            paginator.scrollIntoView({
-                'behaviour' : 'smooth',
-                'block': 'start',
-            });
-        }
     }).catch((error) => {
         list.innerHTML = renderError(error);
-    })
+    });
+    return false;
 }
