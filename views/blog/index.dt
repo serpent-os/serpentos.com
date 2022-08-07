@@ -16,8 +16,8 @@ block content
                         h2.page-title Blog
         div.row.py-3
             div.row#recentPosts
-        div.row.py-3.justify-content-center
-            div.col-6.col-md-6#paginator
+        div.d-flex.row.py-3.justify-content-center
+            div.col-auto#paginator
 
 block scripts
 

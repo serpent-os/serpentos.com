@@ -66,16 +66,22 @@ function renderPost(post)
     return `
 <div class="col-6 col-md-6 col-12 p-2">
     <div class="card">
-        <div class="card-img-top img-fluid img-responsive img-responsive-16x9" style="background-color: grey; background-image: url('/static${post.featuredImage}'); background-repeat: no-repeat; background-position: cover;">
-        </div>
         <div class="card-body">
-            <div class="row d-flex">
-                <div class="col-auto">
-                    <span class="avatar">??</span>
-                </div>
+            <div class="row d-flex align-items-center">
                 <div class="col">
-                    <div class="text-bold"><a class="text-reset text-bold stretched-link" href="/${post.slug}">${post.title}</a></div>
-                    <div class="text-muted">${dom.documentElement.textContent.substring(0, 200)}…</div>
+                    <h3><a class="stretched-link" href="/${post.slug}">${post.title}</a></h3>
+                </div>
+                <div class="col-auto align-items-center">
+                    <span class="avatar avatar-sm">ID</span>
+                </div>
+            </div>
+            <div class="row d-flex pt-4">
+                <div class="col-3 col-md-3">
+                    <div class="img-fluid img-thumbnail img-responsive img-responsive-16x9" style="background-color: grey; background-image: url('/static${post.featuredImage}'); background-repeat: no-repeat; background-position: cover;">
+                    </div>
+                </div>
+                <div class="col"
+                    <div>${dom.documentElement.textContent.substring(0, 200)}…</div>
                 </div>
             </div>
         </div>

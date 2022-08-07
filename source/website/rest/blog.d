@@ -58,7 +58,7 @@ struct Paginator(T)
     /**
      * How big is each page?
      */
-    ulong pageSize = 4;
+    ulong pageSize = 6;
 
     /**
      * How many pages in this query?
