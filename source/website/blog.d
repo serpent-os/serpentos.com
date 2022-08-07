@@ -36,6 +36,11 @@ import std.string : format;
         preloadContent();
     }
 
+    void index()
+    {
+        render!"blog/index.dt";
+    }
+
     /**
      * Could've just done "*" but route matching can save DB thrashing
      */
@@ -46,7 +51,7 @@ import std.string : format;
         Post post;
         immutable err = appDB.view((in tx) => post.load(tx, slug));
         enforceHTTP(err.isNull, HTTPStatus.notFound, err.message);
-        render!("post.dt", post);
+        render!("blog/post.dt", post);
     }
 
 private:

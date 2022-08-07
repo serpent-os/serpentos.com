@@ -92,13 +92,13 @@ import website.blog;
     /**
      * Render a single top level page
      */
-    @path("/:page") @method(HTTPMethod.GET)
-    void showPage(string _page) @safe
+
+    @noRoute void showPage(HTTPServerRequest req, HTTPServerResponse res, string _page) @safe
     {
         Post post;
         immutable err = appDB.view((in tx) => post.load(tx, _page));
         enforceHTTP(err.isNull, HTTPStatus.notFound, err.message);
-        render!("page.dt", post);
+        res.render!("page.dt", post, req);
     }
 
 private:
@@ -139,6 +139,7 @@ private:
                 {
                     return e;
                 }
+                router.get(p.slug, (req, res) => showPage(req, res, p.slug));
             }
             return NoDatabaseError;
         });
