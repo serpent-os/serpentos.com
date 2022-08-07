@@ -22,6 +22,7 @@ import moss.db.keyvalue.interfaces;
 import moss.db.keyvalue.orm;
 import website.models;
 import website.blog;
+import website.rest;
 
 /**
  * Main instance, state et all
@@ -61,6 +62,10 @@ import website.blog;
         auto blog = new Blog();
         blog.configure(router, appDB);
         preloadContent();
+
+        auto rapi = new BaseAPI();
+        rapi.configure(appDB, router);
+
         router.rebuild();
     }
 

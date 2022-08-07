@@ -55,6 +55,33 @@ function renderError(error)
     <div class="empty-action"><a class="btn" href="javascript:refreshList();">Refresh..</a></div>
 </div>`;
 }
+
+/**
+ * Render a single post
+ */
+function renderPost(post)
+{
+    return `
+<div class="col-6 col-md-6 col-12 p-2">
+    <div class="card">
+        <div class="card-img-top img-fluid img-responsive img-responsive-16x9" style="background-color: grey; background-image: url('https://serpentos.com/${post.featuredImage}'); background-repeat: no-repeat; background-position: cover;">
+        </div>
+        <div class="card-body">
+            <div class="row d-flex">
+                <div class="col-auto">
+                    <span class="avatar">??</span>
+                </div>
+                <div class="col">
+                    <div class="text-bold"><a class="text-reset stretched-link" href="/${post.slug}">${post.title}</a></div>
+                    <div class="text-muted">Some summary...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+`;
+}
+
 /**
  * Refresh the blog post listing
  */
@@ -62,7 +89,8 @@ function refreshList()
 {
     const list = this.document.getElementById('recentPosts');
     list.innerHTML = renderLoadingPosts();
-    fetch('/api/v1/blog/list', {
+    fetch('/api/v1/posts/list', {
+        'method': 'GET',
         'credentials': 'include'
     }).then((response) => {
         if (!response.ok)
@@ -70,8 +98,12 @@ function refreshList()
             throw new Error("Failed to fetch posts: " + response.statusText + " (status: " + response.status + ")");
         }
         return response.json();
-    }).then((object) = {
-
+    }).then((object) => {
+        let rawHTML = '';
+        object.forEach((element) => {
+            rawHTML += renderPost(element);
+        });
+        list.innerHTML = rawHTML;
     }).catch((error) => {
         list.innerHTML = renderError(error);
     })
