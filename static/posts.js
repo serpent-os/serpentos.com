@@ -68,18 +68,15 @@ function renderPost(post)
 <div class="col-6 col-md-6 col-12 p-2">
     <div class="card">
         <div class="card-body">
-            <div class="row d-flex align-items-center">
+            <div class="row align-items-center">
                 <div class="col">
                     <h3><a class="stretched-link" href="/${post.slug}">${post.title}</a></h3>
                 </div>
                 <div class="col-auto">
                     <small class="text-muted">${when}</small>
                 </div>
-                <div class="col-auto align-items-center">
-                    <span class="avatar avatar-sm">ID</span>
-                </div>
             </div>
-            <div class="row d-flex pt-4">
+            <div class="row d-flex pt-2">
                 <div class="col-3 col-md-3">
                     <div class="img-fluid img-thumbnail img-responsive img-responsive-16x9" style="background-color: grey; background-image: url('/static${post.featuredImage}'); background-repeat: no-repeat; background-position: cover;">
                     </div>
