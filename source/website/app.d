@@ -133,6 +133,7 @@ private:
                 p.tsCreated = tstamp;
                 p.tsModified = tstamp;
                 p.processedContent = mdPost.content;
+                p.type = PostType.Page;
                 auto e = p.save(tx);
                 if (!e.isNull)
                 {

@@ -18,7 +18,13 @@ module website.models.post;
 import moss.db.keyvalue.orm;
 
 public import std.datetime.systime;
-public import std.stdint : uint64_t;
+public import std.stdint : uint64_t, uint8_t;
+
+public enum PostType : uint8_t
+{
+    RegularPost = 0,
+    Page,
+}
 
 /**
  * A Post can either be a blog post or a genuine page.
@@ -54,4 +60,9 @@ public import std.stdint : uint64_t;
      * Last modification time
      */
     uint64_t tsModified;
+
+    /**
+     * Page or not..?
+     */
+    PostType type = PostType.RegularPost;
 }
