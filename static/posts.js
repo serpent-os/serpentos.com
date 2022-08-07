@@ -61,7 +61,7 @@ function renderError(error)
  */
 function renderPost(post)
 {
-    const dom = new DOMParser().parseFromString(post.processedSummary, "text/html");
+    const dom = new DOMParser().parseFromString(post.summary, "text/html");
 
     return `
 <div class="col-6 col-md-6 col-12 p-2">

@@ -21,7 +21,20 @@ import moss.db.keyvalue.orm;
 import website.models.post;
 import std.array : array;
 import std.range : drop, take;
-import std.algorithm : filter, sort;
+import std.algorithm : filter, sort, map;
+
+/**
+ * Strips our model down to send the minimal
+ * amount of information via JSON API
+ */
+struct MiniPost
+{
+    string title;
+    string summary;
+    string featuredImage;
+    uint64_t tsCreated;
+    string slug;
+}
 
 /**
  * Helper to wrap up an input slice and provide
@@ -79,7 +92,7 @@ struct Paginator(T)
     /**
      * List all of the posts
      */
-    @path("list") @method(HTTPMethod.GET) Paginator!Post list(@viaQuery("offset") ulong offset = 0)@safe;
+    @path("list") @method(HTTPMethod.GET) Paginator!MiniPost list(@viaQuery("offset") ulong offset = 0)@safe;
 
 }
 
@@ -97,17 +110,18 @@ public final class PostsAPI : PostsAPIv1
         this.appDB = appDB;
     }
 
-    override Paginator!Post list(ulong offset = 0) @safe
+    override Paginator!MiniPost list(ulong offset = 0) @safe
     {
-        Post[] storage;
+        MiniPost[] storage;
         immutable ret = appDB.view((in tx) @safe {
             storage = tx.list!Post
                 .filter!((p) => p.type == PostType.RegularPost)
+                .map!((p) => MiniPost(p.title, p.processedSummary, p.featuredImage, p.tsCreated, p.slug))
                 .array();
             storage.sort!"a.tsCreated > b.tsCreated";
             return NoDatabaseError;
         });
-        return Paginator!Post(storage, offset);
+        return Paginator!MiniPost(storage, offset);
     }
 
 private:
