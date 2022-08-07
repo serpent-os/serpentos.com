@@ -82,14 +82,48 @@ function renderPost(post)
 `;
 }
 
+function renderPaginator(object)
+{
+    const pickers = Array.from({length: object.numPages}, (x, i) => i).map(elem => {
+        if (object.page == elem)
+        {
+            return `<li class="page-item active"><a class="page-link" href="#">${elem + 1}</a></li>`;
+        } else {
+            return `<li class="page-item"><a class="page-link" href="javascript:refreshList(${elem}, true);">${elem + 1}</a></li>`
+        }
+    }).join("\n");
+    return `
+<nav aria-label="Navigation of posts" class="justify-content-center">
+    <ul class="pagination">
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                <svg class="icon">
+                    <use xlink:href="/static/tabler-sprite-nostroke.svg#tabler-chevron-left"></use>
+                </svg>
+            </a>
+        </li>
+        ${pickers}
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                <svg class="icon">
+                    <use xlink:href="/static/tabler-sprite-nostroke.svg#tabler-chevron-right"></use>
+                </svg>
+            </a>
+        </li>
+    </ul>
+</nav>
+`;
+}
+
 /**
  * Refresh the blog post listing
  */
-function refreshList()
+function refreshList(offset = 0, jump = false)
 {
     const list = this.document.getElementById('recentPosts');
+    const paginator = this.document.getElementById('paginator');
     list.innerHTML = renderLoadingPosts();
-    fetch('/api/v1/posts/list', {
+    fetch(`/api/v1/posts/list?offset=${offset}`, {
         'method': 'GET',
         'credentials': 'include'
     }).then((response) => {
@@ -100,10 +134,18 @@ function refreshList()
         return response.json();
     }).then((object) => {
         let rawHTML = '';
-        object.forEach((element) => {
+        object.items.forEach((element) => {
             rawHTML += renderPost(element);
         });
         list.innerHTML = rawHTML;
+        paginator.innerHTML = renderPaginator(object);
+        if (jump)
+        {
+            paginator.scrollIntoView({
+                'behaviour' : 'smooth',
+                'block': 'start',
+            });
+        }
     }).catch((error) => {
         list.innerHTML = renderError(error);
     })
