@@ -21,6 +21,7 @@ import moss.db.keyvalue.errors;
 import moss.db.keyvalue.interfaces;
 import moss.db.keyvalue.orm;
 import website.models;
+import website.blog;
 
 /**
  * Main instance, state et all
@@ -57,8 +58,10 @@ import website.models;
         router.get("/static/*", serveStaticFiles("static", fileSettings));
 
         router.registerWebInterface(this);
-        router.rebuild();
+        auto blog = new Blog();
+        blog.configure(router, appDB);
         preloadContent();
+        router.rebuild();
     }
 
     /**

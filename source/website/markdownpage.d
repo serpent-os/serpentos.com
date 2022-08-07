@@ -134,6 +134,11 @@ public final class MarkdownPage
             _icon = metadata["icon"].get!string;
         }
 
+        _creation = metadata["date"].get!SysTime;
+
+        _slug = format!"%d/%02d/%02d/%s"(_creation.year, _creation.month,
+                _creation.day, _title.asSlug);
+
         /* Load it, and postfix the basic markdown */
         auto preMarkdown = ret[DocumentGroup.Contents];
 

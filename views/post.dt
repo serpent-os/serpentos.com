@@ -1,0 +1,12 @@
+extends root
+
+block title
+    title #{post.title} | Serpent OS
+
+block content
+    div.container.pt-5
+        div.row.d-flex.justify-content-center
+            div.col-12.col-md-8.col-sm-10
+                div.card
+                    div.card-body.p-5
+                        div.markdown!= post.processedContent
