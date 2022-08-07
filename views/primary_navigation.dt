@@ -31,7 +31,7 @@ nav.navbar.navbar-expand-lg.navbar-light.border-bottom.shadow-sm
     div.container
         // Logo
         a.navbar-brand.logo(href="/")
-            img(src="/static/logo.png", width="32px", height="32px")
+            img(src="/static/logo.webp", width="32px", height="32px")
         button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#primaryNavigation", aria-controls="primaryNavigation", aria-expanded="false")
             span.navbar-toggler-icon.text-white
         div.collapse.navbar-collapse(id="primaryNavigation")

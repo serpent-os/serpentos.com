@@ -160,9 +160,15 @@ public final class MarkdownPage
             _icon = metadata["icon"].get!string;
         }
 
+        /* Force webp featured images! */
         if ("featuredImage" in metadata)
         {
             _featuredImage = metadata["featuredImage"].get!string;
+            if (_featuredImage.endsWith(".png"))
+            {
+                _featuredImage = format!"%s.webp"(_featuredImage[0 .. $ - 4]);
+                logWarn("%s: Forcibly changed featuredImage to webp", filename);
+            }
         }
 
         _creation = metadata["date"].get!SysTime;
