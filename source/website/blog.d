@@ -88,6 +88,7 @@ private:
                 p.tsCreated = tstamp;
                 p.tsModified = tstamp;
                 p.processedContent = mdPost.content;
+                p.processedSummary = mdPost.summary;
                 p.featuredImage = mdPost.featuredImage;
                 auto e = p.save(tx);
                 if (!e.isNull)

@@ -24,11 +24,16 @@ import std.range : take;
 import std.regex;
 import vibe.d;
 
+private static enum maxSummaryLength = 320;
+
 /**
  * Hugo document separation regex.
  */
 private static auto metaRe = ctRegex!(`\-\-\-([\s\S]*?)^\-\-\-$([\s\S]*)`, ['m']);
 
+/**
+ * Markdown code regex
+ */
 private static auto codeRe = ctRegex!("^```([\\w]+)$", ['g', 'm']);
 
 /**
@@ -65,6 +70,8 @@ private static enum DocumentGroup
     Meta = 1,
     Contents = 2,
 }
+
+private static immutable(string) readMore = "<!--more-->";
 
 /**
  * Create a new MarkdownPage from the given input file
@@ -141,6 +148,16 @@ public final class MarkdownPage
     }
 
     /**
+     * Summary property for blog posts
+     *
+     * Returns: Partial summary
+     */
+    pure @property string summary() @safe @nogc nothrow const
+    {
+        return _summary;
+    }
+
+    /**
      * Load the page from a file
      */
     void loadFile(in string filename) @safe
@@ -178,6 +195,21 @@ public final class MarkdownPage
 
         /* Load it, and postfix the basic markdown */
         auto preMarkdown = ret[DocumentGroup.Contents];
+
+        /* Firstly, lets look for the read more separator. */
+        auto splits = preMarkdown.split(readMore);
+        if (splits.length > 1)
+        {
+            enforceHTTP(splits.length == 2, HTTPStatus.internalServerError,
+                    "Can only split a document with <!--more--> ONCE: " ~ filename);
+            /* Grab the summary now and *barely* process it */
+            _summary = filterMarkdown(splits[0].strip(), settings);
+            preMarkdown = splits[0] ~ splits[1];
+        }
+        else
+        {
+            _summary = filterMarkdown(preMarkdown.take(maxSummaryLength).to!string.strip);
+        }
 
         /* vibe.d screws up code handling badly w/ backticks.
            we temporarily insert lang=identifier for later processing.
@@ -292,4 +324,5 @@ private:
     string _content;
     string _icon = "";
     string _featuredImage;
+    string _summary;
 }

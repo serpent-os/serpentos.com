@@ -47,6 +47,11 @@ public enum PostType : uint8_t
     string title;
 
     /**
+     * Prepared summary
+     */
+    string processedSummary;
+
+    /**
      * Pre-rendered content
      */
     string processedContent;

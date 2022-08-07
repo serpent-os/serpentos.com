@@ -61,6 +61,8 @@ function renderError(error)
  */
 function renderPost(post)
 {
+    const dom = new DOMParser().parseFromString(post.processedSummary, "text/html");
+
     return `
 <div class="col-6 col-md-6 col-12 p-2">
     <div class="card">
@@ -72,8 +74,8 @@ function renderPost(post)
                     <span class="avatar">??</span>
                 </div>
                 <div class="col">
-                    <div class="text-bold"><a class="text-reset stretched-link" href="/${post.slug}">${post.title}</a></div>
-                    <div class="text-muted">Some summary...</div>
+                    <div class="text-bold"><a class="text-reset text-bold stretched-link" href="/${post.slug}">${post.title}</a></div>
+                    <div class="text-muted">${dom.documentElement.textContent.substring(0, 200)}…</div>
                 </div>
             </div>
         </div>
