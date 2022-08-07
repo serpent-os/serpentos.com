@@ -1,0 +1,15 @@
+extends root
+
+block title
+    title Blog | Serpent OS
+
+block content
+    div.container.pt-5
+        div.row.d-flex.justify-content-center
+
+            ul
+            - foreach (post; posts)
+            - {
+                li
+                    a(href="/#{post.slug}")= post.title
+            - }
