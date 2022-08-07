@@ -8,7 +8,7 @@
 - }
 - static enum navItems = [
 -   NavigationItem("/", "Home"),
--   NavigationItem("#", "Blog"),
+-   NavigationItem("/blog", "Blog"),
 -   NavigationItem("#", "Community", [
 -       NavigationItem("https://forums.serpentos.com", "Forums"),
 -       NavigationItem("#", "Matrix")
