@@ -79,3 +79,5 @@ I know the world isn't making things easier right now for any of us, so from the
 everyone who has been supporting the project, it means the absolute world to me. We're now in a position of community
 building and developer enabling, a position we've fought the last 2 years to get to. Thanks to you all, we're hitting the
 launch button and going hypersonic.
+
+You can leave feedback on this blog post over [on the forums](https://forums.serpentos.com/d/7-lets-do-this)
