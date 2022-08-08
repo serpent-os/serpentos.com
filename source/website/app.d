@@ -44,6 +44,7 @@ import website.rest;
                 "Failed to create model: " ~ err.message);
 
         settings = new HTTPServerSettings();
+        settings.errorPageHandler = &onError;
         settings.bindAddresses = ["localhost"];
         settings.disableDistHost = true;
         settings.port = 4040;
@@ -68,6 +69,15 @@ import website.rest;
         rapi.configure(appDB, router);
 
         router.rebuild();
+    }
+
+    /**
+     * Handle error pages
+     */
+    @noRoute void onError(scope HTTPServerRequest req,
+            scope HTTPServerResponse res, scope HTTPServerErrorInfo error) @safe
+    {
+        res.render!("error.dt", req, error);
     }
 
     /**
