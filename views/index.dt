@@ -10,7 +10,7 @@ block banner
                     h1.display-6.p-2 It's coming.
                     p.p-2 After #[em two years] of engineering effort, we're almost ready to lift the curtains. 
                         | Seriously, words, things, stuff, images and icons. Ermagahd, even dherguns.
-                    a.btn.btn-outline-light.btn-square.mx-1 Read more
+                    a.btn.btn-outline-light.btn-square.mx-1(href="/blog/2022/08/08/let-s-do-this") Read more
                     a.btn.btn-outline-light.btn-square.mx-1(href="/sponsors") Support us
 block content
 
