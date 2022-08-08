@@ -8,4 +8,4 @@ div.container-fluid.mt-auto.col-12
             div.col.d-inline-flex.justify-content-center
                 center: small.text-muted Built with love, #[a(href="https://dlang.org") D (Language)], #[a(href="https://vibed.org") vibe.d] and #[a(href="https://tabler.io") tabler].
             div.col.d-inline-flex.justify-content-end
-                small.text-muted version 0.0.0
+                small.text-muted #[a.text-reset(href="/privacy") Privacy policy]
