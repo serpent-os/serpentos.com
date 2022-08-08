@@ -62,7 +62,7 @@ function renderError(error)
 function renderPost(post)
 {
     const dom = new DOMParser().parseFromString(post.summary, "text/html");
-    var when = new Date(post.tsCreated * 1000).toLocaleDateString();
+    var when = new Date(post.tsCreated * 1000).toDateString();
 
     return `
 <div class="col-6 col-md-6 col-12 p-2">

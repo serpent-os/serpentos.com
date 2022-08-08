@@ -27,10 +27,22 @@ block content
     -   Feature("tabler-free-rights", "Free", "Serpent OS will always be free to download and use. This extends to all of the tools we use to build the project.")
     - ];
 
+    // Latest posts
+    div.container-fluid.border-bottom
+        div.container
+            div.row.py-4#latestNews
+                div.row.d-flex.justify-content-center
+                    div.col-auto: span.spinner.spinner-border
+                    div.col-auto: h3.text-muted loading latest news
+
     // Main section of goals
     div.container-fluid.bg-white.text-dark.border-bottom
         div.container
             div.row.justify-content-center.py-4
+
+                h1.display-6.text-center.p-3
+                    | Goals!
+                    small.text-muted What's it all about, really?
 
                 div.row.d-flex.justify-content-center
                     - import std.range : chunks;
@@ -49,3 +61,7 @@ block content
                                                     div.text-muted= f.text
                             - } }
                     - } }
+
+block scripts
+
+    script(src="/static/mainPage.js", defer, async, module="true")
