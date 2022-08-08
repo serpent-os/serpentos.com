@@ -15,35 +15,37 @@ block content
     - {
     -    string icon;
     -    string label;
-    -    string text;  
+    -    string text;
+    -    string link = "#";
     - }
     - static enum features = [
-    -   Feature("tabler-massage", "Smart", "Our Smart System Management takes care of Serpent OS while you sit back and relax."),
-    -   Feature("tabler-speedboat", "Fast", "Pushing the limits of what's possible by making binaries more efficient in all configurations."),
-    -   Feature("tabler-friends", "Community", "A fun and welcoming environment for users, contributors and the team."),
-    -   Feature("tabler-heart-handshake", "Dependable", "Built on top of the robust Linux kernel. Our mission is to keep you running without the hassle."),
-    -   Feature("tabler-jump-rope", "Flexible", "Empowering users to make their own decisions, without getting in their way."),
+    -   Feature("tabler-massage", "Smart", "Our Smart System Management takes care of Serpent OS while you sit back and relax.", "/smart"),
+    -   Feature("tabler-speedboat", "Fast", "Pushing the limits of what's possible by making binaries more efficient in all configurations.", "/fast"),
+    -   Feature("tabler-friends", "Community", "A fun and welcoming environment for users, contributors and the team.", "/community"),
+    -   Feature("tabler-heart-handshake", "Dependable", "Built on top of the robust Linux kernel. Our mission is to keep you running without the hassle.", "/dependable"),
+    -   Feature("tabler-jump-rope", "Flexible", "Empowering users to make their own decisions, without getting in their way.", "/flexible"),
     -   Feature("tabler-free-rights", "Free", "Serpent OS will always be free to download and use. This extends to all of the tools we use to build the project.")
     - ];
 
     // Main section of goals
     div.container-fluid.bg-white.text-dark.border-bottom
         div.container
-            div.row.justify-content-center
-                div.col-12.col-md-11
+            div.row.justify-content-center.py-4
 
-                    div.row.d-flex.justify-content-center
-                        - import std.range : chunks;
-                        - static foreach (featureSet; features.chunks(features.length / 2))
-                        - { {
-                            div.col-12.col-md-6
-                                - static foreach (f; featureSet)
-                                - { {
-                                    div.p-4
-                                        div.row.d-flex
-                                            div.col-auto: svg.text-azure.mx-3(width="64px", height="64px"): use(xlink:href="/static/tabler/tabler-sprite.svg\##{f.icon}")
-                                            div.col:
-                                                h3= f.label
-                                                div.text-muted= f.text
-                                - } }
-                        - } }
+                div.row.d-flex.justify-content-center
+                    - import std.range : chunks;
+                    - static foreach (featureSet; features.chunks(features.length / 2))
+                    - { {
+                        div.col-12.col-md-6
+                            - static foreach (f; featureSet)
+                            - { {
+                                div.p-2
+                                    div.card
+                                        div.card-body
+                                            div.row.d-flex.align-items-center
+                                                svg.col-auto.text-azure.mx-3(width="64px", height="64px"): use(xlink:href="/static/tabler-sprite-nostroke.svg\##{f.icon}")
+                                                div.col:
+                                                    h3: a.stretched-link(href=f.link)= f.label
+                                                    div.text-muted= f.text
+                            - } }
+                    - } }
