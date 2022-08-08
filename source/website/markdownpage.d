@@ -158,6 +158,16 @@ public final class MarkdownPage
     }
 
     /**
+     * Author property
+     *
+     * Returns: Who wrote it, like.
+     */
+    pure @property string author() @safe @nogc nothrow const
+    {
+        return _author;
+    }
+
+    /**
      * Load the page from a file
      */
     void loadFile(in string filename) @safe
@@ -175,6 +185,11 @@ public final class MarkdownPage
         if ("icon" in metadata)
         {
             _icon = metadata["icon"].get!string;
+        }
+
+        if ("authors" in metadata)
+        {
+            _author = metadata["authors"].get!(Node)[0].get!string;
         }
 
         /* Force webp featured images! */
@@ -325,4 +340,5 @@ private:
     string _icon = "";
     string _featuredImage;
     string _summary;
+    string _author;
 }

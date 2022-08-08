@@ -75,4 +75,7 @@ public enum PostType : uint8_t
      * Page or not..?
      */
     PostType type = PostType.RegularPost;
+
+    /* Eventually maps to an author object.. */
+    string author;
 }

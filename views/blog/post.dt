@@ -32,7 +32,7 @@ block content
                         div.row.d-flex.align-items-center.py-2
                             div.col-auto
                                 svg.icon: use(xlink:href="/static/tabler/tabler-sprite.svg#tabler-user")
-                            div.col-auto Posted by [Some Author]
+                            div.col-auto Posted by #{post.author}
 
                         div.row.d-flex.align-items-center.py-2
                             div.col-auto

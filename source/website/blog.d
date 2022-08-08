@@ -90,6 +90,7 @@ private:
                 p.processedContent = mdPost.content;
                 p.processedSummary = mdPost.summary;
                 p.featuredImage = mdPost.featuredImage;
+                p.author = mdPost.author;
                 auto e = p.save(tx);
                 if (!e.isNull)
                 {

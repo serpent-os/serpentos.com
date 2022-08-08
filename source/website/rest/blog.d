@@ -34,6 +34,7 @@ struct MiniPost
     string featuredImage;
     uint64_t tsCreated;
     string slug;
+    string author;
 }
 
 /**
@@ -118,7 +119,7 @@ public final class PostsAPI : PostsAPIv1
             storage = tx.list!Post
                 .filter!((p) => p.type == PostType.RegularPost)
                 .map!((p) => MiniPost(p.title, p.processedSummary,
-                    p.featuredImage, p.tsCreated, p.slug))
+                    p.featuredImage, p.tsCreated, p.slug, p.author))
                 .array();
             storage.sort!"a.tsCreated > b.tsCreated";
             return NoDatabaseError;
