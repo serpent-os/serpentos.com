@@ -9,7 +9,7 @@ block banner
             div.row.d-flex.align-items-center.justify-content-center
                 div.col-5.col-md-5.align-items-center.text-center.justify-content-center:
                     h1.display-6.pt-1 Sponsors
-                    p Serpent OS isn't possible without #[strong your support]. Whether it's providing an income for our BDFL, or paying for the hosting, every contribution counts.
+                    p Serpent OS is made possible with #[strong your support]. Whether it's providing an income for our BDFL, or paying for the hosting, every contribution counts.
                     a.btn.btn-large.btn-white.text-azure(href="https://opencollective.com/serpent-os")
                         svg.icon.text-azure: use(xlink:href="/static/tabler-sprite-nostroke.svg#tabler-heart-handshake")
                         | Join the Collective Today
