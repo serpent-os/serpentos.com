@@ -50,8 +50,3 @@ block content
                                                 div.text-muted= f.text
                                 - } }
                         - } }
-
-    div.container-fluid
-        div.container.py-5
-            div.row.text-center
-                h1.display-6 add stuff here..

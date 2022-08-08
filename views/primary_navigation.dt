@@ -13,7 +13,6 @@
 -       NavigationItem("https://forums.serpentos.com", "Forums"),
 -       NavigationItem("#", "Matrix")
 -   ]),    
--   NavigationItem("#", "Dashboard"),
 -   NavigationItem("#", "Discover", [
 -       NavigationItem("/community", "Community"),    
 -       NavigationItem("/dependable", "Dependable"),
