@@ -21,6 +21,7 @@
 -       NavigationItem("/flexible", "Flexible"),
 -       NavigationItem("/smart", "Smart"),
 -   ]),
+-   NavigationItem("/sponsors", "Sponsors"),
 -   NavigationItem("#", "Tooling", [
 -       NavigationItem("/boulder", "boulder"),
 -       NavigationItem("/moss", "moss"),

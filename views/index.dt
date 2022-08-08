@@ -11,7 +11,7 @@ block banner
                     p.p-2 After #[em two years] of engineering effort, we're almost ready to lift the curtains. 
                         | Seriously, words, things, stuff, images and icons. Ermagahd, even dherguns.
                     a.btn.btn-outline-light.btn-square.mx-1 Read more
-                    a.btn.btn-outline-light.btn-square.mx-1 Support us
+                    a.btn.btn-outline-light.btn-square.mx-1(href="/sponsors") Support us
 block content
 
     - static struct Feature

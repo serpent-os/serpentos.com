@@ -95,6 +95,12 @@ import website.rest;
         render!"index.dt";
     }
 
+    @path("/sponsors") @method(HTTPMethod.GET)
+    void sponsors() @safe
+    {
+        render!"sponsors.dt";
+    }
+
     /**
      * Render a single top level page
      */

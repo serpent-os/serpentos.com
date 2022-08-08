@@ -92,7 +92,8 @@ struct Paginator(T)
     /**
      * List all of the posts
      */
-    @path("list") @method(HTTPMethod.GET) Paginator!MiniPost list(@viaQuery("offset") ulong offset = 0)@safe;
+    @path("list") @method(HTTPMethod.GET) Paginator!MiniPost list(
+            @viaQuery("offset") ulong offset = 0)@safe;
 
 }
 
@@ -116,7 +117,8 @@ public final class PostsAPI : PostsAPIv1
         immutable ret = appDB.view((in tx) @safe {
             storage = tx.list!Post
                 .filter!((p) => p.type == PostType.RegularPost)
-                .map!((p) => MiniPost(p.title, p.processedSummary, p.featuredImage, p.tsCreated, p.slug))
+                .map!((p) => MiniPost(p.title, p.processedSummary,
+                    p.featuredImage, p.tsCreated, p.slug))
                 .array();
             storage.sort!"a.tsCreated > b.tsCreated";
             return NoDatabaseError;
