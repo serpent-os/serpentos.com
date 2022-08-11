@@ -105,7 +105,7 @@ both myself and the admin fees for everything. The community is the heart and so
 **you** to build the foundations for a fledgling project that will provide a technological home for many years
 to come.
 
-If OpenCollective doesn't as an option, we're in the process of setting up Stripe, and there is the possibility
+If OpenCollective doesn't work as an option, we're in the process of setting up Stripe, and there is the possibility
 of direct bank transfer (EUR). Just send me an [email :)](mailto:ikey@serpentos.com)
 
 ## I represent an organisation and I want to ensure the success of Serpent OS
@@ -116,3 +116,5 @@ organisation will forever be entwined in the success story of Serpent OS, a high
 something genuinely **new** to the world of Arch Linux and Fedora users, among other groups.
 
 Let's do this guys. We're on the cusp.
+
+[Discuss on the forums](https://forums.serpentos.com/d/9-the-shopping-list-serpent-os)
