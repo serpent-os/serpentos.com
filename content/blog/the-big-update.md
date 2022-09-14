@@ -154,3 +154,4 @@ time on the project. Please consider supporting my development work via [GitHub 
 
 Thank you!
 
+You can discuss this forum post over on [our forums](https://forums.serpentos.com/d/20-the-big-update)
