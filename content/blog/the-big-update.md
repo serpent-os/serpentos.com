@@ -65,7 +65,7 @@ getting the thing building and installing correctly.
 Boulder supports "macros" as seen in the RPM and ypkg world, to support consistent builds and integration.
 Additionally it automatically splits up packages into the appropriate subpackages, and automatically scans
 for binary, pkgconfig, perl and other dependencies during source analysis and build time. The end result
-is some `.stone` binary packages and a build manifest, which we use to flesh our our **source package index**.
+is some `.stone` binary packages and a build manifest, which we use to flesh out our **source package index**.
 
 # Major moss improvements
 
@@ -91,8 +91,7 @@ This will be simplified once we introduce `virtual` packages (Coming Soon &trade
 
 # Local Collections
 
-Boulder can now be invoked to utilise a local collection of stone packages, simplify
-the development of large stack items.
+Boulder can now be instructed to utilise a local collection of stone packages, simplifying the development of large stack items.
 
 ```bash
 sudo boulder bi stone.yml -p local-x86_64
