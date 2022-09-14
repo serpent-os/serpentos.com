@@ -9,8 +9,7 @@ Callout: "Grab them ISOs"
 
 Looks like we haven't released any ISOs yet!
 
-We're working towards our [0.0 milestone](https://gitlab.com/groups/serpent-os/-/milestones/1#tab-issues),
-where we plan to release a fully functioning and self-hosting Serpent OS core system distributed as a
+We're working towards the of release a fully functioning and self-hosting Serpent OS core system distributed as a
 [systemd-nspawn container](https://www.freedesktop.org/software/systemd/man/systemd-nspawn.html).
 
 This container will enable interested parties to start developing Serpent OS packages, 

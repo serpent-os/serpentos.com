@@ -70,7 +70,7 @@ At times, we may link to or include third-party content on our website. These in
  - [Tenor](https://tenor.com/legal-terms)
  - [Twitter](https://twitter.com/en/privacy)
  - [YouTube](https://policies.google.com/privacy?hl=en-US)
- - [GitLab](https://about.gitlab.com/terms/)
+ - [GitHub](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
 
 The above links will take you to the terms of service and/or privacy policy for those websites. As such, those particular services **may** set cookies on your machine, or process data separately from Serpent OS. As such you should refer to their terms for how your data is processed.
 
