@@ -13,7 +13,7 @@
 -       NavigationItem("https://forums.serpentos.com", "Forums"),
 -       NavigationItem("#", "Matrix")
 -   ]),
--   NavigationItem("/sponsors", "Sponsors"),
+-   NavigationItem("/sponsors", "https://github.com/sponsors/ikeycode?o=sd&sc=t"),
 -   NavigationItem("#", "Tooling", [
 -       NavigationItem("/boulder", "boulder"),
 -       NavigationItem("/moss", "moss"),

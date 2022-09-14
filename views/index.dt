@@ -7,8 +7,8 @@ block banner
                 div.col-12.col-md-8
                     h1.display-6.p-2 It's coming.
                     p.p-2 After #[em two years] of engineering effort, we're almost ready to lift the curtains. A bit of community enabling here... a bit of infrastructure deployment there.. then we hit the road running.
-                    a.btn.btn-outline-light.btn-square.m-1(href="/blog/2022/08/08/let-s-do-this") Read more
-                    a.btn.btn-outline-light.btn-square.m-1(href="/sponsors") Join the journey
+                    a.btn.btn-outline-light.btn-square.m-1(href="/blog/2022/09/14/the-big-update") Read more
+                    a.btn.btn-outline-light.btn-square.m-1(href="https://github.com/sponsors/ikeycode?o=sd&sc=t") Join the journey
 block content
 
     - static struct Feature
