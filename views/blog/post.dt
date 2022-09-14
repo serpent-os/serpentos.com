@@ -42,4 +42,4 @@ block content
                         div.row.d-flex.align-items-center.py-2
                             div.col-auto
                                 svg.icon: use(xlink:href="/static/tabler/tabler-sprite.svg#tabler-cash")
-                            div.col-auto: a.text-reset(href="https://opencollective.com/serpent-os") Support us!
+                            div.col-auto: a.text-reset(href="https://github.com/sponsors/ikeycode?o=sd&sc=t") Support development!
