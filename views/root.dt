@@ -21,6 +21,7 @@ html(lang="en")
 
     // TODO: Use a site prefix
     script(src="/static/tabler/js/tabler.min.js", defer, async)
+    script(src="/static/darkMode.js")
     script(src="/static/global.js")
 
     block scripts

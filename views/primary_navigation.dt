@@ -47,3 +47,7 @@ nav.navbar.navbar-expand-lg.navbar-light.border-bottom.shadow-sm
                                 - }
                     - }
                 - } }
+        div.d-flex
+            a.btn.btn-ghost-info.btn-icon#themeSwitcher
+                svg#themeSwitcherIcon(width="16px", height="16px")
+                    use(xlink:href="/static/tabler/tabler-sprite.svg#tabler-moon")
