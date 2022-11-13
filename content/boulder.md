@@ -69,7 +69,7 @@ process we make packaging easy and less time consuming.
 The `stone.yml` packaging format is quite simple, yet flexible when required. Using easy to understand `YAML`
 formatting, a `stone.yml` will be compact for the majority of cases. Here's a simple example of the `nano` build file:
 
-```
+```yaml
 name        : nano
 version     : 5.8
 release     : 1
