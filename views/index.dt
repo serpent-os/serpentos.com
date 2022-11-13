@@ -36,13 +36,13 @@ block content
                     div.col-auto: h3.text-muted loading latest news
 
     // Main section of goals
-    div.container-fluid.bg-white.text-dark.border-bottom
+    div.container-fluid.bg-light.border-bottom
         div.container
             div.row.justify-content-center.py-4
 
                 h1.display-6.text-center.p-3
                     | Goals!
-                    small.text-muted What's it all about, really?
+                    small.opacity-75 What's it all about, really?
 
                 div.row.d-flex.justify-content-center
                     - import std.range : chunks;
@@ -58,7 +58,7 @@ block content
                                                 svg.col-auto.text-azure.mx-3(width="64px", height="64px"): use(xlink:href="/static/tabler-sprite-nostroke.svg\##{f.icon}")
                                                 div.col:
                                                     h3: a.stretched-link(href=f.link)= f.label
-                                                    div.text-muted= f.text
+                                                    div.opacity-75= f.text
                             - } }
                     - } }
 
