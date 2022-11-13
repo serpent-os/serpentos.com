@@ -10,7 +10,7 @@ block content
             div.page-header
                 div.row.align-items-center
                     div.col
-                        ol.breadcrumb.py-1(aria-label="breadcrumbs")
+                        ol.breadcrumb.breadcrumb-arrows.py-1(aria-label="breadcrumbs")
                             li.breadcrumb-item: a(href="/") Home
                             li.breadcrumb-item.active(aria-current="page"): a(href="/blog") Blog
                         h2.page-title Blog
