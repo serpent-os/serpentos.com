@@ -64,7 +64,7 @@ import std.algorithm : filter, sort;
      * Encode an RSS stream for the blog
      */
     @path("index.xml") @method(HTTPMethod.GET) @contentType("application/rss+xml")
-    ubyte[] rssFeed()
+    ubyte[] rssFeed() @safe
     {
         auto content = appender!string;
         Post[] posts;
@@ -80,7 +80,7 @@ import std.algorithm : filter, sort;
             return NoDatabaseError;
         });
         content.compileHTMLDietFile!("blog/rss.dt", posts);
-        return cast(ubyte[]) content[];
+        return () @trusted { return cast(ubyte[]) content[]; }();
     }
 
 private:
