@@ -50,4 +50,7 @@ nav.navbar.navbar-expand-lg.navbar-light.border-bottom.shadow-sm
         div.d-flex
             a.nav-link#themeSwitcher(href="#", data-bs-toggle="tooltip", data-bs-placement="bottom", data-bs-original-title="Toggle dark mode", aria-label="Toggle dark mode")
                 svg#themeSwitcherIcon(width="16px", height="16px")
-                    use(xlink:href="/static/tabler/tabler-sprite.svg#tabler-moon")
+                    use(xlink:href="/static/tabler/tabler-sprite.svg#tabler-mrssoon")
+            a.px-3.nav-link(href="/blog/index.xml", data-bs-toggle="tooltip", data-bs-placement="bottom", data-bs-original-title="RSS (blog feed)", aria-label="Subscribe to RSS feed")
+                svg(width="16px", height="16px")
+                    use(xlink:href="/static/tabler/tabler-sprite.svg#tabler-rss")

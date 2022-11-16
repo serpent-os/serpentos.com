@@ -1,0 +1,33 @@
+doctype xml
+
+rss(version="2.0")
+    - import vibe.inet.message : writeRFC822DateTimeString;
+    - import std.datetime.systime;
+    - import std.datetime.timezone : UTC;
+    - import std.array : appender;
+    - import std.range : empty;
+    channel
+        title Serpent OS Blog Posts
+        link https://serpentos.com
+        description Serpent OS - Redefining Linux distribution
+        image
+            url https://serpentos.com/static/img/blog/the-big-update/nspawn.webp
+            link https://serpentos.com
+            title Serpent OS Development
+        - foreach (post; posts)
+        - {
+            item
+                title=post.title
+                link=post.slug
+                description=post.processedSummary
+                - auto dateString = appender!string;
+                - writeRFC822DateTimeString(dateString, SysTime.fromUnixTime(post.tsCreated, UTC()));
+                pubDate=dateString[]
+                - if (!post.featuredImage.empty)
+                - {
+                    image
+                        url https://serpentos.com/static#{post.featuredImage}
+                        link https://serpentos.com
+                        title Featured image
+                - }
+        - }

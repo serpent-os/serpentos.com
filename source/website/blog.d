@@ -22,6 +22,9 @@ import moss.db.keyvalue.interfaces;
 import moss.db.keyvalue.orm;
 import website.models;
 import std.string : format;
+import std.array : appender, array;
+import diet.html;
+import std.algorithm : filter, sort;
 
 @path("/blog") public final class Blog
 {
@@ -55,6 +58,29 @@ import std.string : format;
         immutable err = appDB.view((in tx) => post.load(tx, slug));
         enforceHTTP(err.isNull, HTTPStatus.notFound, err.message);
         render!("blog/post.dt", post);
+    }
+
+    /**
+     * Encode an RSS stream for the blog
+     */
+    @path("index.xml") @method(HTTPMethod.GET) @contentType("application/rss+xml")
+    ubyte[] rssFeed()
+    {
+        auto content = appender!string;
+        Post[] posts;
+        appDB.view((in tx) @safe {
+            posts = () @trusted {
+                return tx.list!Post
+                    .filter!((p) => p.type == PostType.RegularPost)
+                    .array;
+            }();
+            posts.sort!"a.tsCreated > b.tsCreated";
+            /* Limit post count to 25 */
+            posts = posts.length > 25 ? posts[0 .. 25] : posts;
+            return NoDatabaseError;
+        });
+        content.compileHTMLDietFile!("blog/rss.dt", posts);
+        return cast(ubyte[]) content[];
     }
 
 private:

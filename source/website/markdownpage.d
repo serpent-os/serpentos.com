@@ -51,8 +51,8 @@ private static auto inlineCommandRe = ctRegex!(
  * "=" separated key value pairs
  */
 private static auto commandArgsRe = ctRegex!(`([a-zA-Z]+)[\s]*?=[\s]*?\"([\s\S]*?)\"`, [
-        'g', 'm'
-        ]);
+    'g', 'm'
+]);
 private static enum CommandGroup
 {
     Name = 1,
@@ -277,9 +277,8 @@ private:
 
                 /* Add missing classes */
                 static foreach (clz; [
-                        "table", "table-responsive", "border", "shadow-sm",
-                        "rounded"
-                    ])
+                    "table", "table-responsive", "border", "shadow-sm", "rounded"
+                ])
                 {
                     table.addClass(clz);
                 }
