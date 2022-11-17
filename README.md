@@ -15,6 +15,15 @@ Improvements:
  - Add file caching for static assets
  - 
 
+### Build prerequisites
+
+- `dub` (part of [LDC](https://github.com/serpent-os/onboarding#ldc-dlang-toolchain-installation-dmd-not-supported))
+- [chroma](https://github.com/alecthomas/chroma) (use one of the statically compiled releases)
+
+Both `dub` and `chroma-bin` need to live in the system `$PATH`.
+
+Use `dub run` in a terminal to build and run the site.
+
 ### License
 
 Copyright © 2020-2021 Serpent OS Developers
