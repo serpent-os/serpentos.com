@@ -80,7 +80,7 @@ instance -- and as a direct consequence, higher overall build throughput across 
 # `vessel` - Making Packages Available to Users
 
 `vessel` is a fairly simple (but very important) part of the build infrastructure. After fetching a package from a
-a builder, `vessel` will then update its index with the newly minted package, thus making the package available in
+builder, `vessel` will then update its index with the newly minted package, thus making the package available in
 our official repository for installation.
 
 In future `vessel` will be expanded to support versioned indexes (making each update a new release) and branches to
