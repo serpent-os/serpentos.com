@@ -32,7 +32,7 @@ However, at this point in time, we have the following:
  - Entirety of stage2 built with `musl` libc.
  - Working, minimal, `chroot` environment as product of `stage2`, with working compiler (`C` & `C++`)
 
-{{<figure_screenshot_one image="stage2-complete/x86_64" caption="Working x86_64 chroot">}}
+![x86_64](/static/img/blog/stage2-complete/x86_64.webp "Working x86_64 chroot")
 
 This is a major milestone for the project, as it is an early indication that we're self hosting.
 
@@ -46,7 +46,7 @@ manage to get hold of some testing hardware. It will likely be some time after f
 x86_64 support that we'd officially support more hardware, however it is very important
 that our bootstrap-scripts can trivially target multiple platforms.
 
-{{<figure_screenshot_one image="stage2-complete/ARMv8" caption="ARMv8 validation">}}
+![ARMv8](/static/img/blog/stage2-complete/ARMv8.webp "ARMv8 validation")
 
 An interesting change when cross-compiling for other architectures, is the chicken & egg
 situation with `compiler-rt` and other LLVM libraries. When we detect cross-compilation,

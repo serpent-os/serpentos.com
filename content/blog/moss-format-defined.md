@@ -29,7 +29,7 @@ Each payload is verified internally using a CRC64-ISO, and contains basic inform
 both compressed and uncompressed, the compression algorithm used (`zstd` and `zlib` supported) as well as the type and
 version of the payload. All multiple-byte values are stored in Big Endian order (i.e. Network Byte Order).
 
-{{<figure_screenshot_one image="moss-format-defined/Payloads" caption="All relevant payloads">}}
+![Payloads](/static/img/blog/moss-format-defined/Payloads.webp "All relevant payloads")
 
 Internally the representation of a Payload is defined as a 32-byte struct:
 

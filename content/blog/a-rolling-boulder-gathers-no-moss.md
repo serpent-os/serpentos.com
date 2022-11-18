@@ -69,8 +69,7 @@ Removal is quite the same as installation. We simply remove the package IDs
 from the new state selections (copied from the last state) and blit a new
 system root, finally updating the atomic `/usr` pointer.
 
-{{<figure_screenshot_one image="a-rolling-boulder-gathers-no-moss/Removal" caption="Removal of packages with moss. Everything is a transaction">}}
-
+![Removal](/static/img/blog/a-rolling-boulder-gathers-no-moss/Removal.webp "Removal of packages with moss. Everything is a transaction")
 
 # Tying it all together
 

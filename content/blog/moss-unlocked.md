@@ -69,8 +69,7 @@ powerful rollback mechanism.
 
 ### Room for improvement
 
-{{<figure_screenshot_one image="moss-unlocked/Multiple" caption="Extracting multiple moss archives">}}
-
+![Multiple](/static/img/blog/moss-unlocked/Multiple.webp "Extracting multiple moss archives")
 
 There are areas where we're doing things inefficiently, and we'll certainly improve
 that in future revisions of the important. For example, `IndexPayload` actually

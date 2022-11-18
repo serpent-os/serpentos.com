@@ -15,10 +15,9 @@ pieces! We're now bootstrapped on ARMv8(-a) and x86_64
 
 <!--more-->
 
-{{<figure_screenshot_one image="stage3-complete/Build" caption="Complete build-target for x86_64">}}
+![Build](/static/img/blog/stage3-complete/Build.webp "Complete build-target for x86_64")
 
-
-### Announcing Moss
+# Announcing Moss
 
 Our immediate focus is now to implement our package manager: [moss](https://github.com/serpent-linux/moss).
 Currently it only has a trivial CLI and does absolutely nothing. We will now shift our attention
@@ -32,14 +31,14 @@ through capability subscriptions. The binary format will be versioned and dedupl
 internal lookup tables and checksums. Our chief focus with moss is a reliable system
 management tool that is accessible even in situations where internet access is limited.
 
-### Ongoing Works
+# Ongoing Works
 
 In order to complete stage3, we provided linker stubs in `libwildebeest` to ensure
 we can build. Obviously this introduces runtime errors in systemd and our stage3 isn't
 bootable, just chrootable. This will be resolved when systemd is properly packaged by
 moss in stage4.
 
-### Docker Image
+# Docker Image
 
 We now have a test container available on Docker Hub. You can install and run the
 simple bash environment by executing the following command with a Docker-enabled user:
@@ -60,13 +59,13 @@ The image is provided currently as a means to validate the LLVM/musl toolchain.
 
 {{<figure_screenshot_one image="stage3-complete/Featured" caption="Serpent OS stage3 Docker image">}}
 
-### Future ISO
+# Future ISO
 
 We cannot currently say when we'll **definitely** have an ISO, however we do
 know that some VM-specific images will arrive first. After that we'll focus
 on an installer (package selection based) and a default developer experience.
 All we can say is strap in, and enjoy the ride.
 
-### Updated Roadmap
+# Updated Roadmap
 
 {{<roadmap_bootstrap>}}

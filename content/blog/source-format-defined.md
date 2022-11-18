@@ -19,7 +19,7 @@ that the end user can install. With our 2 formats defined, we can now go ahead a
 
 {{<figure_screenshot_one image="source-format-defined/Featured" caption="A very trivial package spec">}}
 
-### A YAML based format
+# A YAML based format
 
 The eagle-eyed among you will already see this is a derivation of the `package.yml` format I originally created
 while at [Solus](https://getsol.us). Minor adaptations to the format have been made to support multiple architectures
@@ -51,7 +51,7 @@ package and subpackages:
             rundeps: Different rundeps
 ```
 
-### Multiple architecture support
+# Multiple architecture support
 
 In keeping with the grouping behaviour, we're baking multiple architecture configurations into the YML file. A common
 issue encountered with the older format was how to handle `emul32`:
@@ -64,10 +64,9 @@ issue encountered with the older format was how to handle `emul32`:
         else
             %configure
         fi
-...
+
     build: |
-        %make
-...
+    %make
 ```
 
 Our new approach is to group Build Definitions into the root level struct, which may then individually be overridden for
@@ -78,16 +77,14 @@ each architecture. For example:
     profiles:
         - ia32:
             setup: |
-                %configure --some-emul32-option
-...
+        %configure --some-emul32-option
     setup: |
-        %configure
-...
+    %configure
 ```
 
-{{<figure_screenshot_one image="source-format-defined/Permutations" caption="More advanced uses of the spec">}}
+![Permutations](/static/img/blog/source-format-defined/Permutations.webp "More advanced uses of the spec")
 
-### Differences
+# Differences
 
 As you can see it is highly similar to package.yml - which is a great format. However, with our tooling and aims being
 slightly different, it was time to reevaluate the spec and bolster it where appropriate. We're happy to share our

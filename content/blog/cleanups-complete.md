@@ -44,7 +44,7 @@ done. Next is to restore feature development, working specifically on the
 extraction and install routines. From there, much work and cadence will be
 unlocked, allowing us to work towards an MVP.
 
-{{<figure_screenshot_one image="cleanups-complete/TODO" caption="See, we organised stuff">}}
+![TODO](/static/img/blog/cleanups-complete/TODO.webp "See, we organised stuff")
 
 # You keep saying MVP..
 

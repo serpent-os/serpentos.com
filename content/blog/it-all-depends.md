@@ -103,8 +103,7 @@ those found in a repository.  This eliminates a lot of special casing for local 
 allows us to find dependencies within the provided set, before looking to the system and the
 repositories.
 
-{{<figure_screenshot_one image="it-all-depends/Install" caption="Installing packages">}}
-
+![Install](/static/img/blog/it-all-depends/Install.webp "Installing packages")
 
 Dependency resolution is performed now for our package installation and is validated at
 multiple points, allowing a package like nano to depend on compact automatic dependencies:
@@ -131,7 +130,7 @@ Example `list installed` output:
                    nano (5.5) - GNU Text Editor
 ```
 
-{{<figure_screenshot_one image="it-all-depends/ListInstalled" caption="Listing installed packages">}}
+![ListInstalled](/static/img/blog/it-all-depends/ListInstalled.webp "Listing installed packages")
 
 ### Inspect archives
 
@@ -142,8 +141,7 @@ information on the various payloads and their compression stats.
 For general users - the new `info` command displays basic metadata and package
 dependencies.
 
-{{<figure_screenshot_one image="it-all-depends/Info" caption="Display package information">}}
-
+![Info](/static/img/blog/it-all-depends/Info.webp "Display package information")
 
 ### Package Removal
 
@@ -153,8 +151,7 @@ current state, which generates a new filtered state. Additionally we remove all 
 direct and transitive. This is accomplished by utilising a transposed copy of the directed acyclical
 graph, identifying the relevant subgraph and occluding the set from the newly generated state.
 
-
-{{<figure_screenshot_one image="it-all-depends/Remove" caption="Remove packages">}}
+![Remove](/static/img/blog/it-all-depends/Remove.webp "Remove packages")
 
 ### Lastly
 
