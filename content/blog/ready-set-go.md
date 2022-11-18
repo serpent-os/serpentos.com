@@ -97,3 +97,22 @@ indicate which packages provide additional performance from their newer CPU feat
 
 With the infrastructure already supporting multiple builders (and an optimised toolchain to minimise build time), adding
 more architectures will not pose any capacity issues.
+
+# Finally, a note on fundraising
+
+Recently we switched away from OpenCollective for our fundraising to GitHub Sponsors, as the platform offers a zero-fees
+sponsorship. Being an independent project - every penny really does count! However, we did lose an element of transparency,
+so I'd like to provide some initial data:
+
+ - October 2022: £3,003.70
+ - November 2022: £540.58
+
+At some point this website will incorporate some more up-to-date information on sponsorship information to facilitate
+a more transparent approach. Additionally I've taken some additional steps including a (Revolut) bank account specifically
+for Serpent OS funds + expenses.
+
+I'd like to thank everyone supporting the project - the time for us to reward you has now come. Intermittent funding and
+the cost of living crisis has hade a huge impact on the timescale of the project to date, however we're not shying away from
+the challenge. Rather, we've cracked on with implementing the proto-infrastructure and will be deploying it within *days*.
+
+Let's do this.
