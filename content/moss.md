@@ -27,7 +27,7 @@ The ideas behind `moss` are not original, but are refined and combined into a si
 more than a package manager! By taking all the good parts and extending the features we are left with the ultimate
 distro management tools! And what good would it be if we didn't also make it extremely fast!
 
-#### The Basics of System Layout
+# The Basics of System Layout
 
 `moss` stores packages on disk as a unique hash of every file. In Serpent OS, we call this `caching` a package which
 includes adding the package metadata to the corresponding databases. This differs to installation as the files aren't
@@ -40,7 +40,7 @@ packages available to the user. Once we have created a system state, it is now r
 For example, here we see the `/usr` directory as a pointer to the `moss` store (`usr -> .moss/store/root/1/usr`). From
 the users perspective, it will just work like a traditional file system layout, but with much more flexibility.
 
-#### Blitting Makes Serpent OS Atomic
+# Blitting Makes Serpent OS Atomic
 
 The update process is fully atomic, where `caching` occurs separately in the background and `blitting` creates a system
 state in the `moss` store before it has any impact on the users system. If there's a power outage or interruption of
@@ -55,7 +55,7 @@ allows for easy testing of changes including a whole branch of updates!
 For bigger updates you will need to reboot in order to start running the new system, but the update can be prepared
 beforehand so won't be waiting longer than your usual reboot time for the update to complete.
 
-#### `moss-format`: What Makes Up a Package?
+# `moss-format`: What Makes Up a Package?
 
 A `.stone` package is made up of four payloads:
 
@@ -71,7 +71,7 @@ This differs a lot from traditional tarball packages, where each payload is comp
 very efficient by comparison allowing for smaller package sizes. As the format is designed specifically for Serpent OS,
 every aspect can be tuned for function and performance.
 
-#### `moss-triggers`: Smarter Post-Install Triggers
+# `moss-triggers`: Smarter Post-Install Triggers
 
 Post-install package triggers have long been used by Linux distros, but aren't really needed. `moss-triggers` removes
 post-install scripts from packages by taking care of the functions in `moss` when state data needs to be updated after
@@ -79,12 +79,12 @@ package updates. The requirements for post-install operations are entirely predi
 need to update the icon cache. If changing libraries, it will run `ldconfig` to update the cache for faster binary
 loading. This makes life easier for packagers and keeps the system in optimal working condition.
 
-#### Smart System Management (SSM)
+# Smart System Management (SSM)
 
 We already have a pretty in-depth discussion on how `moss` takes care of system through SSM. See our
 [Smart System Management](/smart) page for the full details.
 
-#### Reproducible System States With Versioned Repos
+# Reproducible System States With Versioned Repos
 
 With a rolling release distro, there are instances where users don't always want the latest versions of software. Maybe
 they aren't ready for the changes in the new version of a database. Downgrading or holding back package updates results
@@ -100,7 +100,7 @@ Versioned repos are a fantastic feature when it comes to bugfixing as you can re
 in a given state, even if it was from last month. This allows one to reduce the causes of the bug to a minimal set of
 packages.
 
-#### Binary Versus Source Builds
+# Binary Versus Source Builds
 
 `moss` operates as a source distribution with pre-built binary packages used where available. Pre-built binary packages
 will be available for the main Serpent OS repository, but as it's focused on source builds, opens up opportunities to
@@ -110,7 +110,7 @@ validate that the contents haven't been altered), you can build the package on t
 This makes adding source repos simple and easy, hence having a community source repo for people to share their builds
 without having to setup a build server to create and serve the output `.stone` files.
 
-#### Deltas Make For Small Updates
+# Deltas Make For Small Updates
 
 Where pre-built binary packages are available, there's also the ability to provide delta packages to minimize update
 size. Deltas are very effective on Serpent OS, as due to the unique way that `moss` works there's no need to recreate
@@ -119,7 +119,7 @@ downloading the full package. There's no trade-off for whether they are worthwhi
 increasing CPU use for an update. Serpent OS deltas are able to reduce both! Through the use of `zstd`, we can even
 produce deltas for binary files to really make updates smaller.
 
-#### Check Out These Related Blog Posts:
+# Check Out These Related Blog Posts:
 
 - [Making Deltas Great Again!](/blog/2022/02/11/making-deltas-great-again-part-1) 11-Feb-2022
 - [It All Depends](/blog/2021/11/23/it-all-depends) 23-Nov-2021

@@ -29,7 +29,7 @@ Reducing the time spent packaging saves everyone time, over and over again. This
 minimize the time at each step. Packagers build a lot of packages and users can take advantage of source builds without
 the long wait time. Every second counts and we save a lot of them!
 
-#### Really Fast to Set Up Builds
+# Really Fast to Set Up Builds
 
 A real time sink of shorter builds is the time it takes to create the build environment and extract the needed
 dependencies. We've seen many variations of build environments from setting up a root image to build from in a minimal
@@ -41,7 +41,7 @@ needs to be extracted and cached one time and can be reused for multiple system 
 you've used the package before, you won't have to extract it again. Waiting for packages to extract at the start of a
 build is now a thing of the past!
 
-#### A New Parallel Model
+# A New Parallel Model
 
 There's been many good improvements to speed up build setups such as parallel downloads and using `zstd` for faster
 decompression of packages. But underneath you find the process is still sequential, you download the files in parallel,
@@ -49,7 +49,7 @@ but you have to wait till all files are downloaded before starting to install th
 packages will be queued for extraction (caching) as soon as they are downloaded! So by the time you finish downloading
 the last file, the other files are already installed so you can get started.
 
-#### Post Build Analysis Also in Parallel
+# Post Build Analysis Also in Parallel
 
 Using the same parallel model we are able to make huge reductions to the time taken in the post build stages as well.
 At the end of the build, files are scanned so they can be processed by their type as well creating hashes for each file.
@@ -58,13 +58,13 @@ its size. There's a lot of overhead involved (especially when calling out to ext
 a long time when processing sequentially. The good news is that with `boulder` you won't have to wait and really cuts
 down on waiting after the build is complete.
 
-#### Optimized Toolchain to Make Builds Faster
+# Optimized Toolchain to Make Builds Faster
 
 While this isn't technically `boulder`, a turbo charged compiler compounds the gains from the parallel pre and post
 builds. We go to great lengths to build `clang` with PGO+LTO (and soon with `llvm-bolt`). With tackling each part of the
 process we make packaging easy and less time consuming.
 
-#### Simple Yet Flexible Build Format
+# Simple Yet Flexible Build Format
 
 The `stone.yml` packaging format is quite simple, yet flexible when required. Using easy to understand `YAML`
 formatting, a `stone.yml` will be compact for the majority of cases. Here's a simple example of the `nano` build file:
@@ -95,7 +95,7 @@ circumstances you may need to override one of these rules and `boulder` makes th
 Details of the build are output as `manifest` files, which track the files contained in each package, the dependencies
 and the `ABI`. Being tracked in `git` it's easy to see the result of any changes to the build.
 
-#### A Keen Eye On Performance
+# A Keen Eye On Performance
 
 With the importance of performance in Serpent OS, it is essential that `boulder` is able to output fast and small
 packages. One compiler does not always provide the fastest result so `boulder` provides an option to switch between the
@@ -117,7 +117,7 @@ Compiler flags are another way to squeeze out the last bit of performance from p
 adding performance flags where appropriate. `boulder` exposes a range of tunables to add (or remove from the defaults)
 on a per build basis to help facilitate performance testing. But how do you know which options improve performance?
 
-#### Getting the Most Out of Performance Options
+# Getting the Most Out of Performance Options
 
 Benchmarking can be a time consuming process, but it doesn't have to be. By integrating benchmarks with the packaging
 files, they are easily accessible and allows all users to test the performance of packages. It also makes it extremely easy to
@@ -125,7 +125,7 @@ automate tests within `boulder` to compare multiple configurations and whether a
 performance. Benchmarking is more than a one-off process, and regular testing allows us to identify regressions early to
 make data driven choices.
 
-#### Automate As Much As Possible
+# Automate As Much As Possible
 
 With differences between distros, manually adding package names can be a real hassle. `boulder` is designed to detect
 as many build dependencies as possible so that you don't have to! It also reads the build file to determine the build
@@ -135,7 +135,7 @@ because you forgot it. This is also true for dependencies of created packages, w
 added. Therefore if a package removes a dependency (which you may not even be aware of), you don't have to remember to
 remove it.
 
-#### Check Out These Related Blog Posts:
+# Check Out These Related Blog Posts:
 
 - [Unpacking the Build Process: Part 1](/blog/2021/08/25/unpacking-the-build-process-part-1) 25-Aug-2021
 - [Unpacking the Build Process: Part 2](/blog/2021/09/20/unpacking-the-build-process-part-2) 20-Sep-2021

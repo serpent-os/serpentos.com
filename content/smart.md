@@ -26,7 +26,7 @@ make it as simple as possible. It reduces support requests by introducing smart 
 Users can also benefit from a slimmer OS footprint by removing files that you don't need. The number of improvements
 will only increase with more ideas from the community!
 
-#### Got Your Hardware Covered!
+# Got Your Hardware Covered!
 
 Knowing the right packages to install to get the most of your hardware can be tricky. There's plenty of guides online,
 but are usually specific to one distro. We could also make a guide specific to Serpent...or we could integrate it
@@ -41,7 +41,7 @@ Here's a couple of ideas of how `moss` will take out the guesswork:
    (or not need) a package based on your installed hardware. For example, we can automatically install the `VA`/`VA-API`
    packages for your brand of hardware, but not include all versions for all hardware (which usually occurs).
 
-#### moss Knows What You Need
+# moss Knows What You Need
 
 SSM allows `moss` to create dependencies beyond the traditional 1-to-1 relationship that is typically used. There is no
 need for optional or recommended dependencies. Every distribution is different in terms of package names and SSM allows
@@ -59,7 +59,7 @@ Here are some examples of how the smart dependencies can handle situations, so y
  - Some software requires separate kernel modules, but how do you know which version to install? Smart dependencies
    takes away the need for documentation. You choose the software, `moss` will get you the right kernel modules.
 
-#### Slim Down Your OS
+# Slim Down Your OS
 
 SSM reduces the number of files that you need installed on your system, reducing the cruft and OS footprint of your
 system. Packages frequently include files that you may never use. For files like locales of other languages, `moss` can
@@ -73,7 +73,7 @@ Ways that `moss` can slim down your system:
  - **Documentation:** While documentation is very useful, many of us go straight to the search engine to read up on it
    online. For those kind of users, we can free up a bit of disk space!
 
-#### Customize Your System Without Rebuilding Packages
+# Customize Your System Without Rebuilding Packages
 
 In theory, there's no limit to what you can achieve via SSM. By combining the efforts of our community, we can add more
 ideas and allows users to differentiate without all the hard work. As an example, you could opt into a `minimal`

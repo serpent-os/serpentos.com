@@ -22,7 +22,7 @@ libraries we distribute to you in **all** configurations. This provides users wi
 laptop lasts longer and generates less heat. Better battery is always a bonus and there's less waiting around for your
 device.
 
-#### Making Binaries More Efficient
+# Making Binaries More Efficient
 
 There's been plenty of strategies and techniques to boost the performance of benchmarks. For example, overclocking
 allows you to get greater performance at a higher power draw. From the OS side, tuning the kernel with various CPU
@@ -47,7 +47,7 @@ Build system defaults:
  - Using link time optimizations (LTO) where possible.
  - The ability to use `gcc` for packages where a performance deficit is detected.
 
-#### Integrating benchmarking-tools
+# Integrating benchmarking-tools
 
 Solid benchmarking is a challenging process and requires a strong methodology and understanding what is creating the
 difference in results. By integrating `benchmarking-tools` into Serpent OS, it allows us to test the performance of
@@ -60,7 +60,7 @@ packages we deliver to users. Some important features from integrating `benchmar
  - Integrated `perf` result generation to give more clarity around performance differences.
  - Accessible to all users so they may run the same tests, or even add their own.
 
-#### From Theory to Practice!
+# From Theory to Practice!
 
 Putting the two pieces together allows us to transition from academic theory, to better performance for your system.
 By testing the performance of various knobs and features of `boulder`, we can identify ones that lead to better results
@@ -74,7 +74,7 @@ each option has on the performance via `perf`. While this can be a time consumin
 to ensure you get a lightning fast experience. Allowing users to easily run the benchmarks can validate that the
 changes provide a benefit across varying hardware configurations.
 
-#### Check Out These Related Blog Posts:
+# Check Out These Related Blog Posts:
 
 - [RELR Brings Smaller Files, More Performance?](/blog/2022/04/05/relr-brings-smaller-files-more-performance) 5-Apr-2022
 - [Performance Corner: Small Changes Pack a Punch](/blog/2021/12/14/performance-corner-small-changes-pack-a-punch) 14-Dec-2021

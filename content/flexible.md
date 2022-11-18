@@ -24,14 +24,14 @@ fast experience out of the box, while providing the tools to easily modify your 
 Whether you want to just get things done or get stuck in behind the scenes, Serpent OS is a compelling choice for both
 use cases, and anywhere in-between.
 
-#### Tools to Meet Your Needs
+# Tools to Meet Your Needs
 
 Serpent OS is highly extensible, allowing you to create use cases we never dreamed of! Our much more than a package
 manager `moss` grants you flexibility in how you want to setup your computer. This gives you options to get your
 software from a variety of sources, including building your own packages. With all of our tools accessible to everyone,
 it's really down to you how far you want to go.
 
-#### Community Maintained Source Repository
+# Community Maintained Source Repository
 
 Serpent OS allows users to easily build and package software that may not be available in the main repository yet. By
 providing easy access to a shared community repository, users can share their work to conveniently allow others to
@@ -49,7 +49,7 @@ To enable the best experience, tooling enforces a few requirements to ensure bui
 You can even rebuild packages targeted specifically for your CPU for those packages that are important to you. We will
 also add more pre-built packages for newer CPUs so that you probably won't want to anymore.
 
-#### Not Quite a Free Lunch
+# Not Quite a Free Lunch
 
 While flexibility provides many benefits, it can come with a reduction in reliability. Community reviews of updates are
 to ensure correctness of the build and not the quality or stability of the software contained. We take steps with our

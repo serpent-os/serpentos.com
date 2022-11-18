@@ -29,12 +29,12 @@ We go a step further to reduce frictions of contributors and developers to avoid
 the project. The contributions of the community are pivotal to the success of many open source projects. With Serpent
 OS, the line between being a user and a contributor has never been finer!
 
-#### Sounds Great, Where Can I Find You?
+# Sounds Great, Where Can I Find You?
 
 Check out our [Team](/team) page to find out all the places where we hang out. Or keep reading to learn how we make
 contributing fast and easy.
 
-#### Lightning Fast Build System
+# Lightning Fast Build System
 
 Nobody likes to wait around for packages to build. In Serpent OS, we value your time (and ours!) so every effort is
 made to make creating packages as fast and smooth as possible.
@@ -59,7 +59,7 @@ Utilizing pre-compiled headers (PCH) and unity builds:
  - Can result in significant build time reductions for packages like LibreOffice
  - `clang` enables you to instantiate templates of pre-compiled headers for even faster PCH builds
 
-#### Smart and Simple Packaging
+# Smart and Simple Packaging
 
 As well as making builds lightning quick, package files need to be just as easy to create. We achieve this through:
 
@@ -72,7 +72,7 @@ As well as making builds lightning quick, package files need to be just as easy 
  - Lets you know when you've likely made an error in packaging, so you can fix it up before someone else sees
    - Reduces the need to rework commits, which can be a barrier for some users
 
-#### Making Contributing Easy
+# Making Contributing Easy
 
 Even the tiniest impediments to contributing are enough to turn off potential contributors. Most frictions contributors
 face can be reduced, or even eliminated entirely.
@@ -83,6 +83,6 @@ start making changes upstream.
 
 You can learn more about `boulder` [here](/boulder).
 
-#### Check Out These Related Blog Posts:
+# Check Out These Related Blog Posts:
 
 - [The Joy of Contribution](https://serpentos.com/blog/2022/01/04/the-joy-of-contribution) 4-Jan-2022

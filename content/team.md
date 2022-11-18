@@ -13,7 +13,7 @@ they share the workload in building the core of Serpent OS.
 
 {{<render_team "core">}}
 
-#### Our Loving Community
+# Our Loving Community
 
 Most development discussions happen on our matrix channels [#serpentos](https://matrix.to/#/#serpentos:matrix.org) on
 matrix.org or in our development channel, [#serpentos-dev](https://matrix.to/#/#serpentos-dev:matrix.org) on matrix.org.

@@ -20,7 +20,7 @@ The Serpent OS team understands that there's more to life than making an OS. Our
 the hassle, so you can get done what you need to. If you do encounter an issue, you can reboot right back to your
 previous working state!
 
-#### Reliable Atomic Updates
+# Reliable Atomic Updates
 
 Partial updates are a thing of the past with `moss` allowing for atomic updates of your system. This reduces the chances
 of things going wrong during the update process (such as loss of power). Your system will reload into its previous state
@@ -34,7 +34,7 @@ Serpent OS makes using a rolling release safer by:
    an update only relies on the changing of a single pointer once it is ready.
  - Rollback an update by selecting the previous option from the boot menu and return to the prior system state.
 
-#### Checkpoints Provide Immutable Mini Releases
+# Checkpoints Provide Immutable Mini Releases
 
 Checkpoints are an interesting feature in a rolling release, where you define a state of a fixed set of packages that
 make up a mini release. This means that not only can you rollback from a previous update, but you can recreate a Serpent
@@ -47,7 +47,7 @@ Advantages of the checkpoint system:
    features.
  - Install a prior checkpoint that is has been widely tested and deployed through your organization.
 
-#### Integrated Test Coverage
+# Integrated Test Coverage
 
 Broad but simple testing of packages is deployed for as many of the packages as feasible. This can range from aggressive
 unit testing during the build, to running the binaries to check for any runtime deficiencies (for example missing

@@ -19,7 +19,7 @@ The team have developed a set of principles and goals for what represents Serpen
  - Be part of a thriving community
  - Have fun while interacting with other users and contributors
 
-#### Be Part of a Thriving Community
+# Be Part of a Thriving Community
 
 Most development discussions happen on our matrix channels [#serpentos](https://matrix.to/#/#serpentos:matrix.org) on
 matrix.org or in our development channel, [#serpentos-dev](https://matrix.to/#/#serpentos-dev:matrix.org) on matrix.org.
@@ -34,10 +34,10 @@ We want to enjoy working on Serpent OS, and we want you to as well. If there is 
 your time with the community, then let us know. Others may be feeling the same way, so we can get on top of it before it becomes a
 wider concern.
 
-#### All the Finer Details
+# All the Finer Details
 
 There are plenty of other details that reflect these goals that have been written about during development, so check out [our blog](../blog/) to discover some of the nitty gritty details and design decisions that make up Serpent OS.
 
-#### Logo
+# Logo
 
 Our logo was kindly contributed by Rıza Türker (Legend!).
