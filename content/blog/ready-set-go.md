@@ -84,7 +84,7 @@ enable testing new features complete with rollback that `moss` supports across a
 
 # Enabling Faster Packages!
 
-Feature work has started on adding ISA levels to enable support for adding `x86-64-3x` packages. This can provide extra
+Feature work has started on adding ISA levels to enable support for adding `x86-64-v3x` packages. This can provide extra
 performance and reduced power use for supported CPUs (this denotes the `x86-64-v3` psABI with some extra e**x**tensions
 that your processor will likely also include). As we aren't relying on the `glibc` hwcaps feature, we have the ability
 to adjust the featureset to the benefit of our users. Once we have a `x86-64-v4` builder available, we can also look at
