@@ -21,6 +21,7 @@ users to get involved by making packaging so easy.
 
 **TL:DR - With the infrastructure and tooling almost in place, the bringup of Serpent OS begins**
 
+
 # The Long Road Reaps Rewards
 
 What we have done is worked on getting all the tools and infrastructure in place before trying to release anything
@@ -116,3 +117,7 @@ the cost of living crisis has had a huge impact on the timescale of the project 
 the challenge. Rather, we've cracked on with implementing the proto-infrastructure and will be deploying it within *days*.
 
 Let's do this.
+
+--
+
+You can discuss this post over on our [forums](https://forums.serpentos.com/d/30-ready-set-go)
