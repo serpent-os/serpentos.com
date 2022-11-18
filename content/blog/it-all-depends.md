@@ -35,7 +35,7 @@ Lastly, we'll always ensure there is no possibility for "partial update" woes. W
 considerations, we have no need to support `>=` style dependencies, and instead rely on
 strict design goals and maintainer responsibility.
 
-## First and foremost!
+# First and foremost!
 
 The rapid move we're enjoying from concept, to prototype, and soon to be fully fledged Linux distribution,
 is only possible with the amazing community support. The last few months have seen us pull off some amazing
@@ -45,46 +45,46 @@ plastic and electric heaters are expensive =))
 
 {{<oc>}}
 
-## The Milestones
+# The Milestones
 
 We have created our initial milestones that our quite literally our escape trajectory from
 bootstrap to distro. We're considerably closer now, hence this open announcement.
 
-### [v0.0](https://gitlab.com/groups/serpent-os/-/milestones/1]): Container (`systemd-nspawn`)
+## [v0.0](https://gitlab.com/groups/serpent-os/-/milestones/1]): Container (`systemd-nspawn`)
 
 Our first release medium will be a `systemd-nspawn` compatible container image. Our primary
 driver for this is to allow us to add encapsulation for our build tool, `boulder`, permitting
 us to create distributable builder images to seed our infrastructure and first public binary
 repository.
 
-### [v0.1](https://gitlab.com/groups/serpent-os/-/milestones/2): Bootable "image"
+## [v0.1](https://gitlab.com/groups/serpent-os/-/milestones/2): Bootable "image"
 
 Once our build infra is up and running (honestly a lot of work has been completed for this in
 advance) we'll work towards our first 0.1 image. This will initially target VM usage, with
 a basic console environment and tooling (`moss`, `boulder`, etc).
 
-### And then..
+## And then..
 
 We have a clear linear path ahead of us, with each stage unlocking the next. During the development
 of `v0.0` and `v0.1` we'll establish our build and test infrastructure, and begin hosting our
 package sources and binaries. At this point we can enter a rapid development cycle with
 incremental, and considerable improvements. Such as a usable desktop experience and installer.. :)
 
-## Recent changes
+# Recent changes
 
 I haven't blogged in quite a while, as I've been deep in the trenches working on our core features.
 As we've expressed before, we tend to work on the more complex systems *first* and then glue them
 together after to form a cohesive hole. The last few days have involved plenty of glue, and we now
 have distinct package management features.
 
-### Refactor
+## Refactor
 
  - Replaced defunct InstallDB with reusable MetaDB for local installation of archives as well as
    forming the backbone of repository support.
  - Added `ActivePackagesPlugin` to identify installed packages
  - Swapped non cryptographic hash usage with `xxhash`
 
-### Dependencies
+## Dependencies
 
  - Introduced new Transaction type to utilise a directed acyclical graph for dependency solving.
  - Reworked moss-deps into plugins + registry core for all resolution operations.
@@ -96,7 +96,7 @@ have distinct package management features.
    into packages and resolved by depsolver.
 
 
-### Package Installation
+## Package Installation
 
 We handle locally provided `.stone` packages passed to the `install` command identically to
 those found in a repository.  This eliminates a lot of special casing for local archives and
@@ -115,7 +115,7 @@ multiple points, allowing a package like nano to depend on compact automatic dep
 Note our format and database are binary and endian aware. The dependency type only requires
 1 byte of storage and no string comparisons.
 
-### List packages
+## List packages
 
 Thanks to the huge refactor, we can now trivially access the installed packages as a list.
 This code will be reused for a `list available` command in future.
@@ -132,7 +132,7 @@ Example `list installed` output:
 
 ![ListInstalled](/static/img/blog/it-all-depends/ListInstalled.webp "Listing installed packages")
 
-### Inspect archives
+## Inspect archives
 
 For debugging and development purposes, we've moved our old "info" command to a new
 "inspect" command to work directly on local `.stone` files. This displays extended
@@ -143,7 +143,7 @@ dependencies.
 
 ![Info](/static/img/blog/it-all-depends/Info.webp "Display package information")
 
-### Package Removal
+## Package Removal
 
 Upon generating a new system state, "removed" packages are simply no longer installed. As such
 no live mutation is performed. As of today we can now request the removal of packages from the
@@ -153,7 +153,7 @@ graph, identifying the relevant subgraph and occluding the set from the newly ge
 
 ![Remove](/static/img/blog/it-all-depends/Remove.webp "Remove packages")
 
-### Lastly
+## Lastly
 
 The past few weeks have been especially enjoyable. I've truly had a fantastic time working on the project
 and cannot wait for the team and I to start offering our first downloads, and iterate as a truly new

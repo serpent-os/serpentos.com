@@ -14,7 +14,7 @@ bootstrap..
 
 <!--more-->
 
-### fosshost.org sponsors Serpent OS
+# fosshost.org sponsors Serpent OS
 
 Recently we've been in talks with [fosshost.org](https://fosshost.org) who have very kindly
 agreed to sponsor the project through additional hosting and mirrors. We've been provided
@@ -27,13 +27,13 @@ our project grows, so will the hosting support.
 This has enabled to get our infrastructure ready in ancticipation of the `stage4` bootstrap,
 which is only around the corner now.
 
-### Wildcard SSL Certificate
+# Wildcard SSL Certificate
 
 As part of our expansion, Aydemir has purchased a wildcard SSL certificate for our domains lasting
 2 years, as part of ensuring our longevity. This has been deployed across two of our subdomains,
 and will soon be deployed on this website too.
 
-### Phabricator
+# Phabricator
 
 We now have a brand-spanking-new Phabricator instance running at [dev.serpentos.com](https://dev.serpentos.com).
 This will be used for tracking issues, hosting repositories and will become a central pillar of our
@@ -50,12 +50,12 @@ Please note we're not accepting package requests at this moment in time, and gen
 relating to development will be closed as they only serve to derail work on the project, by taking away
 valuable time.
 
-### Download server
+# Download server
 
 Our download server currently lives at [download.serpentos.com](https://download.serpentos.com) and co-exists
 with the Tracker. We expect to serve downloads and repositories at this address for the `stage4` bootstrap.
 
-### Mirrors
+# Mirrors
 
 `fosshost` have also kindly integrated the Serpent OS servers into their mirror network. Currently you can find us
 at these locations:
@@ -65,7 +65,7 @@ at these locations:
 
 Right now there is no content to download until such point as stage4 progresses.
 
-### Moving Our Repositories
+# Moving Our Repositories
 
 Our `bootstrap-scripts` repository has migrated from GitHub to our internal hosting. You can find it here:
 
@@ -75,13 +75,13 @@ It is advisable to re-clone the project, as we've migrated from the `master` bra
 All future Serpent OS repositories will now default to this branch, enabling more logical naming of
 branches (`main/edge`).
 
-### Privacy Policy
+# Privacy Policy
 
 To ensure that our users are comfortable, and ensure compliance with the GDPR, we've deployed an updated
 privacy policy which can be found [here](/privacy/). This can be found in the top header of the website
 at any time.
 
-### A Final Word
+# A Final Word
 
 We want to extend our warmest thanks to [fosshost.org](https://fosshost.org) for their early support of
 the project, as it will ensure we have scale builtin from the outset to better serve our users.

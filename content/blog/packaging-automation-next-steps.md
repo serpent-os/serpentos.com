@@ -22,7 +22,7 @@ time on Serpent OS =) Much love <3
 
 {{<figure_screenshot_one image="packaging-automation-next-steps/Featured" caption="Look at all the buildiness">}}
 
-### But, but build _flavours_ ...
+# But, but build _flavours_ ...
 
 Alright you got me there, certain projects prefer to abstract the configuration, build and
 installation of packages and be provided with some kind of hint to the build system, i.e.
@@ -37,7 +37,7 @@ with automatic runtime dependencies and package splitting as standard.
 
 ..Doesn't mean we can't make packaging **even easier** though.
 
-### Build discovery
+# Build discovery
 
 {{<giphy "bjujfYVIqpLYA">}}
 
@@ -59,7 +59,7 @@ to the skeleton `stone.yml` file. We'll enhance support for other build systems 
 that each new package is as close to done on creation as possible, with review and iteration left
 to the developer.
 
-### License compliance
+# License compliance
 
 {{<giphy "hWEPBwxwXSfUKD1Blo">}}
 
@@ -82,11 +82,11 @@ blocking them.
 
 As of today we support the [REUSE](https://reuse.software/) specification for expressing software licenses too!
 
-## Next on the list
+# Next on the list
 
 The next steps are honest-to-goodness exciting for us. Or should I say.. exiting?
 
-### bill
+## bill
 
 Work formally begins now on Bootstrap Bill (Turner). Whilst we did successfully bootstrap Serpent OS
 and construct the `Protosnek` repository, the process for that is **not** reproducible as `boulder`
@@ -98,7 +98,7 @@ designed bootstrap process to eliminate all host contamination and bootstrap Ser
 
 Layering support will land in `moss` and `boulder` to begin the infrastructure projects.
 
-### Build Submission ("Let's Roll")
+## Build Submission ("Let's Roll")
 
 The aim is to complete `bill` in a very short time so we can bring some initial infrastructure
 online to facilitate the automatic build of submitted build jobs. We'll use this process

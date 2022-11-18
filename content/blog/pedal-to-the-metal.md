@@ -21,7 +21,7 @@ wrote this post. (I know, right?)
 
 {{<figure_screenshot_one image="pedal-to-the-metal/Featured" caption="Installing remote package and dependencies with moss">}}
 
-### Release ... The Packages
+# Release ... The Packages
 
 We're a **highly** tool oriented project, and in fact, virtually every announcement
 since our inception has been in relation to tooling. But.. aren't we also building
@@ -38,7 +38,7 @@ be entering a parallel development phase where the distribution and package mana
 will grow in tandem allowing us to rapidly build up.
 
 
-### Images when?
+# Images when?
 
 Along with packages being available, we're going to soon be building preliminary
 Serpent OS images. These are not meant for use in production or daily use in any
@@ -47,7 +47,7 @@ can begin implementing the distro itself. Anyone will be free to download and te
 the images - just remember, they will eat your homework and are devcycle images
 to figure out how to provide the final user friendly images :)
 
-### The Mandatory Bullet Point List
+# The Mandatory Bullet Point List
 
 Oh you have to have one of these. It's mandatory.
 

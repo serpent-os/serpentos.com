@@ -17,7 +17,7 @@ share a progress update.
 {{<figure_screenshot_one image="moss-unlocked/Featured" caption="Extracting content from moss archives">}}
 
 
-### moss can now extract
+# moss can now extract
 
 Oh yeah, that totally happened. So, we can now successfully build moss
 packages from `boulder` and then extract them to disk once again with
@@ -28,7 +28,7 @@ Admittedly the code is super rough within `moss` and somewhat proof
 of concept, however we're able to extract the contents of the moss
 archive and rebuild the layout on disk.
 
-### What makes extraction difficult?
+# What makes extraction difficult?
 
 Well, quirky new format for one. A moss archive currently consists of
 4 "payloads", or major sections:
@@ -67,7 +67,7 @@ This will also power our core update mechanism, whereby each update is atomic,
 and is simply the difference on disk from the previous version, permitting a
 powerful rollback mechanism.
 
-### Room for improvement
+# Room for improvement
 
 ![Multiple](/static/img/blog/moss-unlocked/Multiple.webp "Extracting multiple moss archives")
 
@@ -87,7 +87,7 @@ and serve as a jumping off point for the project.
 Stay tuned, there is a whole bunch of awesome coming now that moss is officially
 unlocked and progressing.
 
-### And finally
+# And finally
 
 I want to thank everyone who is currently supporting the project. I also want to personally
 thank you for your understanding of the setbacks of real life, given the difficult times myself

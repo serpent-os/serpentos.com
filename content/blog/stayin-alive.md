@@ -23,7 +23,7 @@ Stay safe, protect your health workers and your loved ones.
 
 {{<figure_screenshot_one image="stayin-alive/Featured" caption="New development rig">}}
 
-### Onwards, pls!
+# Onwards, pls!
 
 For realsies. Time to get back to work. As of this morning, we're officially back to work.
 
@@ -39,7 +39,7 @@ shed :) This is permitting 20meg down now, which is perfectly usable for everyda
 
 {{<tweet "1355789053766078465">}}
 
-### See ya real soon
+# See ya real soon
 
 Lots of work to do, and much fun to be had. Planning on taking it quite easy at first and building myself
 up, and obviously our initial focus is getting to a point of package-manager controlled filesystem

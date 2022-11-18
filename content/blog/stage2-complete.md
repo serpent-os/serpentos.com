@@ -36,7 +36,7 @@ However, at this point in time, we have the following:
 
 This is a major milestone for the project, as it is an early indication that we're self hosting.
 
-### Multiple Architecture Support
+# Multiple Architecture Support
 
 At this point in time, we now have build support for two targets: `x86_64` and `ARMV8a`.
 Our intent is to support `haswell` and above, or `zen` and above, for the x86_64 target.
@@ -54,7 +54,7 @@ we'll automatically bootstrap `compiler-rt` before building `musl`, and then cro
 `libc++`, `libc++abi` and `libunwind` to ensure `stage1` can produce native binaries for
 the target with correct linkage.
 
-### Next Steps
+# Next Steps
 
 As we've mentioned, we'll push ahead with `2.5` and `3`, which will complete the initial
 Serpent OS bootstrap, producing a self-hosting, self-reliant rootfs. This is the point
@@ -73,6 +73,6 @@ simplest thing in the world to fork Serpent OS to one's liking or needs.
 If you want to support our work, you can jump onto our IRC channel (`#serpentOS` on freenode)
 or support us via the [Team page](/team).
 
-### Updated Roadmap
+# Updated Roadmap
 
 {{<roadmap_bootstrap>}}

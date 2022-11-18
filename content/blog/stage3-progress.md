@@ -26,14 +26,14 @@ is done on the host, i.e. extraction and patching, minimising the tool requireme
 environment. The configuration, build and install is performed from within the initially empty
 chroot environment, replacing all the `/serpent/usr/bin` tools and `/serpent/usr/lib` libraries.
 
-### Mild Blockers
+# Mild Blockers
 
 As we move further through stage3, towards a fully usable chroot environment, we've encountered
 a small number of blockers. Now, we **could** solve them by using existing patchwork and workarounds,
 but most have not and will not be accepted upstream. Additionally it is incredibly hard to track the
 origin and history of most of these, making security rather more painful.
 
-# libc-support
+## libc-support
 
 We're going to start working on a project to flesh out the `musl` runtime with some missing utilities,
 written with a clean-room approach. These will initially include the `getconf` and `getent` tools,
@@ -41,7 +41,7 @@ which will be written only with Linux in mind, and no legacy/BSD support.
 
 These will be maintained over at our [GitHub](https://github.com/serpent-linux/libc-support)
 
-# libwildebeest
+## libwildebeest
 
 As a project we strive for correctness in the most pragmatic way. Some software, such as systemd,
 is heavily reliant on GNU GCC/GLibc extensions. In some software there are feasible alternatives
@@ -60,7 +60,7 @@ will have a build-time dependency on `libwildebeest`. We do not intend to use th
 
 This will be maintained over at our [GitHub](https://github.com/serpent-linux/libwildebeest)
 
-### A Word On Init Systems
+# A Word On Init Systems
 
 Recently we've had many queries regarding the init system, as there is an expectation that due to our
 use of musl/llvm we also dislike systemd or wish to be a small OS, etc. There is a place in the world
@@ -71,7 +71,7 @@ for those projects already, and we wish them much success. However from our own 
 make it possible to swap `systemd` for a similar set of packages. However, we only intend at this time
 to support `systemd/udev/dbus` directly in Serpent OS and leave alternatives to the community.
 
-### Other News
+# Other News
 
 Just a quick heads up, we've been talking to the cool folks over at [fosshost.org](https://fosshost.org/)
 and they've agreed to kindly provide us with additional hosting and mirroring. This will allow us to
@@ -85,7 +85,7 @@ setting up a public Phabricator instance for reporting issues, security flaws, a
 Much of our website is in much need of update, but our current priority is with building the OS. Please
 be patient with us, we'll have it all sorted out in no time.
 
-# Where We At?
+## Where We At?
 
 Well, stage3 completes fully, builds the final compiler, which has also been verified. A usable chroot
 system is produced, built using `musl`, `libc++`, `libunwind`, `clang`, etc. Some might say that stage3
@@ -97,7 +97,7 @@ package management and define the OS itself, with global flags, policies, etc.
 
 With the speed we're moving at, that really isn't too far away.
 
-# And finally..
+## And finally..
 
 I personally wish to thank the Serpent OS team as a whole for the commitment and work undertaken of late.
 Additionally I want to thank the growing community around Serpent OS, primarily residing in our IRC
