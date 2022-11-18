@@ -67,17 +67,21 @@ will only be built on the most trusted builders and test builds will be made to 
 
 There are many use cases for `avalanche`, where we can partition system resources via `systemd-nspawn` instances to
 provide multiple builders on one host. Many builds only utilise a few cores, so it becomes more efficient to run
-multiple builders concurrently. As builds are isolated from the host, they can easily be run on bare metal or in a
-container/VM if preferred.
+multiple builders concurrently. As builds are isolated from the host, `avalanche` instances can easily be run on
+bare metal or in a container/VM if preferred.
 
-Once a build is completed, `avalanche` is responsible for reporting completion to `summit` and transferring the packages
-to `vessel`.
+Once a build is completed, `avalanche` is responsible for reporting completion to `summit`. `summit` then instructs
+`vessel` to fetch the build artefacts from the relevant `avalanche` instance.
+
+This design decision allows `summit` to schedule a new build to the `avalanche` instance as soon as it has reported
+completion of the prior build, thus allowing for maximum use of both upload and download bandwith for each `avalanche`
+instance -- and as a direct consequence, higher overall build throughput across the entire set of builders.
 
 # `vessel` - Making Packages Available to Users
 
-`vessel` is a fairly simple (but very important) part of the build infrastructure. After a package is transferred,
-`vessel` will then update its index with the newly minted package, thus making the package available in our official
-repository for installation.
+`vessel` is a fairly simple (but very important) part of the build infrastructure. After fetching a package from a
+a builder, `vessel` will then update its index with the newly minted package, thus making the package available in
+our official repository for installation.
 
 In future `vessel` will be expanded to support versioned indexes (making each update a new release) and branches to
 enable testing new features complete with rollback that `moss` supports across all updates.
