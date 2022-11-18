@@ -14,7 +14,7 @@ packages. Over the last couple of days, I've been investigating various techniqu
 
 <!--more-->
 
-#### Trade-offs Between Packages and Deltas
+# Trade-offs Between Packages and Deltas
 
 Minimising the size of updates is particularly valuable where files are downloaded many times and even better if they're
 updated infrequently. With a rolling release, packages will be updated frequently, so creating deltas can become
@@ -32,7 +32,7 @@ aren't required immediately, so there's minimal impact in taking longer to minim
 we can trade-off the size of packages to speed up development, while users will not be affected and fetch only size
 optimised deltas.
 
-#### Test Case - QtWebEngine
+# Test Case - QtWebEngine
 
 QtWebEngine provides a reasonable test case where the package is a mix of binaries, resources and translations, but
 above average in size (157.3MB uncompressed). The first trade-off for speed over size has already been made by
@@ -50,7 +50,7 @@ updates.
 | Time to create  | 5.4s         | 26.8s    | 27.8s        | 56.0s    | 70.6s    | 66.5s  |
 | Size of package | 52.6MB       | 52.6MB   | 49.2MB       | 49.2MB   | 48.4MB   | 45.9MB |
 
-#### Deltas to the Rescue!
+# Deltas to the Rescue!
 
 There are two basic methods for deltas. One simple method is to include only files that have been changed since the
 earlier release. With reproducible builds, it is typical to create the same file from the same inputs. However, with a
@@ -67,7 +67,7 @@ To highlight the weakness of the simple method, when you compare the delta acros
 only a 7% reduction of the full package (as most files have changed), while using an optimal binary diff, it still
 managed to achieve a respectable 31% size reduction.
 
-#### A New Contender
+# A New Contender
 
 While looking into alternatives, I happened to [stumble across](https://github.com/facebook/zstd/releases/tag/v1.4.5)
 a new feature in `zstd` which can be used to create deltas. As we already use `zstd` heavily it should make integration
@@ -83,7 +83,7 @@ the blink of an eye!
 | Size of delta   | 38.2MB             | 33.2MB | 33.3MB   | 28.5MB   | 25.4MB                      |
 
 
-#### Next Steps
+# Next Steps
 
 There's certainly a lot of information to digest, but the next step is to integrate a robust delta solution into the
 `moss` format. I really like the `zstd` approach, where you can tune for speed with an increase in size if desired. With

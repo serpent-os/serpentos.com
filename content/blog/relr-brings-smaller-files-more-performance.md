@@ -15,7 +15,7 @@ performance - you **can** have your cake and eat it too!
 
 <!--more-->
 
-#### Delicious Size Savings
+# Delicious Size Savings
 
 Everyone enjoys smaller files, especially when it's for free! `RELR` provides a very efficient method of storing
 relative relocations where it only requires a few percent compared to storing them in the `.rela.dyn` section which is
@@ -37,7 +37,7 @@ have a `.rela.dyn` section over 10MB!
 |           |              |            |
 | Total     | 44,853,987   | 42,966,764 |
 
-#### Smaller, But at What Cost?
+# Smaller, But at What Cost?
 
 While most of the discussion about `RELR` is around the size savings, there's been very little in terms of the
 performance numbers of enabling `RELR`. For most things, it's not going to make a noticeable difference, as it should
@@ -78,7 +78,7 @@ further 0.63s!
 
 That's a 2.37s reduction in the build just from improving the `clang` binary's load time.
 
-#### What This Means - RELR by Default
+# What This Means - RELR by Default
 
 So what actually is `RELR`? I can't really do the topic justice, so will point you to a great blog post about RELR,
 [Relative Relocations and RELR](https://maskray.me/blog/2021-10-31-relative-relocations-and-relr). It's quite technical
@@ -90,7 +90,7 @@ What I can tell you, is that we've applied the requisite patches for `RELR` supp
 `boulder` for builds. Our container has been rebuilt and all is working well with `RELR` enabled. More measurements will
 be done in future in the same controlled manner, particularly around PIE load times.
 
-#### Caveats - The Hidden Details
+# Caveats - The Hidden Details
 
 The performance benchmark was quite limited in terms of being an optimal case for `RELR` as `clang` is called thousands
 of times in the build so on average improved load time by about 0.6-0.7ms. We can presume that using `RELR` on smaller
@@ -123,7 +123,7 @@ handle though).
 
 {{<figure_screenshot_one image="relr-brings-smaller-files-more-performance/Featured" caption="34 wasted bytes with GLIBC_ABI_DT_RELR">}}
 
-#### The Cost of Adding GLIBC_ABI_DT_RELR
+# The Cost of Adding GLIBC_ABI_DT_RELR
 
 A quick check of two equivalent builds (one adding the `GLIBC_ABI_DT_RELR` version dependency and one not), there was an
 increase of 34 bytes to the file's sections (18 bytes to `.dynstr` and 16 bytes to `.gnu.version_r`). It also means

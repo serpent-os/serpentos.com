@@ -15,7 +15,7 @@ a quick recap of some of the more important ones.
 
 {{<figure_screenshot_one image="boulder-keeps-on-rolling/Featured" caption="boulder hard at work">}}
 
-#### Key Changes to Boulder
+# Key Changes to Boulder
 
  - Fixed a path issue that prevented manifests from being written for 32bit builds
  - Added keys to control where the tarballs are extracted to

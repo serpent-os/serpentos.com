@@ -18,7 +18,7 @@ going live once more.
 
 {{<figure_image image="snake-pit-is-live/Featured.jpeg" caption="We have an office">}}
 
-#### Mobile Home
+# Mobile Home
 
 Despite lots of delays, and remaining on holidays camps and in hotels for over
 4 weeks, our mobile home arrived. It took over a week to get everything sorted,
@@ -32,7 +32,7 @@ etc, but it's all done now.
 {{<tweet "1400372320926158850">}}
 
 
-#### Office Space
+# Office Space
 
 It took quite some effort, but I've purchased and built a dedicated office
 space where I'll be working on Serpent OS daily. As my eldest son has just
@@ -50,7 +50,7 @@ successful.
 {{<tweet "1401319640161210369">}}
 {{<tweet "1403983790171688964">}}
 
-#### Broadband
+# Broadband
 
 I've signed up to broadband with ~40mbps min download, ~69mbps average,
 just waiting for the engineer appointment to install a new master socket.
@@ -58,7 +58,7 @@ just waiting for the engineer appointment to install a new master socket.
 New day time availability, high speed internet and a dedicated office space
 will mean drastically improved productivity as well as permitting live streams!
 
-#### A Huge Thank You
+# A Huge Thank You
 
 I want to thank you all for your belief in me and patience while my family and
 I completely reinvented our lives to ensure ongoing stability. It's been only

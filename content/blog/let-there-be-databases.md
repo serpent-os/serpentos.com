@@ -13,7 +13,7 @@ timelines, progress, and database related shmexiness.
 
 <!--more-->
 
-#### Quick word on personal circumstances
+# Quick word on personal circumstances
 
 
 The last year, as many likely know by now, has been an incredibly stressful one. I'm not
@@ -61,7 +61,7 @@ cultural and ethnic identity in the fear that it might upset others or make me a
 high time that freshness and honesty was mirrored to my work. So, with a very happy heart,
 I'll be investing that freedom and energy into all my projects :)
 
-#### Sweetness. Tell me bout them databases
+# Sweetness. Tell me bout them databases
 
 {{<figure_screenshot_one image="let-there-be-databases/Featured" caption="Emerging DB design">}}
 
@@ -82,7 +82,7 @@ something akin to a binary encoded dpkg selections file with candidate specifica
 Next on the list is the LayoutsDB (file manifests) and the CacheDB, for recording refcounts
 of every cached file in the OS pool.
 
-#### Integration with Serpent ECS
+# Integration with Serpent ECS
 
 An interesting trial we're currently implementing is to hook the DB implementation up to
 our Entity Component system from the Serpent Engine, in order to provide fast, cache coherent,
@@ -109,7 +109,7 @@ use of `std.algorithm` APIs:
 		.each!((s) => writeOne(s));
 {{</highlight>}}
 
-#### Tying it all together
+# Tying it all together
 
 Ok, so you can see we need basic DB types for storing the files for each moss archive, plus each
 cache and state entry. If you look at the ECS code above, it becomes quite easy to imagine how this

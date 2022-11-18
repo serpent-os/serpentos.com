@@ -27,7 +27,7 @@ In practice that required an encapsulation API written in D around the C API, an
 it resulted in a very allocation-heavy implementation that just didn't sit right with us, and due to the absurd complexity
 of RocksDB was still missing quite a few features.
 
-#### Enter LMDB
+# Enter LMDB
 
 We're now using the [Lightning Memory-Mapped Database](https://www.symas.com/lmdb) as the driver implementation
 for moss-db. In short, we get rapid reads, ACID transactions, bulk inserts, you name it. Our implementation takes
@@ -35,7 +35,7 @@ advantage of multiple database indexes (`MDB_dbi`) in LMDB to partition the data
 so that we can provide "buckets", or collections. These internal DBs are used for bucket mapping to permit a
 key-compaction strategy - iteration of top level buckets and key-value pairs within a bucket.
 
-#### Hat tip, boltdb
+# Hat tip, boltdb
 
 The majorty of the API was designed with the [boltdb](https://github.com/boltdb/bolt) API in mind. Additionally
 it was built with `-preview=dip1000` and `-preview=in` enabled, ensuring safely scoped memory use and no
@@ -77,7 +77,7 @@ err = db.view((in tx) @safe
 }
 ```
 
-#### Next for moss
+# Next for moss
 
 Moss will be ported to the new DB API and we'll gather some performance metrics,
 while implementing features like expired state garbage collection (disk cleanup),

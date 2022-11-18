@@ -13,7 +13,7 @@ distribution that we ourselves want to use and one that we will enjoy contributi
 
 <!--more-->
 
-#### To Contribute or Not
+# To Contribute or Not
 
 New users come and go, many asking what they can do to help. Now I could come up with a really long list of things to
 do, but that is rarely fulfilling to users. They might get a few things done, but tend to drop off quite quickly. The
@@ -22,14 +22,14 @@ the contributions stop as it doesn't make sense spending your time doing somethi
 say to find something you enjoy doing, rather than tell users what to work on. This is why making Serpent OS fun and
 enjoyable with a thriving community is the core foundation on which it is built.
 
-#### Experience is a Great Teacher
+# Experience is a Great Teacher
 
 As the saying goes, if we fail to learn from our mistakes, we are doomed to repeat them. The team are well versed in
 distro tooling and the sore points where improvements are needed. This is also true of managing a distro and community.
 Some things work well and some didn't. We have gone to great lengths to discuss the good and the bad so that we can
 develop Serpent OS into what we envision for the project. Mistakes have been made, so we must learn from them.
 
-#### Making it Fun for Other People
+# Making it Fun for Other People
 
 It takes more than a team to achieve great things! A distribution is no different, with the contributions from the
 community providing a key building block for the project. Therefore we need to think beyond ourselves and see things
@@ -40,7 +40,7 @@ There is a good balance of levels within the team and community, from maintainer
 things light. The ideal approach is making it easier for contributors even at a slight cost to the team. Taking it a
 step further to advocate on the behalf of contributors to make their lives easier for further contributions.
 
-#### A Word From `sunnyflunk`
+# A Word From `sunnyflunk`
 
 We all have had varying experiences with previous projects and the major thing missing was that they weren't fun to work
 on after a while (often the opposite). We have a good understanding of why this happened and how it can be prevented.

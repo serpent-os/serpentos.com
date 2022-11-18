@@ -17,7 +17,7 @@ package that's been built so far. This makes the environment extremely difficult
 Today we announce `moss-container`, a simple but flexible container creator that we can integrate for proper
 containerized builds.
 
-#### Versatile For Many Use Cases
+# Versatile For Many Use Cases
 
 Containers have a multitude of uses for a Linux distro, but our immediate use case is for reproducible container builds
 for `boulder`. However, we have plans to use `moss-container` for testing, validation and benchmarking purposes as well.
@@ -32,7 +32,7 @@ it's very fast so fits in well with the rest of our tooling!
 The next step is integrating `moss-container` into `boulder`, so that builds become reproducible across machines, and
 makes it much easier for users to run builds on their host machines.
 
-#### moss Now Understands Repositories
+# moss Now Understands Repositories
 
 Previously (but not covered in the blogs) work was also done on `moss` so that it can understand and fetch `stone`
 packages from an online repo. This ties in nicely with the `moss-container` work and is a requirement for finishing up a
@@ -41,14 +41,14 @@ packages and pushing those packages as system updates!
 
 {{<figure_screenshot_one image="can-hardly-contain-myself-plus-a-bonus/Featured" caption="Container with functioning device nodes">}}
 
-#### Check Out The Development
+# Check Out The Development
 
 In case you've missed it, `ikey` has been streaming some of the development of the tooling on his
 [Twitch channel](https://www.twitch.tv/ikeydoherty). DLang is not as commonly used as other languages, so check it out
 to see the advantages it brings. Streams are typically announced on twitter, or give him a follow to see when he next
 goes live!
 
-#### Bonus Content Refresh
+# Bonus Content Refresh
 
 This year we've had a considerable number of new visitors and interest in Serpent OS. Unfortunately the content on the
 website had been a bit stale and untouched for some time. There was some confusion and misunderstanding over some of the

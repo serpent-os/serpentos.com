@@ -23,13 +23,13 @@ we have a friendly and accessible way to engage with the team from a variety
 of OS/device combinations, empowering the team with a level of mobility and
 stability.
 
-#### Main Channels
+# Main Channels
 
 You can find us at [#serpentos](https://app.element.io/#/room/#serpentos:matrix.org) on `matrix.org` or in our development channel,
 [#serpentos-dev](https://app.element.io/#/room/#serpentos-dev:matrix.org)  on `matrix.org`. We're already there, and will begin disbanding
 the IRC channel today.
 
-#### Recommended Clients
+# Recommended Clients
 
 ..There are loads, I really can't recommend one above another. Due to the nice
 UX and my epic laziness, I'm quite happy with [element](https://app.element.io)

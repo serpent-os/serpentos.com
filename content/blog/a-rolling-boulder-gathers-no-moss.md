@@ -33,7 +33,7 @@ final layout of the package on disk.
 As can be imagined, the weirdness made it quite difficult to install in
 a trivial fashion.
 
-#### Databases
+# Databases
 
 Well, persistence really. Thanks to `RocksDB` and our new `moss-db` project,
 we can trivially store information we need from each package we "precache".
@@ -44,14 +44,14 @@ present is simply a series of package ID selections grouped by a unique
 Additionally we remember the layouts within the LayoutDB so that we can
 eventually recreate said layout on disk.
 
-#### Precaching
+# Precaching
 
 Before we actually commit to an install, we try to precache all of the stone
 files in our pool. So we unpack the content payload ("megablob"), split it
 into various unique files in the pool ready for use. At this point we also
 record the Layouts, but do not "install" the package to a system root.
 
-#### Blitting
+# Blitting
 
 This is our favourite step. When our cache is populated, we gather all
 relevant layouts for the current selections, and then begin applying them
@@ -63,7 +63,7 @@ Currently these live in `/.moss/store/root/$ID/usr`. To complete the transaction
 we update `/usr` to point to the new `usr` tree **atomically** assuming that
 a reboot isn't needed. In future, boot switch logic will update the tree for us.
 
-#### Removal
+# Removal
 
 Removal is quite the same as installation. We simply remove the package IDs
 from the new state selections (copied from the last state) and blit a new
@@ -72,7 +72,7 @@ system root, finally updating the atomic `/usr` pointer.
 {{<figure_screenshot_one image="a-rolling-boulder-gathers-no-moss/Removal" caption="Removal of packages with moss. Everything is a transaction">}}
 
 
-#### Tying it all together
+# Tying it all together
 
 We retain classic package management traits such as having granular selections,
 multiple repositories, etc, whilst sporting advanced features like full system
@@ -83,7 +83,7 @@ transaction without requiring an internet connection. Due to the use of pooling
 and hardlinks, each transaction tree is only a few KiB, with files shared between
 each transaction/install.
 
-#### On the list..
+# On the list..
 
 We need some major cleanups, better error handling, logging, timed functions,
 and an eventloop driven process to allow parallel fetching/precaching prior

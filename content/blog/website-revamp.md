@@ -22,7 +22,7 @@ it's important we all share the same values and goals.
 
 In short, our new tagline and motto is:
 
-#### We're building a pioneering new Linux distribution based on modern technologies, enabling stellar features for everyone, without the price tag
+# We're building a pioneering new Linux distribution based on modern technologies, enabling stellar features for everyone, without the price tag
 
 
 Now, it's time for us to get back to work, so, see you soon!

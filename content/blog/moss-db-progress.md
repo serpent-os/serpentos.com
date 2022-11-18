@@ -23,7 +23,7 @@ a more abstract approach to not tie ourselves to any specific implementation of 
 Our main goal with `moss-db` is to encapsulate the [RocksDB](https://rocksdb.org/) library, providing sane, idiomatic access
 to a key value store. 
 
-#### High level requirements
+# High level requirements
 
 At the highest level, we needed something that could store arbitrary keys and values, grouped
 by some kind of common key (commonly known as "buckets"). We've succeeded in that abstraction,
@@ -67,7 +67,7 @@ And this is the new, shmexy way:
 It's quite easy to see the new API lends itself robustly to our needs, so that
 we may implement stateful, strongly typed databases for moss.
 
-#### Next Steps
+# Next Steps
 
 Even though some APIs in `moss-db` may still be lacking (remove, for example)
 we're happy that it can provide the foundation for our next steps. We now need

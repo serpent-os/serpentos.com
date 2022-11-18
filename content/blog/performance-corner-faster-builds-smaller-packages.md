@@ -20,7 +20,7 @@ Here we focus on a few performance changes `Ikey` has been working on to the bui
 awesome results! If you end up doing any source builds, you'll be thankful for these improvements. Special thanks to
 `ermo` for the research into hash algorithms and enabling our ELF processing.
 
-#### Start From the Beginning
+# Start From the Beginning
 
 When measuring changes, it's always important to know where you're starting from. Here are some results from a recent
 `glibc` build, but before these latest changes were incorporated.
@@ -37,7 +37,7 @@ Payload: Content [Records: 2550 Compression: Zstd, Savings: 81.46%, Size: 236.72
 The build time is a little high, but a lot of that is due to a slow compiler on the host machine. But analysing and
 producing packages was also taking a lot longer than it needed to.
 
-#### The Death of moss-jobs in boulder
+# The Death of moss-jobs in boulder
 
 In testing an equivalent build outside of `boulder`, the build stages were about 5% faster. Testing under `perf`, the
 jobs system was a bit excessive for the needs of `boulder`, polling for work when we already know the times when
@@ -58,7 +58,7 @@ removal. The other major change is making the analyse stage parallel in `moss-de
 parallelism to begin with). Decreasing the time from 21.2s to 8.1s is a great achievement despite it doing more work as
 we've also added ELF scanning for dependency information in-between these results.
 
-#### New Hashing Algorithm
+# New Hashing Algorithm
 
 One of the unique features in `moss` is using hashes for file names which allows full deduplication within packages,
 the running system, previous system roots and for source builds with `boulder`. Initially this was hooked up using
@@ -105,7 +105,7 @@ types, debug handling and stripping, but with the integrated parallel model, we 
 
 {{<figure_screenshot_one image="performance-corner-faster-builds-smaller-packages/Featured" caption="">}}
 
-#### We're Not Done Yet
+# We're Not Done Yet
 
 The first installment of `Performance Corner` shows some great wins to the Serpent OS tools and architecture. This is
 just the beginning and there will likely be a follow up soon (you may have also noticed that it takes too long to make

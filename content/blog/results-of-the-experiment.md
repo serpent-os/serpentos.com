@@ -31,21 +31,21 @@ for a reliable, rolling operating system with a powerful package manager.
 {{<figure_screenshot_one image="results-of-the-experiment/Featured" caption="Toolchain bootstrap">}}
 
 
-#### An open community
+# An open community
 
 Over the past 2 months we've transformed from set of ideas into a transparent, community-first organisation
 with clear leadership and open goals. I've stepped into the Benevolent Dictator For Life position, and Peter
 has taken on daily responsibilities for the project running. Aydemir is now our treasurer on Open Collective,
 and many individuals contribute to our project.
 
-#### Transactional package management
+# Transactional package management
 
 No need to rehash this, but the defining feature of Serpent OS has clearly become moss, something initially
 not anticipated when we started. A read-only root filesystem, transactional operations, rollbacks, deduplicating
 throughout and atomic updates. Combine that with a rolling release model, stateless policy and ease-of-use,
 the core feature-set is already powerful.
 
-#### Deferral of musl integration
+# Deferral of musl integration
 
 In recent weeks we've been working on `libwildebeest` and `libc-support`, primarily as a stop-gap to provide
 glibc compatibility without using glibc. While musl has many advantages, it is clear to us now that writing
@@ -70,7 +70,7 @@ etc. Our bootstrap-scripts is being improved to support both `glibc` and `musl`,
 be reviewed. If we reach a position whereby musl inclusion once again makes sense, thanks to atomic updates
 from moss, it will be possible to switch.
 
-#### Final thoughts
+# Final thoughts
 
 Initially Serpent OS emerged as a collective agreement on IRC as a set of notions as opinions. Over the past few
 months those opinions have solidified into tangible ideas, and a sense of community. In keeping with what is

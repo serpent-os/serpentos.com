@@ -16,7 +16,7 @@ with you.
 
 {{<figure_screenshot_one image="moss-format-defined/Featured" caption="Development work on Moss">}}
 
-#### Explaining the format
+# Explaining the format
 
 Briefly, the binary container format consists of 4 payloads:
 
@@ -64,11 +64,11 @@ representation. For example, each metadata key is only 8 bytes.
 ```
 
 
-#### TLDR that for me...
+# TLDR that for me...
 
 Binary format that is self deduplicating at several layers, permitting fast transactional operations.
 
-#### Up Next
+# Up Next
 
 Before we work any more on the binary format, we now need to pivot to the source format. Our immediate goal is to now
 have moss actually **build** packages from source, with resulting `.stone` packages. Once this step is complete we can

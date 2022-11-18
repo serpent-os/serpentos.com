@@ -16,7 +16,7 @@ Lets get started!
 
 <!--more-->
 
-#### Squeezing Out the Last Blit of Performance
+# Squeezing Out the Last Blit of Performance
 
 `Blitting` in Serpent OS is the process of setting up a root, using hardlinks of files installed in the `moss` store to
 construct the system `/usr` directory. Some initial testing showed `buildPath` using about 3% of the total events
@@ -39,7 +39,7 @@ After:
    12,814,283 ( 0.40%)  /usr/include/dlang/ldc/std/range/package.d:pure nothrow @safe immutable(char)[] std.path.buildPath
 ```
 
-#### Only Record What's Needed!
+# Only Record What's Needed!
 
 Our `Index Payload` is used for extracting the `Content Payload` into its hashed file names. As it has one job (and then
 discarded), we could hone in on including only the information we needed. Previously an entry was a 32 byte key and
@@ -52,7 +52,7 @@ Before: Index [Records: 3688 Compression: Zstd, Savings: 60.61%, Size: 239.72 KB
 After:  Index [Records: 3688 Compression: Zstd, Savings: 40.03%, Size: 118.02 KB]
 ```
 
-#### Too Many Entries Makes for a Large Payload
+# Too Many Entries Makes for a Large Payload
 
 One of the bugbears about the Layout Payload, was the inclusion of `Directory` paths for every single directory. This is
 handy in that directories can be created easily before any files are included (to ensure they exist), but it comes at a
@@ -87,7 +87,7 @@ to be stored (where only the last line is added now).
 
 This will be exceptionally useful for keeping the `LayoutDB` slimmer and faster as the number of packages grows.
 
-#### Cutting Back 1 Byte at a Time
+# Cutting Back 1 Byte at a Time
 
 Next we removed recording the timestamps of files, which for reproducible builds, is often a number of little relevance
 as you have to force them all to a fixed number. As `moss` is de-duplicating for files, there's a second issue where two
@@ -109,7 +109,7 @@ Before: Layout [Records: 6812 Compression: Zstd, Savings: 86.24%, Size: 689.10 K
 After: Layout [Records: 6812 Compression: Zstd, Savings: 86.20%, Size: 655.00 KB]
 ```
 
-#### Storing the Hash Efficiently
+# Storing the Hash Efficiently
 
 Using the same method for the `Index Payload`, we are now storing the hash as `ubyte[16]`, but not directly in the
 `Payload Entry`. This gives us a sizeable reduction of 17 bytes per entry which is the most significant of all the
@@ -123,7 +123,7 @@ After: Layout [Records: 6812 Compression: Zstd, Savings: 83.92%, Size: 539.26 KB
 
 {{<figure_screenshot_one image="performance-corner-small-changes-pack-a-punch/Featured" caption="Planning out the Payload changes">}}
 
-#### Hang On, Why am I Getting Faster Installation?
+# Hang On, Why am I Getting Faster Installation?
 
 As a side-effect of small code rewrites to implement these changes, we've seen a nice decrease in time to install
 packages. There are fewer entries to iterate over with the removal of directories and `buildPath` is now only called
@@ -145,7 +145,7 @@ After:
     7,761,417 ( 0.24%)  /usr/include/dlang/ldc/std/range/package.d:pure nothrow @safe immutable(char)[] std.path.buildPath
 ```
 
-#### Summing it All Up
+# Summing it All Up
 
 It was a pretty awesome weekend of work (a few weeks ago now), making some quick changes that will improve `Serpent OS`
 a great deal for a long time to come. This also means we have integrated all the quick format changes so we won't have
@@ -161,7 +161,7 @@ Here's a quick summary of the results of all these small changes:
 
 These are some pretty huge numbers and even excluded the massive improvements we made in the previous blog!
 
-#### What if We Include the Previous Changes?
+# What if We Include the Previous Changes?
 
 I'm glad you asked, cause I was curious too! Here we see a before and after with all the changes included. For the
 `Layout Payload` we see a ~45% reduction in the compressed and uncompressed size. For the `Index Payload` we have

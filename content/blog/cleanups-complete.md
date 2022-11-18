@@ -16,7 +16,7 @@ cleaned up, so we can begin working towards an MVP.
 
 {{<figure_screenshot_one image="cleanups-complete/Featured" caption="Lots and lots of work">}}
 
-#### Codebase hygiene
+# Codebase hygiene
 
 Since Friday, I've been working extensively on cleaning up the codebase for the
 following projects:
@@ -30,13 +30,13 @@ As it now stands, 1 lint issue (a non-issue, really) exists across all 4
 projects. A plethora of issues have been resolved, ranging from endian correctness
 in the format to correct idiomatic D-lang integration and module naming.
 
-#### Bored
+# Bored
 
 Granted, cleanups aren't all that sexy. Peter has been updating many parts of
 the bootstrap project, introducing systemd 247.3, LLVM 11.0.1, etc. We now have
 all 3 stages building correctly again for the x86_64 target.
 
-#### And then....
+# And then....
 
 Yikes, tough audience! So we've formed a new working TODO which will make its
 way online as a public document at some point. The first stage, cleanups, is
@@ -46,7 +46,7 @@ unlocked, allowing us to work towards an MVP.
 
 {{<figure_screenshot_one image="cleanups-complete/TODO" caption="See, we organised stuff">}}
 
-#### You keep saying MVP..
+# You keep saying MVP..
 
 I know, it makes me feel all ... cute and professional. At the moment we're cooking up
 a high level description of how an MVP demonstration could be deployed. While most of

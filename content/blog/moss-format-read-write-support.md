@@ -38,7 +38,7 @@ Right now we can read and write our `MetaPayload` from and to the stream,
 allowing us to encode & decode the metadata associated with the package,
 with strong type information (i.e. `Uint64`, `String`, etc.)
 
-#### Next Steps
+# Next Steps
 
 We need to restore the `IndexPayload`, `LayoutPayload` and `ContentPayload`
 definitions. The first two are simply **data** payloads and will largely
@@ -77,6 +77,6 @@ Once we add transactions it'll be possible to boot an older version of the OS us
 the deduplication capabilities for offline recovery. Additionally there is no requirement
 for file deletion, rename or modification for an update to succeed.
 
-#### Nutshell
+# Nutshell
 
 Huge progress. Major excitement. Such wow. Soon alphas.

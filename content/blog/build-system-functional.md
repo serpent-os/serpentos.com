@@ -20,7 +20,7 @@ Let's quickly catch up with those updates and see where we're headed next.
 {{<figure_screenshot_one image="build-system-functional/Featured" caption="Look at all the buildiness">}}
 
 
-#### It lives!
+# It lives!
 
 We're now able to build **the majority** of a moss package. Notice I've made
 a distinction there. So, we're able to run the build instructions, and use
@@ -42,7 +42,7 @@ we support the following features in the build system:
  - Recursive macro support in build scripts, defined on per-profile level
  - Architecture specific profiles support in stone.yml, i.e. `profiles -> aarch64 -> setup:` to avoid if/else spaghetti.
 
-#### Next on the agenda
+# Next on the agenda
 
 Now that the huge amount of scaffolding work has been done, we can actually turn the results of builds
 into installable binary packages using our `moss.format.binary` module. We'll add some magic sauce to

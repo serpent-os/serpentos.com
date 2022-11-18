@@ -33,7 +33,7 @@ a small number of blockers. Now, we **could** solve them by using existing patch
 but most have not and will not be accepted upstream. Additionally it is incredibly hard to track the
 origin and history of most of these, making security rather more painful.
 
-#### libc-support
+# libc-support
 
 We're going to start working on a project to flesh out the `musl` runtime with some missing utilities,
 written with a clean-room approach. These will initially include the `getconf` and `getent` tools,
@@ -41,7 +41,7 @@ which will be written only with Linux in mind, and no legacy/BSD support.
 
 These will be maintained over at our [GitHub](https://github.com/serpent-linux/libc-support)
 
-#### libwildebeest
+# libwildebeest
 
 As a project we strive for correctness in the most pragmatic way. Some software, such as systemd,
 is heavily reliant on GNU GCC/GLibc extensions. In some software there are feasible alternatives
@@ -85,7 +85,7 @@ setting up a public Phabricator instance for reporting issues, security flaws, a
 Much of our website is in much need of update, but our current priority is with building the OS. Please
 be patient with us, we'll have it all sorted out in no time.
 
-#### Where We At?
+# Where We At?
 
 Well, stage3 completes fully, builds the final compiler, which has also been verified. A usable chroot
 system is produced, built using `musl`, `libc++`, `libunwind`, `clang`, etc. Some might say that stage3
@@ -97,7 +97,7 @@ package management and define the OS itself, with global flags, policies, etc.
 
 With the speed we're moving at, that really isn't too far away.
 
-#### And finally..
+# And finally..
 
 I personally wish to thank the Serpent OS team as a whole for the commitment and work undertaken of late.
 Additionally I want to thank the growing community around Serpent OS, primarily residing in our IRC

@@ -33,7 +33,7 @@ projects, and most of the issues, to the new public GitLab project. It will
 take a couple of days to get the migration completed, updating submodule URLs, etc,
 but we've already archived all of our GitHub projects.
 
-#### Other Items
+# Other Items
 
 In keeping with naming consistency, the official Twitter account was renamed
 to [Serpent_OS](https://twitter.com/Serpent_OS). Additionally, my shiny new
@@ -44,7 +44,7 @@ Peter has been working on a messaging overhaul for the website, which will be
 launched Fairly Soonish. After that, a visual update will follow. In parallel
 to this, we'll be putting moss to work.
 
-#### Repurposing our sponsored server
+# Repurposing our sponsored server
 
 [Fosshost](https://fosshost.org) kindly sponsored us very early on with a
 server to host our Phabricator instance and downloads. For now we'll explicitly

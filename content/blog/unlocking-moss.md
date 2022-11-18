@@ -15,7 +15,7 @@ updates that we'd like to share.
 <!--more-->
 
 
-#### LDC present in the bootstrap
+# LDC present in the bootstrap
 
 Thanks to some awesome work from Peter, we now have LDC (The LLVM D Lang Compiler)
 present in the stage3 bootstrap. To simplify the process we use the official
@@ -30,7 +30,7 @@ to integrate with our toolchain decisions.
 
 {{<figure_screenshot_one image="unlocking-moss/Featured" caption="A wild LDC appears">}}
 
-#### Reworking the Payload implementation
+# Reworking the Payload implementation
 
 Originally our prototype moss format only contained a `ContentPayload` for files, and
 a `MetaPayload` for metadata, package information, etc. As a result, we opted for simple
@@ -60,7 +60,7 @@ In short, we've unlocked the path to installing moss packages while preserving t
 advanced features of the format. The same new APIs will permit introspection of the
 archives metadata, and of course, storing these records in a stateful system database.
 
-#### Thank you for the unnecessary update
+# Thank you for the unnecessary update
 
 Oh you're quite welcome :P Hopefully now you can see our plan, and that we're on track
 to meet our not-28th target. Sure, some code needs throwing away, but all codebases

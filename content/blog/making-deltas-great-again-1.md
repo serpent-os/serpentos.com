@@ -15,7 +15,7 @@ useful in almost all situations without the drawbacks.
 
 <!--more-->
 
-#### Deltas Have a Bad Reputation
+# Deltas Have a Bad Reputation
 
 I remember back in the early 2000s on Gentoo when someone set up a server to produce delta patches from source tarballs
 to distribute to users with small data caps such as myself. When requesting the delta, the job would be added to the
@@ -28,7 +28,7 @@ have typically pushed extra computational effort onto the users computer in comp
 fast internet connection that cost is a real burden where deltas take longer to install than simply downloading the full
 package.
 
-#### What's so Bad About the Old Method?
+# What's so Bad About the Old Method?
 
 The previous idea of using the full payload for deltas was very efficient in terms of distribution, but required changes
 in how `moss` handles packages to implement it. Having the previous payload available (and being fast) means storing the
@@ -47,7 +47,7 @@ In short we weren't happy with having to increase the disk storage requirements 
 increase in CPU time to create compressed payloads to minimize it. This was akin to the old delta model, of smaller
 downloads but significantly slower updates.
 
-#### Exploring an Alternative Approach
+# Exploring an Alternative Approach
 
 Optimal compression generally benefits from combining multiple files into one archive than to compress each file
 individually. With `zstd` deltas, since you read in a dictionary (the old file), you already have good candidates for
@@ -84,7 +84,7 @@ Well everything sounds pretty positive so far, there must be some drawback?
 
 {{<figure_screenshot_one image="making-deltas-great-again-1/Featured" caption="">}}
 
-#### The Impact on Package Cache Time
+# The Impact on Package Cache Time
 
 As the testing method for this article is quite simplistic (`bash` loops and calls to `zstd` directly), the additional
 overhead from creating deltas for individual files I estimated to be about 20ms compared to a proper solution. The main
@@ -127,7 +127,7 @@ delta packages. Where this approach, and the use of `zstd`, really thrives is th
 the overhead, from creating the deltas to getting them installed locally. Next we explore some ideas of how we can
 minimize the caching time of delta files.
 
-#### Improving Delta Cache Time
+# Improving Delta Cache Time
 
 To get the best bang for your buck with deltas, it is essential to reduce the size of the larger files. My experience in
 testing was that there wasn't a significant benefit from creating deltas for small files. In this example, we only
@@ -156,7 +156,7 @@ files.
 There are also some steps we can take to make sure that caching a delta is almost always faster than the full package
 (solving the only real drawback to users), only requiring Serpent OS resources to create these delta packages.
 
-#### Creating More Efficient Deltas
+# Creating More Efficient Deltas
 
 For this article, all the tests have been run with `zstd --ultra -22 --zstd=chainLog=30`...until now! The individual
 file delta approach is more robust at lower compression levels to keep package size small while reducing how long they
@@ -186,7 +186,7 @@ The best news of all is that these numbers are already out of date. Testing was 
 where there have been notable speed improvements to both compression and decompression that have been included in newer
 releases. Great news given how fast it is already! Here's a quick summary of how it all ties together.
 
-#### Delta's Are Back!
+# Delta's Are Back!
 
 This blog series has put forward a lot of data that might be difficult to digest...but what does it mean for users of
 Serpent OS? Here's a quick summary of the advantages of using this delta method on individual files when compared to
@@ -206,7 +206,7 @@ fetching the full packages:
 - The memory requirements are reduced compared to the prior delta approach, especially if you factor in extracting the
   payload in memory (possibly using `tmpfs`) as part of installation.
 
-#### Getting More Bang for Your Buck
+# Getting More Bang for Your Buck
 
 There's still plenty more work to be done for implementing delta's in Serpent OS and they likely aren't that helpful
 early on. To make delta packages sustainable and efficient over the long run, we can make them even better and reduce
@@ -224,7 +224,7 @@ some wastage. Here are some more ideas in how to make deltas less resource inten
   delta generation from earlier releases for instance if they save less than 10% total size or less than 100KB. A delta
   against an earlier release will almost always be larger than versus a more recent release.
 
-#### Even Better than These Numbers Suggest
+# Even Better than These Numbers Suggest
 
 While the numbers included have been nothing short of remarkable, they don't quite reflect how good this approach will
 be. The results shown lack some of the key advantages of our delta approach such as excluding files that are unchanged

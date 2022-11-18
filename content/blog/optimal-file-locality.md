@@ -16,7 +16,7 @@ without any changes made to `boulder` or `moss-format`. What on Earth was going 
 
 <!--more-->
 
-#### Making Sure you Aren't Going Crazy!
+# Making Sure you Aren't Going Crazy!
 
 To test the efficiency our content payload, the natural choice was to compare it to a tarball containing the same files.
 When first running the test the results were quite frankly awful! Our payload was 10% larger than the equivalent
@@ -24,7 +24,7 @@ tarball! It was almost unbelievable in a way, so the following day I repeated th
 payload was smaller than the tarball. This didn't actually make sense, I made the tarball with the same files, but
 only changed the directory it was created from. Does it really matter?
 
-#### File Locality Really Matters!
+# File Locality Really Matters!
 
 Of course it does (otherwise it would be a pretty crappy blog post!). When extracting a `.stone` package it creates two
 directories, `mossExtract` where the sha256sum named files are stored and `mossInstall` where those files are
@@ -33,7 +33,7 @@ realised that creating the tarball from `mossExtract` would provide the closest 
 was a direct comparison. When compressing the tarballs to match the `.stone` compression level, the tarball compressed
 from `mossInstall` was 10% smaller, despite the uncompressed tarball being slightly larger.
 
-#### Compression Wants to Separate Apples and Oranges
+# Compression Wants to Separate Apples and Oranges
 
 In simplistic terms, the way compression works is comparing data that it's currently reading versus data that it's read
 earlier in the file. `zstd` has some great options like `--long` that increases the distance in which these matches can
@@ -42,7 +42,7 @@ takes shortcuts that reduce the compression ratio. For optimal compression, you 
 each other to be as close as possible. You won't get as many matches from a text file to an ELF file as you would from a
 similar looking text file.
 
-#### Spot the Difference
+# Spot the Difference
 
 Files in `mossExtract` are listed in their sha256sum order, which is basically random, where files in `mossInstall` are
 ordered by their path. Sorting files by path actually does some semblance of sorting where binaries are in `/usr/bin`
@@ -74,7 +74,7 @@ Testing has shown that higher compression levels (and enabling `--long`) is more
 (3-11% smaller vs only 2-5% smaller when using `--long`). The table above is without `--long` so the difference is
 larger.
 
-#### Hang On, Why Don't You...
+# Hang On, Why Don't You...
 
 There's certainly something to this and sorting by file order is a first step. In future we can consider creating an
 efficient order for files to improve locality. Putting all the ELF, image or text files together in the payload will
@@ -84,7 +84,7 @@ be a followup on this approach shortly). The `moss-format` content payload is qu
 paths in it. Therefore it's effectively costless to switch around the order of files, so we can try out a few things and
 see what happens.
 
-#### An Academic Experiment
+# An Academic Experiment
 
 To prove the value of `moss-format` and the content payload, I tried out some crude sorting methods and their impact on
 compression for the package. As you want similar files chunked together, it divided the files into 4 groups, still
@@ -109,7 +109,7 @@ size, so we can start off with some basic concepts like this. Moving files that 
 compressed files, images and video to the start of payload meaning that the remaining files are closer together. We also
 need to test out a broader range of packages and the impact any changes would have on them.
 
-#### Food For Thought?
+# Food For Thought?
 
 So ultimately the answer to the original question (was `moss-format` efficient?), the answer is yes! While there are
 some things that we still want to change to make it even better, in its current state package creation time was faster

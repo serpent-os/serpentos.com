@@ -15,7 +15,7 @@ spend time working on features rather than package updates.
 
 <!--more-->
 
-#### The End of Bootstrap
+# The End of Bootstrap
 
 Bootstrapping a distribution involves building a new toolchain and many packages needed to support it. For us bootstrap
 was getting us to the point where we have built `stone` packages that we can use to start an initial repository with
@@ -25,14 +25,14 @@ bootstrap, the fun has only just begun!
 
 {{<figure_screenshot_one image="out-of-the-bootstrap-towards-serpent-os/Featured" caption="The first install from the bootstrap">}}
 
-#### Where to Next?
+# Where to Next?
 
 The next goal is to make Serpent OS self-hosting, where we can build packages in a container and update the repo index
 with the newly built packages. It is essentially a live repository accessible from the internet. There's still plenty of
 improvements to be made with the tooling, but will soon enable more users to participate in bringing Serpent OS into
 fruition.
 
-#### Becoming More Inclusive
+# Becoming More Inclusive
 
 While there's a strong focus in Serpent OS on performance, the decision has been made to lower the initial requirements
 for users. Despite AVX2 being an older technology, there are still computers sold today that don't support it. Because
@@ -56,7 +56,7 @@ offering more optimized packages where it provides the most benefit.
 
 Note that from the bootstrap, most packages built in under 15s and only three took longer than 2 minutes.
 
-#### Trying Out Some Tweaks From the Get Go
+# Trying Out Some Tweaks From the Get Go
 
 While the project is young is a great time to test out new technologies. The use of `clang` and `lld` open up new
 possibilities to reduce file sizes, shorten load times and decrease memory usage. Some of these choices may have
@@ -67,7 +67,7 @@ the need to change the `libc`, we can make the change without you having to rein
 major stack updates by rebooting into a staged update and go straight back to the old system, regardless of your file
 system.
 
-#### Speed Packaging!
+# Speed Packaging!
 
 In the early days of the repository, tooling to make creating new packages as simple as possible is vital for
 efficiency. Spending some time automating as much of the process as possible will take weeks off bringing up Serpent OS.
@@ -78,6 +78,6 @@ The other way we'll be speeding up the process is by holding back some of the tu
 instance can result in much longer build times so will not initially be the default. The same is true for debug
 packages, where it slows down progress without any tangible benefit.
 
-#### Things Are Happening!
+# Things Are Happening!
 
 We hope you are as excited as we are!

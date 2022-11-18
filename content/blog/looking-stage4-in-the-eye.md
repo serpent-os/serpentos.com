@@ -16,7 +16,7 @@ stage3 off the ground.
 
 {{<figure_screenshot_one image="looking-stage4-in-the-eye/FeaturedSD" caption="Building systemd the easy way">}}
 
-#### libc-support
+# libc-support
 
 Our [libc-support](https://dev.serpentos.com/source/libc-support/) project has been growing, thanks primarily to the contributions
 of [Jouni Roivas](https://dev.serpentos.com/p/joroi/). We now have initial working versions
@@ -24,7 +24,7 @@ of `getent` and `getconf`. The `getconf` program is considered feature-complete
 for our current requirements, and the focus is now on cleaning up `getent` making
 it more modular and easy to maintain in the long run.
 
-#### libwildebeest
+# libwildebeest
 
 We began work on [libwildebeest](https://dev.serpentos.com/source/libwildebeest/) to quickly unlock building `systemd`.
 Remember, our ambition with this project is to provide a sane, centralised way of
@@ -67,7 +67,7 @@ reliable fashion.
 Until such point as all the APIs are fully and safely implemented, it would be highly ill-advised
 to **use** libwildebeest in any project. We'll announce stability in the coming weeks.
 
-#### systemd
+# systemd
 
 We've made great progress in enabling systemd in Serpent OS. Where `libwildebeest` is in
 place, it now enables our currently required level of source compatibility to a point where
@@ -88,7 +88,7 @@ The other patches, were simply portability fixes, ensuring all headers were incl
 It should be noted both of these (very trivial) pull requests were accepted and merged upstream,
 and will be part of the next systemd release.
 
-#### Next On The Agenda
+# Next On The Agenda
 
 Our major ticket items involve fleshing out stage3 with some missing libraries to further
 enable systemd, rebuilds of util-linux to be systemd-aware, and continue fleshing out

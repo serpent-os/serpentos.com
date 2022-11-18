@@ -17,7 +17,7 @@ with.
 
 This post follows on from [Part 1](/blog/2021/08/25/unpacking-the-build-process-part-1).
 
-#### Turning Source into Compiled Code
+# Turning Source into Compiled Code
 
 The steps for compiling code are generally quite straight-forward:
 - Setting up the build (cmake, configure, meson)
@@ -31,7 +31,7 @@ Optimizations (PGO), do you build the package for performance or for the smalles
 benefit considerably from individual tuning flags (like `-fno-semantic-interposition` with `python`). With so many
 possibilities, `boulder` helps us utilize them through convenient configuration options.
 
-#### What Makes boulder so Special?
+# What Makes boulder so Special?
 
 As I do a lot of packaging and performance tuning, `boulder` is where I spend most of my time. Here are some key
 features that `boulder` brings to make my life easier.
@@ -51,7 +51,7 @@ Serpent OS is focused on the performance of produced packages, even if that mean
 complete. This is why we have put in significant efforts to speed up the compiler and setup tools in order to offset and
 minimize the time needed to enable greater performance.
 
-#### Why do You Care so Much About Setup Time?
+# Why do You Care so Much About Setup Time?
 
 My initial testing focused on the performance of `clang` as well as the time taken to run `cmake` and `configure`. This
 lays the foundation for all future work in expanding the Serpent OS package archives at a much faster pace. On the
@@ -65,7 +65,7 @@ relevant as you increase the numbers of threads on the builder. For example, whe
 configure step takes 13.5s, while the build itself takes only 2.3s, so there's significant gains to be had from speeding
 up the setup stage of a build (which we will absolutely be taking advantage of!).
 
-#### A Closer Look at the clang Compiler's Performance
+# A Closer Look at the clang Compiler's Performance
 
 A first cut of the compiler results were shared earlier in [Initial Performance Testing](../blog/2021/08/02/initial-performance-testing),
 and given the importance to overall build time, I've been taking a closer look. In the post I said that `"At stages

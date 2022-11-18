@@ -21,7 +21,7 @@ from the time it takes to produce a package. With a source/binary hybrid model, 
 faster builds as well. In terms of what I've targeted in these tests is the performance of `clang` and testing some
 compiler flag options on `cmake`.
 
-#### Clang Shows its Promise
+# Clang Shows its Promise
 
 `clang` has always been a compiler with a big future. The performance credentials have also been improving each release
 and are now starting to see it perform strongly against its `GNU` counterpart. It is common to hear that `clang` is slow
@@ -43,7 +43,7 @@ Based on the results during testing, the performance of `clang` in Serpent OS st
 quick tuning pass. At stages where I would have expected to be ahead already, the compile performance was only equal
 (but `cmake` and `configure` were still well ahead).
 
-#### GCC Matters Too!
+# GCC Matters Too!
 
 While `clang` is the default compiler in Serpent OS, there may be instances where the performance is not quite where it
 could be. It is common to see software have more optimized code paths where they are not tested with `clang` upstream. As
@@ -62,7 +62,7 @@ toolchain is important but small compile time improvements won't be noticed by u
 | Compile `llvm-ar`   | 168.11s      | 199.07s     | 18.4%      |
 | `configure` gettext | 45.45s       | 51.93s      | 14.3%      |
 
-#### An OS is More Than Just a Compiler
+# An OS is More Than Just a Compiler
 
 While the current bootstrap exists only as a starting point for building the rest of Serpent OS, there are some other
 packages we can easily test and compare. Here's a summary of those results.
@@ -79,7 +79,7 @@ packages we can easily test and compare. Here's a summary of those results.
 | `zstd` Compress Kernel (-19 -T4)  | 51.87s       | 66.52s      | 28.3%      |
 | `zstd` Decompress Kernel          | 2.90s        | 3.08s       | 6.3%       |
 
-#### State of the Bootstrap
+# State of the Bootstrap
 
 From my experiences with testing the bootstrap, it is clear there's some cobwebs in there that require some more iterations
 of the toolchain.
@@ -94,7 +94,7 @@ deliberate until integrating outputs from builds (such as symbol information).
 But this provides an excellent platform to build out the rest of the OS. The raw speed of the `clang` compiler will make
 iterating and expanding the package set a real joy!
 
-#### Hang On, What's Going on With Python?
+# Hang On, What's Going on With Python?
 
 Very astute of you to notice! `python` in its current state is an absolute minimal build of `python` in order to run `meson`.
 However, I did an `analyze` run in `benchmarking-tools` where it became obvious that they were doing completely different

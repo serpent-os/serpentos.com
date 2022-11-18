@@ -18,7 +18,7 @@ The build process can be thought of in three distinct parts, setting up the buil
 and post build analysis plus package creation. Please note that this process hasn't been finalized in Serpent OS so
 we will be making further changes to the process where possible.
 
-#### Setting up the Build Environment
+# Setting up the Build Environment
 
 Some key parts to setting up the build environment:
 
@@ -33,7 +33,7 @@ While the focus of early optimization work has been on build time performance, t
 packages time than simply compiling code. Now the compiler is in a good place, we can explore the rest of the
 build process.
 
-#### Packaging is More than just Compile Time
+# Packaging is More than just Compile Time
 
 There's been plenty of progress in speeding up the creation of the build environment such as parallel downloads to
 reduce connection overhead and using `zstd` for the fast decompression of packages. But there's more that we can
@@ -46,7 +46,7 @@ particular interest in speeding up is extracting and installing packages into th
 
 {{<figure_screenshot_one image="unpacking-the-build-process-1/Featured" caption="Eight seconds (for a small number of dependencies) that don't need to be endlessly repeated">}}
 
-#### The Dynamic Duo: boulder and moss
+# The Dynamic Duo: boulder and moss
 
 Installing packages to a clean environment can be the most time consuming part of setting up the build (excluding
 fetching files which is highly variable). Serpent OS has a massive advantage with the design of `moss` where
@@ -70,7 +70,7 @@ the last file is downloaded!
 contributors alike to be more efficient in getting work done for Serpent OS. With greater efficiency it may become
 possible to provide a second architecture for older machines (if the demand arises).
 
-#### Part 1?
+# Part 1?
 
 Yes, there's plenty more to discuss so there will be more follow up posts showing the cool features Serpent OS is doing
 to both reduce the time taken to build packages and in making packages easier to create so stay tuned!

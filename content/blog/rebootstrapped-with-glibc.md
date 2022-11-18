@@ -19,19 +19,19 @@ Our next steps are fairly logical, but feel free to have a read.
 
 {{<figure_screenshot_one image="rebootstrapped-with-glibc/Featured" caption="Semi-functional systemd-nspawn">}}
 
-#### Enable early multilib support
+# Enable early multilib support
 
 Having established our goals, it is clear we also need to support 32-bit binaries on a 64-bit
 Serpent OS installation, such as Steam. We'll add multilib support to our bootstrap to ensure
 we ship with support for these 32-bit binaries very quickly.
 
-#### Validate AArch64 support
+# Validate AArch64 support
 
 We made a bit of a mess in switching to glibc, so, we'll go back and build for aarch64 and fix any fallout.
 It is still important we target this architecture, as the community explicitly requested support for the
 Raspberry Pi 4!
 
-#### Pivot back to moss
+# Pivot back to moss
 
 We had to get this bootstrap out of the way before it became a growing issue. While it's still "dirty" and
 some paths or configurations are not to our liking, the groundwork is sufficient to enable developing moss
@@ -40,7 +40,7 @@ now.
 Our first port of call is to develop the build side of moss, i.e. emitting binary packages that can then
 be installed to form a rootfs.
 
-#### Timescale
+# Timescale
 
 It actually all depends on moss now. Once moss can produce packages we can firmly put ourselves into stage4
 and have package git repositories on our infrastructure, and open up contributions from the community. We
@@ -51,7 +51,7 @@ Some of you may know my significant other is expecting a child, or rather, she w
 When this situation changes I will of course take some downtime to help the growing family and then
 return to work.
 
-#### Support
+# Support
 
 At the time of writing, 18 amazing individuals have contributed to us on our [Open Collective](https://opencollective.com/serpent-os).
 On behalf of the team, I want to thank you from the bottom of our hearts. Once we leave bootstrap, we'll
