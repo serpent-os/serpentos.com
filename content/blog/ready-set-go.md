@@ -108,11 +108,11 @@ so I'd like to provide some initial data:
  - November 2022: £540.58
 
 At some point this website will incorporate some more up-to-date information on sponsorship information to facilitate
-a more transparent approach. Additionally I've taken some additional steps including a (Revolut) bank account specifically
-for Serpent OS funds + expenses.
+a more transparent approach. Recently I've taken some additional steps towards this, including opening a (Revolut) bank
+account specifically for Serpent OS funds + expenses.
 
 I'd like to thank everyone supporting the project - the time for us to reward you has now come. Intermittent funding and
-the cost of living crisis has hade a huge impact on the timescale of the project to date, however we're not shying away from
+the cost of living crisis has had a huge impact on the timescale of the project to date, however we're not shying away from
 the challenge. Rather, we've cracked on with implementing the proto-infrastructure and will be deploying it within *days*.
 
 Let's do this.
