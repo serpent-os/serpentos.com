@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/scaling-our-infrastructure/featured.png"
+featuredImage: "/img/blog/scaling-our-infrastructure/featured.webp"
 ---
 
 While it might look like we haven't been up to much lately, the exact opposite is true.

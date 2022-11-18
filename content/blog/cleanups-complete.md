@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/cleanups-complete/Featured.png"
+featuredImage: "/img/blog/cleanups-complete/Featured.webp"
 ---
 
 Well, we're officially back to working around the clock. After spending

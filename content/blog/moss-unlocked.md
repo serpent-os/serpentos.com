@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/moss-unlocked/Featured.png"
+featuredImage: "/img/blog/moss-unlocked/Featured.webp"
 ---
 
 Well, it's not all doom and gloom these days. We've actually made some

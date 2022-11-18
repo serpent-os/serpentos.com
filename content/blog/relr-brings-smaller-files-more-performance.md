@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/relr-brings-smaller-files-more-performance/Featured.png"
+featuredImage: "/img/blog/relr-brings-smaller-files-more-performance/Featured.webp"
 ---
 
 `RELR` is an efficient method of storing relative relocations (but is not yet available in `glibc` upstream). This has a

@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/pedal-to-the-metal/Featured.png"
+featuredImage: "/img/blog/pedal-to-the-metal/Featured.webp"
 ---
 
 Wow - what a roller coaster. The most recent development cycle has seen us really

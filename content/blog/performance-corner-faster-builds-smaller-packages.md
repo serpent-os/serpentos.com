@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/performance-corner-faster-builds-smaller-packages/Featured.png"
+featuredImage: "/img/blog/performance-corner-faster-builds-smaller-packages/Featured.webp"
 ---
 
 `Performance Corner` is a new series where we highlight to you some changes in Serpent OS that may not be obvious, but

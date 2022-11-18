@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/it-all-depends/Featured.png"
+featuredImage: "/img/blog/it-all-depends/Featured.webp"
 ---
 
 It all depends.. it really does. On shared libraries.. interpreters.. `pkg-config` providers

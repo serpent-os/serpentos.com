@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/migrating-to-gitlab/Featured.png"
+featuredImage: "/img/blog/migrating-to-gitlab/Featured.webp"
 
 ---
 

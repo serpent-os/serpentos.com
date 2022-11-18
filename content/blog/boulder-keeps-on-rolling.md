@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/boulder-keeps-on-rolling/Featured.png"
+featuredImage: "/img/blog/boulder-keeps-on-rolling/Featured.webp"
 ---
 
 Squirreling away in the background has been some great changes to bring `boulder` closer to its full potential. Here's

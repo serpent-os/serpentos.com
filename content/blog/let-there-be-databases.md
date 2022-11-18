@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/let-there-be-databases/Featured.png"
+featuredImage: "/img/blog/let-there-be-databases/Featured.webp"
 ---
 
 We haven't been too great on sharing progress lately, so welcome to an overdue update on

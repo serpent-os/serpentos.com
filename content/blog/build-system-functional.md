@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/build-system-functional/Featured.png"
+featuredImage: "/img/blog/build-system-functional/Featured.webp"
 ---
 
 Wow, has it been a hectic few weeks, and it definitely shows: last time

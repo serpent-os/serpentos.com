@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/optimising-package-distribution/Featured.png"
+featuredImage: "/img/blog/optimising-package-distribution/Featured.webp"
 ---
 
 Getting updates as fast as possible to users has made deltas a popular and sought after feature for distributing

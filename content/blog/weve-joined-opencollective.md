@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/weve-joined-opencollective/Featured.png"
+featuredImage: "/img/blog/weve-joined-opencollective/Featured.webp"
 ---
 
 The eagle eyed among you may have noticed we've been making a concerted effort

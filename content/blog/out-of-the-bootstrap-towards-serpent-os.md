@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/out-of-the-bootstrap-towards-serpent-os/Featured.png"
+featuredImage: "/img/blog/out-of-the-bootstrap-towards-serpent-os/Featured.webp"
 ---
 
 The initial `stone` packages that will seed the first Serpent OS repo have now been finalized! This means that work

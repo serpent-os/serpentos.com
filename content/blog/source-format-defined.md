@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/source-format-defined/Featured.png"
+featuredImage: "/img/blog/source-format-defined/Featured.webp"
 ---
 
 Following quickly on the heels of yesterday's announcement that the binary format has been defined, we've

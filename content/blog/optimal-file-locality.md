@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/optimal-file-locality/Featured.png"
+featuredImage: "/img/blog/optimal-file-locality/Featured.webp"
 ---
 
 File locality in this post refers to the order of files in our content payload. Yes that's right, we're focused on the

@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/initial-performance-testing/Featured.png"
+featuredImage: "/img/blog/initial-performance-testing/Featured.webp"
 ---
 
 With further progress on `boulder`, we can now build native stone packages with some easy tweaks such as profile

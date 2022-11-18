@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/moss-db-progress/Featured.png"
+featuredImage: "/img/blog/moss-db-progress/Featured.webp"
 ---
 
 I'll try to make this update as brief as I can but it's certainly an important one, so

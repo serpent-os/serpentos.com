@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/stage3-complete/Featured.png"
+featuredImage: "/img/blog/stage3-complete/Featured.webp"
 ---
 
 Another week, another milestone completed. We're pleased to announce that

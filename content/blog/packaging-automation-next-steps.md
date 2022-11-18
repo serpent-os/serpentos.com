@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/packaging-automation-next-steps/Featured.png"
+featuredImage: "/img/blog/packaging-automation-next-steps/Featured.webp"
 ---
 
 Hot damn we've been busy lately. No, [really](https://gitlab.com/groups/serpent-os/-/activity).

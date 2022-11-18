@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/stayin-alive/Featured.png"
+featuredImage: "/img/blog/stayin-alive/Featured.webp"
 ---
 
 It's been far too long since a blog post. Sure, we've stayed in touch via

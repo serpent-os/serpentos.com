@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/website-revamp/Featured.png"
+featuredImage: "/img/blog/website-revamp/Featured.webp"
 ---
 
 Over the last few days we've been working to refresh the stuffy website design with something much

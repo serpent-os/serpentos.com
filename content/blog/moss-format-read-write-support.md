@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/moss-format-read-write-support/Featured.png"
+featuredImage: "/img/blog/moss-format-read-write-support/Featured.webp"
 ---
 
 It's been 8 days since our last blogpost and a lot of development work has happened

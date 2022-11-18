@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/results-of-the-experiment/Featured.png"
+featuredImage: "/img/blog/results-of-the-experiment/Featured.webp"
 ---
 
 It seems like only yesterday we announced to the world a [Great Experiment](https://serpentos.com/blog/2020/07/01/the-great-experiment/).

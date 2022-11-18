@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/stage3-progress/screenshot.png"
+featuredImage: "/img/blog/stage3-progress/screenshot.webp"
 ---
 
 Well, it's been a few days since we last spoke, so now it's time for a quick

@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/unpacking-the-build-process-2/Featured.png"
+featuredImage: "/img/blog/unpacking-the-build-process-2/Featured.webp"
 ---
 
 Part 2 looks at the core of the build process, turning the source into compiled code. In Serpent OS this is handled by

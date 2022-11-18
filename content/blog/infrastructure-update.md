@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/infrastructure-update/Featured.png"
+featuredImage: "/img/blog/infrastructure-update/Featured.webp"
 
 ---
 

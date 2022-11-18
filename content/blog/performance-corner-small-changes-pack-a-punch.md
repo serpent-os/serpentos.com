@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/performance-corner-small-changes-pack-a-punch/Featured.png"
+featuredImage: "/img/blog/performance-corner-small-changes-pack-a-punch/Featured.webp"
 ---
 
 Here we have another round of changes to make packages smaller and show just how much we care about performance and

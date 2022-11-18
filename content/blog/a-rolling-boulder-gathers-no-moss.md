@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/a-rolling-boulder-gathers-no-moss/Featured.png"
+featuredImage: "/img/blog/a-rolling-boulder-gathers-no-moss/Featured.webp"
 ---
 
 We actually did it. Super pleased to announce that `moss` is now capable

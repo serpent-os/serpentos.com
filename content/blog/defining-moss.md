@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/defining-moss/Featured.png"
+featuredImage: "/img/blog/defining-moss/Featured.webp"
 ---
 
 Over the past few weeks, throughout the entire bootstrap process, we've

@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/yet-another-website-revamp/Featured.png"
+featuredImage: "/img/blog/yet-another-website-revamp/Featured.webp"
 ---
 
 Yeah we did it again. Project is back with a bang and working

@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/stage2-complete/Featured.png"
+featuredImage: "/img/blog/stage2-complete/Featured.webp"
 ---
 
 Just in case you thought we were sleeping behind the wheel, we've got

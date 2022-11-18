@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/can-hardly-contain-myself-plus-a-bonus/Featured.png"
+featuredImage: "/img/blog/can-hardly-contain-myself-plus-a-bonus/Featured.webp"
 ---
 
 One of the core steps for building a package is setting up a minimal environment with only the required (and stated)

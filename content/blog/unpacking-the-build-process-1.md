@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/unpacking-the-build-process-1/Featured.png"
+featuredImage: "/img/blog/unpacking-the-build-process-1/Featured.webp"
 ---
 
 While the build process (or packaging as it's commonly referred to) is largely hidden to most users, it forms a

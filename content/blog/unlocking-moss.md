@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/unlocking-moss/Featured.png"
+featuredImage: "/img/blog/unlocking-moss/Featured.webp"
 ---
 
 Wait, what? Another blog post? In the same WEEK? Yeah totally doing that

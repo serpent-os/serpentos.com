@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/rebootstrapped-with-glibc/Featured.png"
+featuredImage: "/img/blog/rebootstrapped-with-glibc/Featured.webp"
 ---
 
 Only a few days ago we told you of our switch from `musl` to `glibc`. That has now been implemented

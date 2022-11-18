@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/moss-format-defined/Featured.png"
+featuredImage: "/img/blog/moss-format-defined/Featured.webp"
 ---
 
 The core team have been hard at work lately implementing the [Moss package manager](https://github.com/serpent-linux/moss).

@@ -5,7 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/looking-stage4-in-the-eye/FeaturedSD.png"
+featuredImage: "/img/blog/looking-stage4-in-the-eye/FeaturedSD.webp"
 ---
 
 Well, we've made an awful lot of progress in these last few days. It wasn't
