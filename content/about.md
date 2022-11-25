@@ -27,12 +27,13 @@ matrix.org or in our development channel, [#serpentos-dev](https://matrix.to/#/#
 If your matrix client supports spaces (app.element.io does), you can join the [Serpent OS matrix Space](https://matrix.to/#/!trFJOzhpDUejJKnPYg:matrix.org)
 which will show all the channels offered by us.
 
-You can also join us at [GitLab](https://gitlab.com/serpent-os) where you'll find all our code, tools and packaging
-repositories. This is where users are able to contribute and improve Serpent OS.
+You can also join us at [GitHub(serpent-os)](https://github.com/serpent-os) where you'll find all our code and tools. Our packaging
+repositories live at [GitHub(snekpit)](https://github.com/snekpit). These two places are where users are able to contribute and
+improve Serpent OS.
 
-We want to enjoy working on Serpent OS, and we want you to as well. If there is anything that is impacting on your ability to enjoy
-your time with the community, then let us know. Others may be feeling the same way, so we can get on top of it before it becomes a
-wider concern.
+We want to enjoy working on Serpent OS, and we want you to as well. If there is anything that is impacting your ability to enjoy
+your time with the community, then let us know. Others may be feeling the same way, so the sooner you approach us, the sooner we can
+get on top of it before it becomes a wider concern.
 
 # All the Finer Details
 

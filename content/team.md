@@ -18,8 +18,11 @@ they share the workload in building the core of Serpent OS.
 Most development discussions happen on our matrix channels [#serpentos](https://matrix.to/#/#serpentos:matrix.org) on
 matrix.org or in our development channel, [#serpentos-dev](https://matrix.to/#/#serpentos-dev:matrix.org) on matrix.org.
 
-If your matrix client supports spaces (app.element.io does), you can join the [Serpent OS matrix Space](https://matrix.to/#/!trFJOzhpDUejJKnPYg:matrix.org )
-which will show all the channels offered by us.
+If your matrix client supports spaces (app.element.io does), you can join the
+[Serpent OS matrix Space](https://matrix.to/#/#serpent-os-space:matrix.org ) which will show all the channels offered by
+us.
 
-You can also join us at [GitLab](https://gitlab.com/serpent-os) where you'll find all our code, tools and packaging
-repositories. This is where users contribute and improve Serpent OS.
+You can also join us at [GitHub(serpent-os)](https://github.com/serpent-os) where you'll find all our code and tools,
+[GitHub(snekpit)](https://github.com/snekpit) where you'll find our packaging repositories. 
+
+This is where users contribute and improve Serpent OS.

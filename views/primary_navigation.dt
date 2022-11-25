@@ -11,13 +11,16 @@
 -   NavigationItem("/blog", "Blog"),
 -   NavigationItem("#", "Community", [
 -       NavigationItem("https://forums.serpentos.com", "Forums"),
--       NavigationItem("https://matrix.to/#/#serpent-os-space:matrix.org", "Matrix")
+-       NavigationItem("https://matrix.to/#/#serpent-os-space:matrix.org", "Matrix"),
+-       NavigationItem("https://github.com/serpent-os", "Code"),
+-       NavigationItem("https://github.com/snekpit", "Packages"),
 -   ]),
 -   NavigationItem("https://github.com/sponsors/ikeycode?o=sd&sc=t", "Sponsors"),
 -   NavigationItem("#", "Tooling", [
 -       NavigationItem("/boulder", "boulder"),
 -       NavigationItem("/moss", "moss"),
 -   ]),
+-   NavigationItem("/about", "About"),
 - ];
 
 nav.navbar.navbar-expand-lg.navbar-light.border-bottom.shadow-sm

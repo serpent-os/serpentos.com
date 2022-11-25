@@ -36,7 +36,7 @@ c. By using Serpent OS, or our services, you agree to all terms of our Privacy P
 
 a. To ensure its processing of data is lawful, fair and transparent, Serpent OS shall maintain a Register of Services. 
 b. The Register of Services shall be reviewed at least annually. 
-c. Serpent OS services are defined as its primary website, its [Tracker](https://dev.serpentos.com)
+c. Serpent OS services are defined as its primary website, its [Forums](https://forums.serpentos.com)
 and its downloads (packages + OS Image Files).
 c. Individuals have the right to access their personal data and any such requests made to Serpent OS shall be dealt with in a timely manner, in line with Article 15 of the GDPR. 
 
@@ -70,7 +70,7 @@ At times, we may link to or include third-party content on our website. These in
  - [Tenor](https://tenor.com/legal-terms)
  - [Twitter](https://twitter.com/en/privacy)
  - [YouTube](https://policies.google.com/privacy?hl=en-US)
- - [GitLab](https://about.gitlab.com/terms/)
+ - [GitHub](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
 
 The above links will take you to the terms of service and/or privacy policy for those websites. As such, those particular services **may** set cookies on your machine, or process data separately from Serpent OS. As such you should refer to their terms for how your data is processed.
 
