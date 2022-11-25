@@ -19,10 +19,14 @@ Improvements:
 
 - `dub` (part of [LDC](https://github.com/serpent-os/onboarding#ldc-dlang-toolchain-installation-dmd-not-supported))
 - [chroma](https://github.com/alecthomas/chroma) (use one of the statically compiled releases)
+- zlib-devel (or its equivalent)
+- lmdb-devel (or its equivalent)
 
-Both `dub` and `chroma-bin` need to live in the system `$PATH`.
+Both `dub` and `chroma` need to live in the system `$PATH`.
 
-Use `dub run` in a terminal to build and run the site.
+Use `dub run -b release --parallel` in a terminal to build and run the site (`CTRL+C to` terminate the process).
+
+Add `--force` to the build+run invocation to forcibly rebuild everything before running.
 
 ### License
 
