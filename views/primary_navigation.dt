@@ -11,7 +11,7 @@
 -   NavigationItem("/blog", "Blog"),
 -   NavigationItem("#", "Community", [
 -       NavigationItem("https://forums.serpentos.com", "Forums"),
--       NavigationItem("#", "Matrix")
+-       NavigationItem("https://matrix.to/#/#serpent-os-space:matrix.org", "Matrix")
 -   ]),
 -   NavigationItem("https://github.com/sponsors/ikeycode?o=sd&sc=t", "Sponsors"),
 -   NavigationItem("#", "Tooling", [
