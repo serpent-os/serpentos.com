@@ -11,5 +11,6 @@ set -x
 
 # remove everything not tracked by git and reset to origin
 git clean -dfx && git reset --hard HEAD
-DFLAGS="--flto=thin -O3 --static" dub build -b release --parallel ${*}
+# Notes re. GC magic here: https://forum.dlang.org/post/befrzndhowlwnvlqcoxx@forum.dlang.org
+DFLAGS="--flto=thin -O3 --static --DRT-gcopt=heapSizeFactor:0.25" dub build -b release --parallel ${*}
 strip website
