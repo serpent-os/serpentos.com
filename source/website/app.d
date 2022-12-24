@@ -23,6 +23,7 @@ import moss.db.keyvalue.orm;
 import website.models;
 import website.blog;
 import website.rest;
+import vibe.core.core : setTimer;
 
 /**
  * Main instance, state et all
@@ -85,6 +86,7 @@ import website.rest;
      */
     @noRoute void start()
     {
+        setTimer(6.seconds, &memoryHack, true);
         listener = listenHTTP(settings, router);
     }
 
@@ -127,6 +129,18 @@ import website.rest;
     }
 
 private:
+
+    /**
+     * vibe.d runs an idle timer to collect memory every 10 seconds
+     * but we never see it run, so we must manually run the GC every
+     * few seconds ourselves to prevent shitting bricks
+     */
+    void memoryHack() @trusted
+    {
+        import core.memory : GC;
+
+        GC.collect();
+    }
 
     void preloadContent() @safe
     {
