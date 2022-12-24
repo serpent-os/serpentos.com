@@ -5,9 +5,9 @@ block banner
         div.container-xl.p-5
             div.row.d-flex.align-items-center
                 div.col-12.col-md-8
-                    h1.display-6.p-2 It's coming.
-                    p.p-2 After #[em two years] of engineering effort, we're almost ready to lift the curtains. A bit of community enabling here... a bit of infrastructure deployment there.. then we hit the road running.
-                    a.btn.btn-outline-light.btn-square.m-1(href="/blog/2022/09/14/the-big-update") Read more
+                    h1.display-6.p-2 We have lift off!
+                    p.p-2 We've now entered our fastest stage of growth, iterating on the Linux distribution that is Serpent OS. ISOs and docker images are now being published, and you can be part of our growth story.
+                    a.btn.btn-outline-light.btn-square.m-1(href="/blog/2022/12/24/lift-off") Read about our launch
                     a.btn.btn-outline-light.btn-square.m-1(href="https://github.com/sponsors/ikeycode?o=sd&sc=t") Join the journey
 block content
 

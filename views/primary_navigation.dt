@@ -15,6 +15,7 @@
 -       NavigationItem("https://github.com/serpent-os", "Code"),
 -       NavigationItem("https://github.com/snekpit", "Packages"),
 -   ]),
+-   NavigationItem("/download", "Download"),
 -   NavigationItem("https://github.com/sponsors/ikeycode?o=sd&sc=t", "Sponsors"),
 -   NavigationItem("#", "Tooling", [
 -       NavigationItem("/boulder", "boulder"),
