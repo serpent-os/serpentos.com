@@ -8,7 +8,7 @@ Callout: "Grab them images"
 ## ISOs
 
 Currently we only provide a very basic **validation** ISO, used to verify some basic functionality,
-boot sequence, the kernel ansd toolchain. You can experiment with the `moss` package manager too!
+boot sequence, the kernel and toolchain. You can experiment with the `moss` package manager too!
 
 [snekvalidator.iso](https://download.serpentos.com/snekvalidator.iso)
 
@@ -27,7 +27,7 @@ qemu-system-x86_64 -enable-kvm -cdrom snekvalidator.iso -bios /usr/share/edk2-ov
 
 #### Base image
 
-The base image allows experimentation with the Seprnet OS package manager, moss. Note that building
+The base image allows experimentation with the Serpent OS package manager, moss. Note that building
 via `boulder` is __currently__ unsupported.
 
 
