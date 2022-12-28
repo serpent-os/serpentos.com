@@ -68,8 +68,6 @@ import vibe.core.core : setTimer;
 
         auto rapi = new BaseAPI();
         rapi.configure(appDB, router);
-
-        router.rebuild();
         router.get("*", &showPage);
     }
 
