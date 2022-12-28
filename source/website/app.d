@@ -60,9 +60,7 @@ import vibe.core.core : setTimer;
         fileSettings.serverPathPrefix = "/static";
         fileSettings.maxAge = 30.days;
         router.get("/static/*", serveStaticFiles("static", fileSettings));
-        router.get("*", staticTemplate!"down.dt");
 
-        /*
         router.registerWebInterface(this);
         auto blog = new Blog();
         blog.configure(router, appDB);
@@ -71,7 +69,8 @@ import vibe.core.core : setTimer;
         auto rapi = new BaseAPI();
         rapi.configure(appDB, router);
 
-        router.rebuild();*/
+        router.rebuild();
+        router.get("*", &showPage);
     }
 
     /**
@@ -109,6 +108,9 @@ import vibe.core.core : setTimer;
         render!"index.dt";
     }
 
+    /**
+     * Sponsor info
+     */
     @path("/sponsors") @method(HTTPMethod.GET)
     void sponsors() @safe
     {
@@ -159,31 +161,43 @@ private:
                     (i) => cast(string) i.name.dup).array();
         }();
 
-        /* Try to load and save them all into a transaction. */
-        auto err = appDB.update((scope tx) @safe {
-            foreach (page; pages)
+        static DatabaseResult pageLoader(scope Transaction tx, string page) @safe
+        {
+            auto mdPost = new MarkdownPage();
+            mdPost.loadFile(page);
+            /* Force a page name, ignoring conventional slug rules */
+            immutable pageName = page.baseName.split(".")[0].asSlug.to!string;
+            auto tstamp = mdPost.date.toUnixTime;
+            Post p = Post();
+            p.slug = pageName;
+            p.title = mdPost.title;
+            p.tsCreated = tstamp;
+            p.tsModified = tstamp;
+            p.processedContent = mdPost.content;
+            p.type = PostType.Page;
+            immutable err = p.save(tx);
+            if (!err.isNull)
             {
-                auto mdPost = new MarkdownPage();
-                mdPost.loadFile(page);
-                /* Force a page name, ignoring conventional slug rules */
-                immutable pageName = page.baseName.split(".")[0].asSlug.to!string;
-                auto tstamp = mdPost.date.toUnixTime;
-                Post p = Post();
-                p.slug = pageName;
-                p.title = mdPost.title;
-                p.tsCreated = tstamp;
-                p.tsModified = tstamp;
-                p.processedContent = mdPost.content;
-                p.type = PostType.Page;
-                auto e = p.save(tx);
+                return err;
+            }
+            return NoDatabaseError;
+        }
+
+        DatabaseResult insertion(scope Transaction tx) @safe
+        {
+            foreach (p; pages)
+            {
+                immutable e = pageLoader(tx, p);
                 if (!e.isNull)
                 {
                     return e;
                 }
-                router.get("/" ~ p.slug, (req, res) => showPage(req, res));
             }
             return NoDatabaseError;
-        });
+        }
+
+        /* Try to load and save them all into a transaction. */
+        auto err = appDB.update(&insertion);
         enforceHTTP(err.isNull, HTTPStatus.internalServerError, "preloadContent(): " ~ err.message);
 
     }
