@@ -85,7 +85,7 @@ import vibe.core.core : setTimer;
      */
     @noRoute void start()
     {
-        setTimer(6.seconds, &memoryHack, true);
+        setTimer(3.seconds, &memoryHack, true);
         listener = listenHTTP(settings, router);
     }
 
@@ -104,15 +104,6 @@ import vibe.core.core : setTimer;
     void index() @safe
     {
         render!"index.dt";
-    }
-
-    /**
-     * Sponsor info
-     */
-    @path("/sponsors") @method(HTTPMethod.GET)
-    void sponsors() @safe
-    {
-        render!"sponsors.dt";
     }
 
     /**
