@@ -21,7 +21,7 @@ html(lang="en")
                                     svg(width="64px", height="64px"): use(xlink:href="/static/tabler/tabler-sprite.svg#tabler-barrier-block")
                                 div.empty-title Down for maintenance
                                 div.empty-subtitle.text-muted
-                                    p Our website is undgeroing some much needed TLC and will be back online as soon as everything is done.
+                                    p Our website is undergoing some much needed TLC and will be back online as soon as everything is done.
 
     // TODO: Use a site prefix
     script(src="/static/tabler/js/tabler.min.js", defer, async)
