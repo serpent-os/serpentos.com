@@ -1,0 +1,39 @@
+extends root
+
+block title
+    title Team | Serpent OS
+
+block banner
+    div.container-fluid.bg-azure.shadow-sm.border-bottom
+        div.container.p-4.justify-content-center
+            div.row.d-flex.align-items-center.justify-content-center
+                div.col-auto: h1.display-6.pt-1.align-self-center.text-light Meet the team
+
+block content
+    - static struct TeamMember
+    - {
+    -       string username;
+    -       string role;
+    -       string wordy;
+    - }
+    - static immutable members = [
+    -       TeamMember("Ikey Doherty", "Project Lead / Founder", "Ikey is responsible for the development of core tooling to enable a growing community to build Serpent OS and own large parts of it."),
+    -       TeamMember("Rune Morling", "Co-architect / Process guy", "Rune has been deeply involved in the low-level design aspects of Linux-based systems for some time. Core project responsibilities include process design."),
+    -       TeamMember("Aydemir Ulaş Şahin", "Infrastructure support / management", "A long-time project friend, currently on leave. Upon return responsibilities will again include project management, contribution and infrastructure ownership."),
+    -       TeamMember("Reilly Brogan", "Core contributor", "Reilly brings many years experience of working on Linux distributions to the table, easing the bringup-process and coordinating community contributions."),
+    - ];
+    div.container.pt-5
+        div.row
+            p Many individuals contribute to Serpent OS, some on a rolling basis and others when the need arises
+            p As such we only list those in a more formal capacity.
+        div.row.d-flex.justify-content-center
+            - static foreach (member; members)
+            - {
+                div.col-3.col-lg-3.col-sm-3
+                    div.card
+                        div.card-header
+                            h3.card-title=member.username
+                        div.card-body
+                            p.lead.text-muted #{member.role}
+                            p=member.wordy
+            - }

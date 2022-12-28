@@ -21,7 +21,10 @@
 -       NavigationItem("/boulder", "boulder"),
 -       NavigationItem("/moss", "moss"),
 -   ]),
--   NavigationItem("/about", "About"),
+-   NavigationItem("#", "About", [
+-       NavigationItem("/about", "Serpent OS"),
+-       NavigationItem("/team", "Meet the team"),
+-   ]),
 - ];
 
 nav.navbar.navbar-expand-lg.navbar-light.border-bottom.shadow-sm

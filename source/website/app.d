@@ -118,7 +118,6 @@ import vibe.core.core : setTimer;
     /**
      * Render a single top level page
      */
-
     @noRoute void showPage(HTTPServerRequest req, HTTPServerResponse res) @safe
     {
         import std.path : baseName;
@@ -128,6 +127,15 @@ import vibe.core.core : setTimer;
         immutable err = appDB.view((in tx) => post.load(tx, page));
         enforceHTTP(err.isNull, HTTPStatus.notFound, err.message);
         res.render!("page.dt", post, req);
+    }
+
+    /**
+     * Team information
+     */
+    @path("/team") @method(HTTPMethod.GET)
+    void showTeam() @safe
+    {
+        render!"team.dt";
     }
 
 private:
