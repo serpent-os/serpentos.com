@@ -60,7 +60,9 @@ import vibe.core.core : setTimer;
         fileSettings.serverPathPrefix = "/static";
         fileSettings.maxAge = 30.days;
         router.get("/static/*", serveStaticFiles("static", fileSettings));
+        router.get("*", staticTemplate!"down.dt");
 
+        /*
         router.registerWebInterface(this);
         auto blog = new Blog();
         blog.configure(router, appDB);
@@ -69,7 +71,7 @@ import vibe.core.core : setTimer;
         auto rapi = new BaseAPI();
         rapi.configure(appDB, router);
 
-        router.rebuild();
+        router.rebuild();*/
     }
 
     /**

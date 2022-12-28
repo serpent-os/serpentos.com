@@ -1,0 +1,27 @@
+doctype html
+
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        block title
+            title Down for maintenance
+    
+        // TODO: Use a site prefix
+        link(rel="stylesheet", href="/static/tabler/css/tabler.min.css")
+    body.d-flex.flex-column.min-vh-100.theme-dark-auto
+        main
+            div.container-fluid.py-0.px-0.my-0.mx-0
+                div.container.pt-5
+                    div.row.d-flex.justify-content-center
+
+                        div.col-8.col-md-6
+                            div.empty
+                                div.empty-icon
+                                    svg(width="64px", height="64px"): use(xlink:href="/static/tabler/tabler-sprite.svg#tabler-barrier-block")
+                                div.empty-title Down for maintenance
+                                div.empty-subtitle.text-muted
+                                    p Our website is undgeroing some much needed TLC and will be back online as soon as everything is done.
+
+    // TODO: Use a site prefix
+    script(src="/static/tabler/js/tabler.min.js", defer, async)
