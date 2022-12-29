@@ -75,7 +75,7 @@ Once a build is completed, `avalanche` is responsible for reporting completion t
 `vessel` to fetch the build artefacts from the relevant `avalanche` instance.
 
 This design decision allows `summit` to schedule a new build to the `avalanche` instance as soon as it has reported
-completion of the prior build, thus allowing for maximum use of both upload and download bandwith for each `avalanche`
+completion of the prior build, thus allowing for maximum use of both upload and download bandwidth for each `avalanche`
 instance -- and as a direct consequence, higher overall build throughput across the entire set of builders.
 
 # `vessel` - Making Packages Available to Users

@@ -37,7 +37,7 @@ team, in which I include the contributors to our `venom` recipe repository, an I
 to tooling has helped us make significant strides.
 
 It should be noted we've practically folded our old "team" concept and ensured we operate across the board as a singular community,
-with some members having additional responsibilites. Our belief is all in the community have equal share and say. With that said,
+with some members having additional responsibilities. Our belief is all in the community have equal share and say. With that said,
 to the original "team", members both past and present, I thank for their (long) support and contributions to the project.
 
 ### An ISO.

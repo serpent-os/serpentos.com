@@ -62,7 +62,7 @@ will mean drastically improved productivity as well as permitting live streams!
 
 I want to thank you all for your belief in me and patience while my family and
 I completely reinvented our lives to ensure ongoing stability. It's been only
-a short few weeks, but in reality we've been trying this continiuously for the
+a short few weeks, but in reality we've been trying this continuously for the
 last 3 years. At great expense, fiscal and otherwise, it has finally paid off.
 
 Now, as a family we can focus on ourselves again. Professionally speaking, I
