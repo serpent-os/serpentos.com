@@ -22,6 +22,10 @@
 		"VibeNoDefaultArgs",
 		"VibeOutputCompactHTML"
 	],
+	"stringImportPaths": [
+		"views",
+		"repos"
+	],
 	"preBuildCommands": [
 		"chroma --html-styles -s monokai > static/chroma.css"
 	]
