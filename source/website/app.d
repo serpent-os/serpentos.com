@@ -23,6 +23,7 @@ import moss.db.keyvalue.orm;
 import website.models;
 import website.blog;
 import website.rest;
+import website.team;
 import vibe.core.core : setTimer;
 
 /**
@@ -65,6 +66,8 @@ import vibe.core.core : setTimer;
         auto blog = new Blog();
         blog.configure(router, appDB);
         preloadContent();
+
+        router.registerWebInterface(new Team());
 
         auto rapi = new BaseAPI();
         rapi.configure(appDB, router);
@@ -118,15 +121,6 @@ import vibe.core.core : setTimer;
         immutable err = appDB.view((in tx) => post.load(tx, page));
         enforceHTTP(err.isNull, HTTPStatus.notFound, err.message);
         res.render!("page.dt", post, req);
-    }
-
-    /**
-     * Team information
-     */
-    @path("/team") @method(HTTPMethod.GET)
-    void showTeam() @safe
-    {
-        render!"team.dt";
     }
 
 private:
