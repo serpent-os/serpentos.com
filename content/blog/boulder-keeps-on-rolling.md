@@ -8,7 +8,7 @@ categories: [news]
 featuredImage: "/img/blog/boulder-keeps-on-rolling/Featured.webp"
 ---
 
-Squirreling away in the background has been some great changes to bring `boulder` closer to its full potential. Here's
+Squirrelling away in the background has been some great changes to bring `boulder` closer to its full potential. Here's
 a quick recap of some of the more important ones.
 
 <!--more-->

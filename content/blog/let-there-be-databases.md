@@ -139,7 +139,7 @@ tying it all together.
 I know we've gone the long way around creating the package manager, and many times there have
 been delays over the past year. However, we're no longer looking at light at the end of the
 tunnel, we're actively walking out of it. The remaining minor puzzles will unblock the
-installation routine, which in time will enable first alpha images of dubiuous quality.
+installation routine, which in time will enable first alpha images of dubious quality.
 However rough our jumping off point, it will be an awesome journey.
 
 Til next time - 

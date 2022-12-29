@@ -24,7 +24,7 @@ our project grows, so will the hosting support.
 {{<figure src="/img/fosshost.org_Cloud_Light.png" width="20%" height="20%" link="https://fosshost.org">}}
 
 
-This has enabled to get our infrastructure ready in ancticipation of the `stage4` bootstrap,
+This has enabled to get our infrastructure ready in anticipation of the `stage4` bootstrap,
 which is only around the corner now.
 
 # Wildcard SSL Certificate

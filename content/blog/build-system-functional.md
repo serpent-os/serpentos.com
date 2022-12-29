@@ -9,7 +9,7 @@ featuredImage: "/img/blog/build-system-functional/Featured.webp"
 ---
 
 Wow, has it been a hectic few weeks, and it definitely shows: last time
-we blogged it was about rebootstrapping with glibc. Feels like ancient news
+we blogged it was about re-bootstrapping with glibc. Feels like ancient news
 already! So, what's new in the world of Serpent OS? Apart from yours truly
 now being proud parent to a beautiful baby girl, work has resumed on
 the development of Moss, our package manager. And it builds stuff. Awesomely.

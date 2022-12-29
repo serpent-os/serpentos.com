@@ -37,7 +37,7 @@ key-compaction strategy - iteration of top level buckets and key-value pairs wit
 
 ## Hat tip, boltdb
 
-The majorty of the API was designed with the [boltdb](https://github.com/boltdb/bolt) API in mind. Additionally
+The majority of the API was designed with the [boltdb](https://github.com/boltdb/bolt) API in mind. Additionally
 it was built with `-preview=dip1000` and `-preview=in` enabled, ensuring safely scoped memory use and no
 room for memory lifetime issues. While we prefer the use of generics, the API is built with `immutable(ubyte[]`)
 as the internal key and value type.
@@ -91,7 +91,7 @@ Avalanche is a core component of our upcoming infrastructure, providing the
 service for running builds on a local node, and a controller to coordinate
 a group of builders.
 
-Summit will be the publicily accessible project dashboard, and will be responsible
+Summit will be the publicly accessible project dashboard, and will be responsible
 for coordinating incoming builds to Avalanche controllers and repositories.
 Developers will submit builds to Summit and have them dispatched correctly.
 

@@ -71,7 +71,7 @@ integration with the mirror network.
 We do have access to partial-uptime systems in our developer network, but we don't have any statically configured
 "beefy servers" to enable builds.
 
-At minimum, we'll need modern always-up x86-64 (`v3` + `v2`) build machines. To enble AArch64 down the road we
+At minimum, we'll need modern always-up x86-64 (`v3` + `v2`) build machines. To enable AArch64 down the road we
 will also need dedicated build machines and a test system such as the Pinebook.
 
 For a quick bring up we realistically need **two** `x86_64` build systems. They don't need boatloads of disk space,
