@@ -25,7 +25,7 @@ block content
     div.container.pt-5
         div.row
             p Many individuals contribute to Serpent OS, some on a rolling basis and others when the need arises
-            p As such we only list those in a more formal capacity.
+            p A further update to this website will list the main contributors to the project
         div.row.d-flex.justify-content-center
             - static foreach (member; members)
             - {
