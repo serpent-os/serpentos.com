@@ -19,7 +19,7 @@ block content
     -    string link = "#";
     - }
     - static enum features = [
-    -   Feature("tabler-massage", "Smart", "Our Smart System Management takes care of Serpent OS while you sit back and relax.", "/smart"),
+    -   Feature("tabler-brain", "Smart", "Our Smart System Management takes care of Serpent OS while you sit back and relax.", "/smart"),
     -   Feature("tabler-speedboat", "Fast", "Pushing the limits of what's possible by making binaries more efficient in all configurations.", "/fast"),
     -   Feature("tabler-friends", "Community", "A fun and welcoming environment for users, contributors and the team.", "/community"),
     -   Feature("tabler-heart-handshake", "Dependable", "Built on top of the robust Linux kernel. Our mission is to keep you running without the hassle.", "/dependable"),
