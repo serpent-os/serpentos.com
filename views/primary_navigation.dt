@@ -61,3 +61,6 @@ nav.navbar.navbar-expand-lg.navbar-light.border-bottom.shadow-sm
             a.px-3.nav-link(href="/blog/index.xml", data-bs-toggle="tooltip", data-bs-placement="bottom", data-bs-original-title="RSS (blog feed)", aria-label="Subscribe to RSS feed")
                 svg(width="16px", height="16px")
                     use(xlink:href="/static/tabler/tabler-sprite.svg#tabler-rss")
+            a.nav-link(rel="me", href="https://fosstodon.org/@serpentos", data-bs-toggle="tooltip", data-bs-placement="bottom", data-bs-original-title="Mastodon", aria-label="Follow us on Mastodon")
+                svg(width="16px", height="16px")
+                    use(xlink:href="/static/tabler/tabler-sprite.svg#tabler-brand-mastodon")
