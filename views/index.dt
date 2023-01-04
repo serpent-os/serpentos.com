@@ -8,8 +8,8 @@ block banner
                     p.p-2 Serpent OS strives to provide the perfect hybrid experience - a traditional, package management driven Linux&reg; distribution 
                         | powered by the latest technologies. Stateless by design with atomic updates at the core, Serpent OS aims to close the gap between 
                         | development and production.
-                    p.p-2 Whether you're a Linux&reg; professional or a home user, Serpent OS has something for you. With deduplicated on-disk transactions on disk,
-                        | the last working version of your system is only a reboot away. Any freshly installed software is immediately available
+                    p.p-2 Whether you're a Linux&reg; professional or a home user, Serpent OS has something for you. With deduplicated on-disk transactions on disk, 
+                        | the last working version of your system is only a reboot away. Any freshly installed software is immediately available 
                         | giving you the flexibility of traditional package management and the peace of mind of atomic updates.
                     p.p-2 The project is in a highly active stage of development, having achieved full bootstrap with the LLVM toolchain and integration of 
                         | our home grown tooling, #[a(href="/boulder") boulder] and #[a(href="/moss") moss].
