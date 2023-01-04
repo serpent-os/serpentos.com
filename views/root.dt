@@ -10,7 +10,7 @@ html(lang="en")
         // TODO: Use a site prefix
         link(rel="stylesheet", href="/static/tabler/css/tabler.min.css")
         link(rel="stylesheet", href="/static/chroma.css")
-    body.d-flex.flex-column.min-vh-100.theme-dark-auto
+    body.flex-column.min-vh-100.theme-dark-auto
         include primary_navigation
         block banner
         main
