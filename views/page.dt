@@ -4,7 +4,7 @@ block title
     title #{post.title} | Serpent OS
 
 block banner
-    div.container-fluid.bg-azure.shadow-sm.border-bottom
+    div.container-fluid.bg-dark.shadow-sm.border-bottom
         div.container.p-4.justify-content-center
             div.row.d-flex.align-items-center.justify-content-center
                 // div.col-auto.align-self-center

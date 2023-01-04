@@ -27,13 +27,13 @@
 -   ]),
 - ];
 
-header.navbar.navbar-expand-md.navbar-light
+header.navbar.navbar-expand-md.navbar-dark
     div.container-xl
         button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#primaryNavigation", aria-controls="primaryNavigation", aria-expanded="false")
             span.navbar-toggler-icon
         h1.navbar-brand.navbar-brand-autodark.d-none-navbar-horizontal.pe-0.pe-md-3
             a(href="/")
-                img.navbar-brand-image(src="/static/logo.webp", width="32", height="32")
+                img.navbar-brand-image(src="/static/logo_white.webp", width="32", height="32")
         div.navbar-nav.flex-row.order-md-last
             a.nav-link#themeSwitcher(href="#", data-bs-toggle="tooltip", data-bs-placement="bottom", data-bs-original-title="Toggle dark mode", aria-label="Toggle dark mode")
                 svg#themeSwitcherIcon(width="16px", height="16px")
