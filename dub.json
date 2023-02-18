@@ -6,9 +6,11 @@
 	"dependencies": {
 		"arsd-official:dom": "~>10.8.4",
 		"dyaml": "~>0.9.1",
-		"moss-db": "~>0.0.3",
 		"vibe-d": "~>0.9",
-		"vibe-d:tls": "*"
+		"vibe-d:tls": "*",
+        "moss-db": {
+            "path": "../moss-db"
+        }
 	},
 	"subConfigurations": {
 		"vibe-d:tls": "notls"
