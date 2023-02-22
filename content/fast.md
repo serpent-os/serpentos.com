@@ -16,7 +16,7 @@ How:
 - From Theory to Practice! (applying benchmark tests/results to faster packages)
 --->
 
-Performance can mean different different things to different people. For us it is a cross between what is considered
+Performance can mean different things to different people. For us, it is a cross between what is considered
 traditional performance and efficiency. The core foundation of Serpent OS is to increase the performance of binaries and
 libraries we distribute to you in **all** configurations. This provides users with greater energy efficiency so your
 laptop lasts longer and generates less heat. Better battery is always a bonus and there's less waiting around for your
