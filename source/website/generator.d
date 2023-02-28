@@ -18,13 +18,15 @@ module website.generator;
 import std.exception : enforce;
 import std.file;
 import website.models;
-import std.path : buildPath, relativePath;
-import std.parallelism : TaskPool;
-import std.array : array;
+import std.path : buildPath, relativePath, baseName, asNormalizedPath;
+import std.parallelism : TaskPool, parallel;
+import std.array : array, appender, Appender;
 import std.algorithm : sort, map;
 import std.string : startsWith;
 import website.markdownpage;
 import vibe.d;
+import std.conv : to;
+import diet.html;
 
 /** 
  * Private mapping type to solve the dual-context ldc issue
@@ -40,6 +42,11 @@ private static struct LoadableEntry
      * Real path for the entry
      */
     string path;
+}
+
+private static struct EmissionTraits
+{
+    enum htmlOutputStyle = HTMLOutputStyle.compact;
 }
 
 /** 
@@ -83,10 +90,15 @@ public final class WebsiteGenerator
      */
     void build() @safe
     {
-        immutable tsStart = Clock.currTime();
+        auto tsStart = Clock.currTime();
         auto content = loadContent();
-        immutable tsEnd = Clock.currTime();
+        auto tsEnd = Clock.currTime();
         logInfo(format!"Loaded %s pages in %s"(content.length, tsEnd - tsStart));
+
+        tsStart = Clock.currTime();
+        writeContent(content);
+        tsEnd = Clock.currTime();
+        logInfo(format!"Wrote %s pages in %s"(content.length, tsEnd - tsStart));
     }
 
 private:
@@ -108,7 +120,7 @@ private:
 
         auto inputTree = () @trusted {
             return contentPath.dirEntries("*.md", SpanMode.depth).map!((string s) {
-                return LoadableEntry(s.relativePath(inputDirectory), s);
+                return LoadableEntry(s.relativePath(inputDirectory).asNormalizedPath.to!string, s);
             }).array();
         }();
 
@@ -117,6 +129,50 @@ private:
         pages.sort!"a.tsCreated > b.tsCreated";
 
         return pages;
+    }
+
+    /** 
+     * Write all content to disk
+     *
+     * Params:
+     *   pages = The processed pages
+     */
+    void writeContent(Post[] pages) @trusted
+    {
+        import std.file : write;
+
+        static struct MockRequest
+        {
+            string path;
+        }
+
+        foreach (scope const ref page; pages.parallel)
+        {
+            auto app = Appender!string();
+
+            immutable pageOutputDir = outputDirectory.buildPath(page.slug);
+            immutable pageOutputIndex = pageOutputDir.buildPath("index.html");
+
+            pageOutputDir.mkdirRecurse();
+
+            /* Set "current" page */
+            auto req = MockRequest(format!"/%s"(page.slug));
+            auto post = page;
+
+            /* render using appropriate diet template */
+            final switch (page.type)
+            {
+            case PostType.RegularPost:
+                app.compileHTMLDietFile!("blog/post.dt",
+                        EmissionTraits, req, post);
+                break;
+            case PostType.Page:
+                app.compileHTMLDietFile!("page.dt", EmissionTraits, req, post);
+                break;
+            }
+
+            pageOutputIndex.write(app[]);
+        }
     }
 
     /** 
@@ -139,7 +195,8 @@ private:
         model.featuredImage = page.featuredImage;
         model.processedContent = page.content;
         model.processedSummary = page.summary;
-        model.slug = page.slug;
+        model.slug = model.type == PostType.RegularPost
+            ? format!"blog/%s"(page.slug) : page.slug.baseName;
         model.title = page.title;
         model.tsCreated = page.date.toUTC.toUnixTime;
         model.tsModified = model.tsCreated;
