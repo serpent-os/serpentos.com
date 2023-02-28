@@ -18,7 +18,7 @@ module website.generator;
 import std.exception : enforce;
 import std.file;
 import website.models;
-import std.path : buildPath, relativePath, baseName, asNormalizedPath;
+import std.path : buildPath, relativePath, baseName, asNormalizedPath, absolutePath;
 import std.parallelism : TaskPool, parallel;
 import std.array : array, appender, Appender;
 import std.algorithm : sort, map;
@@ -146,12 +146,15 @@ private:
             string path;
         }
 
-        foreach (scope const ref page; pages.parallel)
+        foreach (ref page; pages.parallel)
         {
             auto app = Appender!string();
 
             immutable pageOutputDir = outputDirectory.buildPath(page.slug);
             immutable pageOutputIndex = pageOutputDir.buildPath("index.html");
+            /* Allow relative CSS imports */
+            immutable relativeRoot = outputDirectory.absolutePath.relativePath(
+                    pageOutputDir.absolutePath);
 
             pageOutputDir.mkdirRecurse();
 
@@ -164,10 +167,11 @@ private:
             {
             case PostType.RegularPost:
                 app.compileHTMLDietFile!("blog/post.dt",
-                        EmissionTraits, req, post);
+                        EmissionTraits, relativeRoot, req, post);
                 break;
             case PostType.Page:
-                app.compileHTMLDietFile!("page.dt", EmissionTraits, req, post);
+                app.compileHTMLDietFile!("page.dt",
+                        EmissionTraits, relativeRoot, req, post);
                 break;
             }
 

@@ -8,8 +8,8 @@ html(lang="en")
             title Serpent OS
     
         // TODO: Use a site prefix
-        link(rel="stylesheet", href="/static/tabler/css/tabler.min.css")
-        link(rel="stylesheet", href="/static/chroma.css")
+        link(rel="stylesheet", href="#{relativeRoot}/static/tabler/css/tabler.min.css")
+        link(rel="stylesheet", href="#{relativeRoot}/static/chroma.css")
     body.flex-column.min-vh-100.theme-dark-auto
         include primary_navigation
         block banner
@@ -20,9 +20,9 @@ html(lang="en")
         include footer
 
     // TODO: Use a site prefix
-    script(src="/static/tabler/js/tabler.min.js", defer, async)
-    script(src="/static/darkMode.js")
-    script(src="/static/global.js")
+    script(src="#{relativeRoot}/static/tabler/js/tabler.min.js", defer, async)
+    script(src="#{relativeRoot}/static/darkMode.js")
+    script(src="#{relativeRoot}/static/global.js")
 
     block scripts
         // add scripts here

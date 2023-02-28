@@ -16,7 +16,7 @@ block content
             div.col-8.col-md-6
                 div.empty
                     div.empty-icon
-                        svg(width="64px", height="64px"): use(xlink:href="/static/tabler/tabler-sprite.svg#tabler-alert-circle")
+                        svg(width="64px", height="64px"): use(xlink:href="#{relativeRoot}/static/tabler/tabler-sprite.svg#tabler-alert-circle")
                     div.empty-title Ikey dropped the screwdriver again
                     div.empty-subtitle.text-muted
                         p The server thinks you got a #[code #{error.code} - #{error.message}] ... between you and me?
