@@ -16,11 +16,16 @@ module main;
  */
 
 import vibe.d;
+import website.generator;
 
-/**
- * Main routine, do nothing.
+/** 
+ * Main entry for the binary
+ *
+ * Params:
+ *   args = runtime arguments
  */
-int main(string[] args)
+void main(string[] args) @safe
 {
-
+    auto gen = new WebsiteGenerator(".", "output");
+    gen.build();
 }
