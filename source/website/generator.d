@@ -18,7 +18,7 @@ module website.generator;
 import std.exception : enforce;
 import std.file;
 import website.models;
-import std.path : buildPath, relativePath, baseName, asNormalizedPath, absolutePath;
+import std.path : buildPath, relativePath, baseName, asNormalizedPath, absolutePath, dirName;
 import std.parallelism : TaskPool, parallel;
 import std.array : array, appender, Appender;
 import std.algorithm : sort, map;
@@ -99,6 +99,11 @@ public final class WebsiteGenerator
         writeContent(content);
         tsEnd = Clock.currTime();
         logInfo(format!"Wrote %s pages in %s"(content.length, tsEnd - tsStart));
+
+        tsStart = Clock.currTime();
+        copyStatic();
+        tsEnd = Clock.currTime();
+        logInfo(format!"Copied static/ in %s"(tsEnd - tsStart));
     }
 
 private:
@@ -176,6 +181,40 @@ private:
             }
 
             pageOutputIndex.write(app[]);
+        }
+    }
+
+    void copyStatic() @safe
+    {
+        auto staticSource = inputDirectory.buildPath("static");
+        auto staticDest = outputDirectory.buildPath("static");
+        copyRecurse(staticSource, staticDest);
+    }
+
+    static void copyRecurse(string inputPath, string outputPath) @trusted
+    {
+        import std.file : copy;
+
+        foreach (ref DirEntry ent; inputPath.dirEntries(SpanMode.shallow))
+        {
+            immutable relaPath = ent.name.baseName;
+            auto dest = outputPath.buildPath(relaPath);
+
+            auto dirn = dest.dirName;
+            dirn.mkdirRecurse();
+
+            if (ent.linkAttributes.attrIsDir)
+            {
+                copyRecurse(ent.name, dest);
+            }
+            else if (ent.linkAttributes.attrIsFile)
+            {
+                ent.name.copy(dest);
+            }
+            else
+            {
+                throw new Exception(format!"Cannot handle path %s"(ent.path));
+            }
         }
     }
 
