@@ -21,4 +21,4 @@ block content
 
 block scripts
 
-    script(src="/static/posts.js", defer, async, module="true")
+    script(src="#{relativeRoot}/static/posts.js", defer, async, module="true")
