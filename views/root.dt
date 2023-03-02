@@ -7,7 +7,6 @@ html(lang="en")
         block title
             title Serpent OS
     
-        // TODO: Use a site prefix
         link(rel="stylesheet", href="#{relativeRoot}/static/tabler/css/tabler.min.css")
         link(rel="stylesheet", href="#{relativeRoot}/static/chroma.css")
     body.flex-column.min-vh-100.theme-dark-auto

@@ -12,11 +12,11 @@ block banner
                         | the last working version of your system is only a reboot away. Any freshly installed software is immediately available 
                         | giving you the flexibility of traditional package management and the peace of mind of atomic updates.
                     p.p-2 The project is in a highly active stage of development, having achieved full bootstrap with the LLVM toolchain and integration of 
-                        | our home grown tooling, #[a(href="/boulder") boulder] and #[a(href="/moss") moss].
-                    a.btn.btn-outline-light.btn-square.m-1(href="/blog/2022/12/24/lift-off") Read about our launch
+                        | our home grown tooling, #[a(href="#{relativeRoot}/boulder") boulder] and #[a(href="#{relativeRoot}/moss") moss].
+                    a.btn.btn-outline-light.btn-square.m-1(href="#{relativeRoot}/blog/2022/12/24/lift-off") Read about our launch
                     a.btn.btn-outline-light.btn-square.m-1(href="https://github.com/sponsors/ikeycode?o=sd&sc=t") Join the journey
                 div.col-12.col-md-6
-                    img(src="/static/img/blog/lift-off/Featured.webp")
+                    img(src="#{relativeRoot}/static/img/blog/lift-off/Featured.webp")
 block content
 
     - static struct Feature
@@ -63,13 +63,15 @@ block content
                                     div.card
                                         div.card-body
                                             div.row.d-flex.align-items-center
-                                                svg.col-auto.text-azure.mx-3(width="64px", height="64px"): use(xlink:href="/static/tabler-sprite-nostroke.svg\##{f.icon}")
+                                                - import std.string : format;
+                                                - auto img = format!"%s/static/tabler-sprite-nostroke.svg#%s"(relativeRoot, f.icon);
+                                                svg.col-auto.text-azure.mx-3(width="64px", height="64px"): use(xlink:href=img)
                                                 div.col:
-                                                    h3: a.stretched-link(href=f.link)= f.label
+                                                    h3: a.stretched-link(href=format!"%s/%s"(relativeRoot, f.link))= f.label
                                                     div.opacity-75= f.text
                             - } }
                     - } }
 
 block scripts
 
-    script(src="/static/mainPage.js", defer, async, module="true")
+    script(src="#{relativeRoot}/static/mainPage.js", defer, async, module="true")
