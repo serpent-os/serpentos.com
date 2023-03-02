@@ -44,9 +44,20 @@ private static struct LoadableEntry
     string path;
 }
 
+/**
+ * Force compact emission of HTML
+ */
 private static struct EmissionTraits
 {
     enum htmlOutputStyle = HTMLOutputStyle.compact;
+}
+
+/**
+ * Abuse the use of `.req` querying within templates
+ */
+private static struct MockRequest
+{
+    string path;
 }
 
 /** 
@@ -104,6 +115,8 @@ public final class WebsiteGenerator
         copyStatic();
         tsEnd = Clock.currTime();
         logInfo(format!"Copied static/ in %s"(tsEnd - tsStart));
+
+        emitTemplates();
     }
 
 private:
@@ -145,11 +158,6 @@ private:
     void writeContent(Post[] pages) @trusted
     {
         import std.file : write;
-
-        static struct MockRequest
-        {
-            string path;
-        }
 
         foreach (ref page; pages.parallel)
         {
@@ -239,11 +247,49 @@ private:
         model.processedContent = page.content;
         model.processedSummary = page.summary;
         model.slug = model.type == PostType.RegularPost
-            ? format!"blog/%s"(page.slug) : page.slug.baseName;
+            ? format!"blog/%s"(page.slug) : entry.relaPath.baseName[0 .. $ - 3];
         model.title = page.title;
         model.tsCreated = page.date.toUTC.toUnixTime;
         model.tsModified = model.tsCreated;
         return model;
+    }
+
+    /** 
+     * Emit remaining templates, i.e. index, blog/index
+     *
+     */
+    void emitTemplates() @safe
+    {
+        static struct ManualTemplate
+        {
+            string templateFile;
+            string outputPath;
+            string navPath;
+        }
+
+        static immutable manualTemplates = [
+            ManualTemplate("index.dt", "index.html", "/"),
+            ManualTemplate("team.dt", "team/index.html", "/team"),
+            ManualTemplate("blog/index.dt", "blog/index.html", "/blog"),
+        ];
+
+        static foreach (m; manualTemplates)
+        {
+            {
+                immutable outputPath = outputDirectory.buildPath(m.outputPath);
+                immutable dir = outputPath.dirName;
+                if (!dir.exists)
+                {
+                    dir.mkdirRecurse();
+                }
+                immutable relativeRoot = outputDirectory.absolutePath.relativePath(
+                        dir.absolutePath);
+                auto app = appender!string;
+                auto req = MockRequest(m.navPath);
+                app.compileHTMLDietFile!(m.templateFile, EmissionTraits, relativeRoot, req);
+                outputPath.write(app[]);
+            }
+        }
     }
 
     string inputDirectory;
