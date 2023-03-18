@@ -24,7 +24,7 @@ Our infrastructure is composed of 3 main components.
 
 #### Summit
 
-This is the page you can see over at [dash.serpentos.com])(https://dash.serpentos.com). It contains
+This is the page you can see over at [dash.serpentos.com](https://dash.serpentos.com). It contains
 the build scheduler. It monitors our git repositories, and as soon as it discovers any missing builds
 it creates build tasks for them. It uses a graph to ensure parallel builds happen as much as possible,
 and correctly orders (and blocks) builds based on build dependencies.
