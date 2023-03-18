@@ -16,7 +16,7 @@
 module website.generator;
 
 import diet.html;
-import std.algorithm : each, map, sort;
+import std.algorithm : each, map, sort, filter;
 import std.array : Appender, appender, array;
 import std.conv : to;
 import std.digest;
@@ -28,7 +28,8 @@ import std.mmfile;
 import std.parallelism : parallel, TaskPool;
 import std.path : absolutePath, asNormalizedPath, baseName, buildPath, dirName,
     extension, relativePath;
-import std.range : chunks;
+import std.range : chunks, enumerate;
+import std.range.primitives : isInputRange;
 import std.stdio : File;
 import std.string : startsWith;
 import vibe.d;
@@ -133,6 +134,11 @@ public final class WebsiteGenerator
         tsEnd = Clock.currTime();
         logInfo(format!"Copied static/ in %s"(tsEnd - tsStart));
 
+        tsStart = Clock.currTime();
+        emitAPI(content);
+        tsEnd = Clock.currTime();
+        logInfo(format!"Wrote fake API in %s"(tsEnd - tsStart));
+
         emitTemplates(content, assets);
     }
 
@@ -167,7 +173,10 @@ private:
         ];
         foreach (inp; inputs.parallel)
         {
-            ret[inp] = installAsset(inp);
+            synchronized (this)
+            {
+                ret[inp] = installAsset(inp);
+            }
         }
         return ret;
     }
@@ -367,12 +376,85 @@ private:
         }
     }
 
-    /**
-     * Emit the fake API
+    /** 
+     * Emit the faux API (JSON files)
+     *
+     * Params:
+     *   content = the site content
      */
-    void emitAPI() @safe
+    void emitAPI(scope Post[] content) @safe
     {
+        immutable apiTree = outputDirectory.buildPath("api", to!string(buildTimestamp));
+        apiTree.mkdirRecurse();
 
+        /** 
+         * Slimmed down post for the JSON
+         */
+        static struct MiniPost
+        {
+            string title;
+            string summary;
+            string featuredImage;
+            uint64_t tsCreated;
+            string slug;
+            string author;
+
+            /** 
+             * Construct MiniPost from a full Post
+             * Params:
+             *   post = Input Post
+             */
+            this(scope const ref Post post) @safe
+            {
+                this.title = post.title;
+                this.summary = post.processedSummary;
+                this.featuredImage = post.featuredImage;
+                this.tsCreated = post.tsCreated, this.slug = post.slug;
+                this.author = post.author;
+            }
+        }
+
+        /** 
+         * Paginate data without copying!
+         */
+        static struct Paginator(R) if (isInputRange!R)
+        {
+            R items;
+            ulong pageSize = 6;
+            ulong numPages;
+            ulong page;
+        }
+
+        /** 
+         * Easier constructor for a Paginator
+         * Params:
+         *   inp = input range
+         *   numPages = number of pages
+         */
+        static auto paginate(R)(R inp, ulong numPages = 0) @safe
+        {
+            return Paginator!R(inp, 6, numPages);
+        }
+
+        /* Grab all posts and convert into mini posts */
+        auto posts = () @trusted {
+            return content.filter!((p) => p.type == PostType.RegularPost)
+                .map!((p) => MiniPost(p))
+                .array();
+        }();
+
+        /* Chunk into pages and dump JSON for them */
+        immutable nPosts = posts.length;
+        immutable numPages = (nPosts / 6) + 1;
+        foreach (idx, pageSet; posts.chunks(6).enumerate)
+        {
+            const object = paginate(pageSet, numPages);
+            auto json = object.serializeToJson();
+            auto app = appender!string();
+            app.writeJsonString(json);
+            immutable jsonPath = apiTree.buildPath(format!"posts.%s.json"(idx.to!string));
+            jsonPath.write(app[]);
+        }
     }
 
     string inputDirectory;
