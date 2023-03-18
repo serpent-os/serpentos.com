@@ -111,6 +111,8 @@ public final class WebsiteGenerator
      */
     void build() @safe
     {
+        buildTimestamp = Clock.currTime(UTC()).toUnixTime();
+
         auto tsStart = Clock.currTime();
         auto content = loadContent();
         auto tsEnd = Clock.currTime();
@@ -133,6 +135,8 @@ public final class WebsiteGenerator
 
         emitTemplates(content, assets);
     }
+
+    ulong buildTimestamp;
 
 private:
 
@@ -249,11 +253,11 @@ private:
             {
             case PostType.RegularPost:
                 app.compileHTMLDietFile!("blog/post.dt",
-                        EmissionTraits, relativeRoot, req, post, assets);
+                        EmissionTraits, relativeRoot, req, post, assets, buildTimestamp);
                 break;
             case PostType.Page:
                 app.compileHTMLDietFile!("page.dt",
-                        EmissionTraits, relativeRoot, req, post, assets);
+                        EmissionTraits, relativeRoot, req, post, assets, buildTimestamp);
                 break;
             }
 
@@ -357,7 +361,7 @@ private:
                 auto app = appender!string;
                 auto req = MockRequest(m.navPath);
                 app.compileHTMLDietFile!(m.templateFile, EmissionTraits,
-                        relativeRoot, req, posts, assets);
+                        relativeRoot, req, posts, assets, buildTimestamp);
                 outputPath.write(app[]);
             }
         }

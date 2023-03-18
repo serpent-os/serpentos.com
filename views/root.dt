@@ -13,6 +13,7 @@ html(lang="en")
     body.flex-column.min-vh-100.theme-dark-auto
         input#tblrns(type="hidden", name="tblrns", value=assets["tabler/tabler-sprite-nostroke.svg"])
         input#tblr(type="hidden", name="tblr", value=assets["tabler/tabler-sprite.svg"])
+        input#buildTimestamp(type="hidden", name="buildTimestamp", value=buildTimestamp)
         include primary_navigation
         block banner
         main
