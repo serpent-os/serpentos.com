@@ -15,18 +15,25 @@
 
 module website.generator;
 
+import diet.html;
+import std.algorithm : each, map, sort;
+import std.array : Appender, appender, array;
+import std.conv : to;
+import std.digest;
+import std.digest.sha;
 import std.exception : enforce;
 import std.file;
-import website.models;
-import std.path : buildPath, relativePath, baseName, asNormalizedPath, absolutePath, dirName;
-import std.parallelism : TaskPool, parallel;
-import std.array : array, appender, Appender;
-import std.algorithm : sort, map;
+import std.mmfile;
+import std.mmfile;
+import std.parallelism : parallel, TaskPool;
+import std.path : absolutePath, asNormalizedPath, baseName, buildPath, dirName,
+    extension, relativePath;
+import std.range : chunks;
+import std.stdio : File;
 import std.string : startsWith;
-import website.markdownpage;
 import vibe.d;
-import std.conv : to;
-import diet.html;
+import website.markdownpage;
+import website.models;
 
 /** 
  * Private mapping type to solve the dual-context ldc issue
@@ -90,6 +97,8 @@ public final class WebsiteGenerator
             outputDirectory.mkdirRecurse();
         }
 
+        outputDirectory.buildPath("static").mkdirRecurse();
+
         contentPath = inputDirectory.buildPath("content");
         enforce(contentPath.exists, contentPath ~ " does not exist");
     }
@@ -106,8 +115,10 @@ public final class WebsiteGenerator
         auto tsEnd = Clock.currTime();
         logInfo(format!"Loaded %s pages in %s"(content.length, tsEnd - tsStart));
 
+        auto assets = installAssets();
+
         tsStart = Clock.currTime();
-        writeContent(content);
+        writeContent(content, assets);
         tsEnd = Clock.currTime();
         logInfo(format!"Wrote %s pages in %s"(content.length, tsEnd - tsStart));
 
@@ -116,10 +127,63 @@ public final class WebsiteGenerator
         tsEnd = Clock.currTime();
         logInfo(format!"Copied static/ in %s"(tsEnd - tsStart));
 
-        emitTemplates();
+        emitTemplates(assets);
     }
 
 private:
+
+    static auto computeSHA256(immutable(string) path) @trusted
+    {
+        scope mmfile = new MmFile(File(path, "rb"));
+        auto contents = cast(ubyte[]) mmfile[0 .. $];
+        auto sha = makeDigest!SHA256();
+        contents.chunks(4 * 1024 * 1024).each!((b) => sha.put(b));
+        auto ret = (toHexString(sha.finish()).toLower()).idup;
+        mmfile.destroy!false;
+        return ret;
+    }
+
+    /** 
+     * Hash/merge required assets for uniqueness
+     *
+     * Returns: set of mutated hashed paths
+     */
+    string[string] installAssets() @safe
+    {
+        string[string] ret;
+        static enum inputs = [
+            "tabler/css/tabler.min.css", "tabler/js/tabler.min.js",
+            "js/darkMode.js", "js/global.js", "js/mainPage.js", "js/posts.js",
+            "js/sponsors.js"
+        ];
+        static foreach (inp; inputs)
+        {
+            ret[inp] = installAsset(inp);
+        }
+        return ret;
+    }
+
+    /** 
+     * Install a local asset as a hashed file, preserving the extension
+     *
+     * Params:
+     *   localPath = Path relative to the root, i.e. tabler/min.css
+     * Returns: 
+     */
+    string installAsset(string localPath) @safe
+    {
+        string ext = localPath.extension;
+        if (ext.empty)
+        {
+            ext = ".asset";
+        }
+        immutable asset = inputDirectory.buildPath(localPath);
+        immutable hash = computeSHA256(asset);
+        immutable id = format!"%s%s"(hash, ext);
+        immutable outputPath = outputDirectory.buildPath("static", id);
+        asset.copy(outputPath);
+        return id;
+    }
 
     /** 
      * Preload all markdown pages into Post[] slice
@@ -155,7 +219,7 @@ private:
      * Params:
      *   pages = The processed pages
      */
-    void writeContent(Post[] pages) @trusted
+    void writeContent(Post[] pages, ref string[string] assets) @trusted
     {
         import std.file : write;
 
@@ -180,11 +244,11 @@ private:
             {
             case PostType.RegularPost:
                 app.compileHTMLDietFile!("blog/post.dt",
-                        EmissionTraits, relativeRoot, req, post);
+                        EmissionTraits, relativeRoot, req, post, assets);
                 break;
             case PostType.Page:
                 app.compileHTMLDietFile!("page.dt",
-                        EmissionTraits, relativeRoot, req, post);
+                        EmissionTraits, relativeRoot, req, post, assets);
                 break;
             }
 
@@ -258,7 +322,7 @@ private:
      * Emit remaining templates, i.e. index, blog/index
      *
      */
-    void emitTemplates() @safe
+    void emitTemplates(ref string[string] assets) @safe
     {
         static struct ManualTemplate
         {
@@ -286,7 +350,8 @@ private:
                         dir.absolutePath);
                 auto app = appender!string;
                 auto req = MockRequest(m.navPath);
-                app.compileHTMLDietFile!(m.templateFile, EmissionTraits, relativeRoot, req);
+                app.compileHTMLDietFile!(m.templateFile, EmissionTraits,
+                        relativeRoot, req, assets);
                 outputPath.write(app[]);
             }
         }

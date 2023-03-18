@@ -74,4 +74,4 @@ block content
 
 block scripts
 
-    script(src="#{relativeRoot}/static/mainPage.js", defer, async, module="true")
+    script(src=format!"%s/static/%s"(relativeRoot, assets["js/mainPage.js"]), defer, async, module="true")
