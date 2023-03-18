@@ -13,12 +13,17 @@
  * License: Zlib
  */
 
+let buildTimestamp;
+let svgAsset;
+
 /**
  * Hook up our post handling
  */
  window.addEventListener('load', function(ev)
  {
-     refreshLatestNews();
+    buildTimestamp = this.document.getElementById('buildTimestamp').getAttribute('value');
+    svgAsset = this.document.getElementById('tblr').getAttribute('value');
+    refreshLatestNews();
  });
  
  /**
@@ -30,7 +35,7 @@
  <div class="empty">
      <div class="empty-icon">
          <svg>
-             <use xlink:href="/static/tabler-sprite-nostroke.svg#tabler-bug"></use>
+             <use xlink:href="/static/${svgAsset}#tabler-bug"></use>
          </svg>
      </div>
      <div class="empty-title">Aww crap</div> 
@@ -80,7 +85,7 @@
  function refreshLatestNews()
  {
      const list = this.document.getElementById('latestNews');
-     fetch(`/api/v1/posts/list`, {
+     fetch(`/api/${buildTimestamp}/posts.0.json`, {
          'method': 'GET',
          'credentials': 'include'
      }).then((response) => {
