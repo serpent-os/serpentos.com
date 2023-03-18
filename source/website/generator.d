@@ -34,6 +34,7 @@ import std.string : startsWith;
 import vibe.d;
 import website.markdownpage;
 import website.models;
+import core.internal.gc.impl.conservative.gc;
 
 /** 
  * Private mapping type to solve the dual-context ldc issue
@@ -115,7 +116,10 @@ public final class WebsiteGenerator
         auto tsEnd = Clock.currTime();
         logInfo(format!"Loaded %s pages in %s"(content.length, tsEnd - tsStart));
 
+        tsStart = Clock.currTime();
         auto assets = installAssets();
+        tsEnd = Clock.currTime();
+        logInfo(format!"Hashed %s assets in %s"(assets.length, tsEnd - tsStart));
 
         tsStart = Clock.currTime();
         writeContent(content, assets);
@@ -148,7 +152,7 @@ private:
      *
      * Returns: set of mutated hashed paths
      */
-    string[string] installAssets() @safe
+    string[string] installAssets() @trusted
     {
         string[string] ret;
         static immutable inputs = [
@@ -157,7 +161,7 @@ private:
             "js/darkMode.js", "js/global.js", "js/mainPage.js", "js/posts.js",
             "js/sponsors.js"
         ];
-        static foreach (inp; inputs)
+        foreach (inp; inputs.parallel)
         {
             ret[inp] = installAsset(inp);
         }
