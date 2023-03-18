@@ -33,17 +33,17 @@ header.navbar.navbar-expand-md.navbar-dark
             span.navbar-toggler-icon
         h1.navbar-brand.navbar-brand-autodark.d-none-navbar-horizontal.pe-0.pe-md-3
             a(href="/")
-                img.navbar-brand-image(src="#{relativeRoot}/static/logo_white.webp", width="32", height="32")
+                img.navbar-brand-image(src=relativeRoot ~ "/static/logo_white.webp", width="32", height="32")
         div.navbar-nav.flex-row.order-md-last
             a.nav-link#themeSwitcher(href="#", data-bs-toggle="tooltip", data-bs-placement="bottom", data-bs-original-title="Toggle dark mode", aria-label="Toggle dark mode")
                 svg#themeSwitcherIcon(width="16px", height="16px")
-                    use(xlink:href="#{relativeRoot}/static/tabler/tabler-sprite.svg#tabler-mrssoon")
+                    use(xlink:href=format!"%s/static/%s#tabler-mrssoon"(relativeRoot, assets["tabler/tabler-sprite.svg"]))
             a.px-3.nav-link(href="/blog/index.xml", data-bs-toggle="tooltip", data-bs-placement="bottom", data-bs-original-title="RSS (blog feed)", aria-label="Subscribe to RSS feed")
                 svg(width="16px", height="16px")
-                    use(xlink:href="#{relativeRoot}/static/tabler/tabler-sprite.svg#tabler-rss")
+                    use(xlink:href=format!"%s/static/%s#tabler-rss"(relativeRoot, assets["tabler/tabler-sprite.svg"]))
             a.nav-link(rel="me", href="https://fosstodon.org/@serpentos", data-bs-toggle="tooltip", data-bs-placement="bottom", data-bs-original-title="Mastodon", aria-label="Follow us on Mastodon")
                 svg(width="16px", height="16px")
-                    use(xlink:href="#{relativeRoot}/static/tabler/tabler-sprite.svg#tabler-brand-mastodon")
+                    use(xlink:href=format!"%s/static/%s#tabler-brand-mastodon"(relativeRoot, assets["tabler/tabler-sprite.svg"]))
         div.navbar-collapse.collapse(id="primaryNavigation")
             ul.navbar-nav.mx-md-3
                 - static foreach (item; navItems)

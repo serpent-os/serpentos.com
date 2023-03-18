@@ -5,6 +5,7 @@ block title
 
 block content
     - import std.range : empty;
+    - import std.string : format;
     div.container.pt-5
 
         div.row
@@ -14,7 +15,7 @@ block content
                         ol.breadcrumb.breadcrumb-arrows.py-1(aria-label="breadcrumbs")
                             li.breadcrumb-item: a(href="#{relativeRoot}/") Home
                             li.breadcrumb-item: a(href="#{relativeRoot}/blog") Blog
-                            li.breadcrumb-item.active(aria-current="page"): a(href="#{relativeRoot}/#{post.slug}")= post.title
+                            li.breadcrumb-item.active(aria-current="page"): a(href=format!"%s/%s"(relativeRoot, post.slug))= post.title
                         h2.page-title= post.title
     
         div.row.py-3
@@ -31,15 +32,15 @@ block content
                     div.card-body.p-4
                         div.row.d-flex.align-items-center.py-2
                             div.col-auto
-                                svg.icon: use(xlink:href="#{relativeRoot}/static/tabler/tabler-sprite.svg#tabler-user")
+                                svg.icon: use(xlink:href=format!"%s/static/%s#tabler-user"(relativeRoot, assets["tabler/tabler-sprite.svg"]))
                             div.col-auto Posted by #{post.author}
 
                         div.row.d-flex.align-items-center.py-2
                             div.col-auto
-                                svg.icon: use(xlink:href="#{relativeRoot}/static/tabler/tabler-sprite.svg#tabler-calendar-event")
+                                svg.icon: use(xlink:href=format!"%s/static/%s#tabler-calendar-event"(relativeRoot, assets["tabler/tabler-sprite.svg"]))
                             div.format-unix-timestamp.col-auto.d-none= post.tsCreated
 
                         div.row.d-flex.align-items-center.py-2
                             div.col-auto
-                                svg.icon: use(xlink:href="#{relativeRoot}/static/tabler/tabler-sprite.svg#tabler-cash")
+                                svg.icon: use(xlink:href=format!"%s/static/%s#tabler-cash"(relativeRoot, assets["tabler/tabler-sprite.svg"]))
                             div.col-auto: a(href="https://github.com/sponsors/ikeycode?o=sd&sc=t") Support development!
