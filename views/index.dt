@@ -67,7 +67,7 @@ block content
                                                 - auto img = format!"%s/static/tabler-sprite-nostroke.svg#%s"(relativeRoot, f.icon);
                                                 svg.col-auto.text-azure.mx-3(width="64px", height="64px"): use(xlink:href=img)
                                                 div.col:
-                                                    h3: a.stretched-link(href=format!"%s/%s"(relativeRoot, f.link))= f.label
+                                                    h3: a.stretched-link(href=f.link)= f.label
                                                     div.opacity-75= f.text
                             - } }
                     - } }
