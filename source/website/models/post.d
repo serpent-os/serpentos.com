@@ -15,8 +15,6 @@ module website.models.post;
  * License: Zlib
  */
 
-import moss.db.keyvalue.orm;
-
 public import std.datetime.systime;
 public import std.stdint : uint64_t, uint8_t;
 
@@ -29,12 +27,12 @@ public enum PostType : uint8_t
 /**
  * A Post can either be a blog post or a genuine page.
  */
-@Model public struct Post
+public struct Post
 {
     /**
      * Unique site wide identifier. Must not have a "/" style prefix.
      */
-    @PrimaryKey string slug;
+    string slug;
 
     /**
      * Tag IDs we're associated with

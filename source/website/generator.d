@@ -292,6 +292,14 @@ private:
         }
     }
 
+    /**
+     * Emit the fake API
+     */
+    void emitAPI() @safe
+    {
+
+    }
+
     string inputDirectory;
     string outputDirectory;
     string contentPath;

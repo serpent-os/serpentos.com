@@ -15,15 +15,13 @@ module website.models.tag;
  * License: Zlib
  */
 
-import moss.db.keyvalue.orm;
-
 /**
  * A Tag is used to categorise our content
  */
-@Model public struct Tag
+public struct Tag
 {
     /**
      * Unique string for the tag
      */
-    @PrimaryKey string id;
+    string id;
 }
