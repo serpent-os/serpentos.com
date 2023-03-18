@@ -151,7 +151,7 @@ private:
     string[string] installAssets() @safe
     {
         string[string] ret;
-        static enum inputs = [
+        static immutable inputs = [
             "tabler/css/tabler.min.css", "tabler/js/tabler.min.js",
             "tabler/tabler-sprite-nostroke.svg", "tabler/tabler-sprite.svg",
             "js/darkMode.js", "js/global.js", "js/mainPage.js", "js/posts.js",
