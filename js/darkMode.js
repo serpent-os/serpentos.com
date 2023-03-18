@@ -64,25 +64,26 @@ function activateTheme(themePref)
 {
     const svg = document.getElementById('themeSwitcherIcon');
     const useIcon = svg.getElementsByTagName('use').item(0);
+    const svgResource = document.getElementById('tblr').getAttribute('value');
     switch (themePref)
     {
         case 'system':
             this.document.body.classList.remove('theme-dark');
             this.document.body.classList.remove('theme-light');
             this.document.body.classList.add('theme-dark-auto');
-            useIcon.setAttribute('xlink:href', '/static/tabler/tabler-sprite.svg#tabler-moon');
+            useIcon.setAttribute('xlink:href', `/static/${svgResource}#tabler-moon`);
             break;
         case 'light':
             this.document.body.classList.remove('theme-dark');
             this.document.body.classList.remove('theme-dark-auto');
             this.document.body.classList.add('theme-light');
-            useIcon.setAttribute('xlink:href', '/static/tabler/tabler-sprite.svg#tabler-moon');
+            useIcon.setAttribute('xlink:href', `/static/${svgResource}#tabler-moon`);
             break;
         case 'dark':
             this.document.body.classList.remove('theme-dark-auto');
             this.document.body.classList.remove('theme-light');
             this.document.body.classList.add('theme-dark');
-            useIcon.setAttribute('xlink:href', '/static/tabler/tabler-sprite.svg#tabler-sun');
+            useIcon.setAttribute('xlink:href', `/static/${svgResource}#tabler-sun`);
             break;
         default:
             break;

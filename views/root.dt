@@ -11,6 +11,8 @@ html(lang="en")
         link(rel="stylesheet", href=format!"%s/static/%s"(relativeRoot, assets["tabler/css/tabler.min.css"]))
         link(rel="stylesheet", href="#{relativeRoot}/static/chroma.css")
     body.flex-column.min-vh-100.theme-dark-auto
+        input#tblrns(type="hidden", name="tblrns", value=assets["tabler/tabler-sprite-nostroke.svg"])
+        input#tblr(type="hidden", name="tblr", value=assets["tabler/tabler-sprite.svg"])
         include primary_navigation
         block banner
         main
