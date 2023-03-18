@@ -127,7 +127,7 @@ public final class WebsiteGenerator
         tsEnd = Clock.currTime();
         logInfo(format!"Copied static/ in %s"(tsEnd - tsStart));
 
-        emitTemplates(assets);
+        emitTemplates(content, assets);
     }
 
 private:
@@ -323,7 +323,7 @@ private:
      * Emit remaining templates, i.e. index, blog/index
      *
      */
-    void emitTemplates(ref string[string] assets) @safe
+    void emitTemplates(scope Post[] posts, ref string[string] assets) @safe
     {
         static struct ManualTemplate
         {
@@ -336,6 +336,7 @@ private:
             ManualTemplate("index.dt", "index.html", "/"),
             ManualTemplate("team.dt", "team/index.html", "/team"),
             ManualTemplate("blog/index.dt", "blog/index.html", "/blog"),
+            ManualTemplate("blog/rss.dt", "blog/index.xml", "/blog")
         ];
 
         static foreach (m; manualTemplates)
@@ -352,7 +353,7 @@ private:
                 auto app = appender!string;
                 auto req = MockRequest(m.navPath);
                 app.compileHTMLDietFile!(m.templateFile, EmissionTraits,
-                        relativeRoot, req, assets);
+                        relativeRoot, req, posts, assets);
                 outputPath.write(app[]);
             }
         }

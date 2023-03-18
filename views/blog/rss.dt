@@ -4,8 +4,10 @@ rss(version="2.0")
     - import vibe.inet.message : writeRFC822DateTimeString;
     - import std.datetime.systime;
     - import std.datetime.timezone : UTC;
+    - import std.algorithm : filter;
     - import std.array : appender;
-    - import std.range : empty;
+    - import std.range : empty, take;
+    - import website.models.post : PostType;
     channel
         title Serpent OS Blog Posts
         link https://serpentos.com
@@ -14,7 +16,8 @@ rss(version="2.0")
             url https://serpentos.com/static/img/blog/the-big-update/nspawn.webp
             link https://serpentos.com
             title Serpent OS Development
-        - foreach (post; posts)
+        // 25 latest posts
+        - foreach (post; posts.filter!((p) => p.type == PostType.RegularPost).take(25))
         - {
             item
                 title=post.title
