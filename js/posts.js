@@ -13,11 +13,16 @@
  * License: Zlib
  */
 
+let buildTimestamp;
+let svgAsset;
+
 /**
  * Hook up our post handling
  */
 window.addEventListener('load', function(ev)
 {
+    svgAsset = this.document.getElementById('tblr').getAttribute('value');
+    buildTimestamp = this.document.getElementById('buildTimestamp').getAttribute('value');
     refreshList();
 });
 
@@ -47,7 +52,7 @@ function renderError(error)
 <div class="empty">
     <div class="empty-icon">
         <svg>
-            <use xlink:href="/static/tabler-sprite-nostroke.svg#tabler-bug"></use>
+            <use xlink:href="/static/${svgAsset}#tabler-bug"></use>
         </svg>
     </div>
     <div class="empty-title">Aww crap</div> 
@@ -93,7 +98,7 @@ function renderPost(post)
 
 function renderPaginator(object)
 {
-    const pickers = Array.from({length: object.numPages + 1}, (x, i) => i).map(elem => {
+    const pickers = Array.from({length: object.numPages}, (x, i) => i).map(elem => {
         if (object.page == elem)
         {
             return `<li class="page-item active"><a class="page-link" href="#paginator" onclick="event.preventDefault();">${elem + 1}</a></li>`;
@@ -131,7 +136,7 @@ function refreshList(offset = 0, jump = false)
     {
         list.innerHTML = renderLoadingPosts();
     }
-    fetch(`/api/v1/posts/list?offset=${offset}`, {
+    fetch(`/api/${buildTimestamp}/posts.${offset}.json`, {
         'method': 'GET',
         'credentials': 'include'
     }).then((response) => {

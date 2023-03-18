@@ -431,9 +431,9 @@ private:
          *   inp = input range
          *   numPages = number of pages
          */
-        static auto paginate(R)(R inp, ulong numPages = 0) @safe
+        static auto paginate(R)(R inp, ulong pageNumber, ulong numPages = 0) @safe
         {
-            return Paginator!R(inp, 6, numPages);
+            return Paginator!R(inp, 6, numPages, pageNumber);
         }
 
         /* Grab all posts and convert into mini posts */
@@ -448,7 +448,7 @@ private:
         immutable numPages = (nPosts / 6) + 1;
         foreach (idx, pageSet; posts.chunks(6).enumerate)
         {
-            const object = paginate(pageSet, numPages);
+            const object = paginate(pageSet, idx, numPages);
             auto json = object.serializeToJson();
             auto app = appender!string();
             app.writeJsonString(json);
