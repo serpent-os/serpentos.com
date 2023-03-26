@@ -355,7 +355,8 @@ private:
             ManualTemplate("team.dt", "team/index.html", "/team"),
             ManualTemplate("blog/index.dt", "blog/index.html", "/blog"),
             ManualTemplate("blog/rss.dt", "blog/index.xml", "/blog"),
-            ManualTemplate("roadmap/index.dt", "roadmap/index.html", "/roadmap")
+            ManualTemplate("roadmap/index.dt", "roadmap/index.html", "/roadmap"),
+            ManualTemplate("download/index.dt", "download/index.html", "/download")
         ];
 
         static foreach (m; manualTemplates)

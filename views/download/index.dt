@@ -1,0 +1,62 @@
+extends root
+
+block title
+    title Download | Serpent OS
+
+block banner
+    div.container-fluid.bg-dark.shadow-sm.border-bottom
+        div.container.p-4.justify-content-center
+            div.row.d-flex.align-items-center.justify-content-center
+                div.col-auto: h1.display-6.pt-1.align-self-center.text-light Download
+block content
+
+    div.container.pt-5
+        div.row.mb-4
+            div.alert.alert-warning.mx-2
+                | The images listed on this page are not deemed secure or suitable for use in production!
+        div.row.d-flex.justify-content-center
+
+            // Main downloads
+            div.col-md-6.col-12
+                div.card.mx-2
+                    div.card-stamp
+                        div.card-stamp-icon
+                            svg
+                                use(xlink:href=format!"%s/static/%s#tabler-device-desktop"(relativeRoot, assets["tabler/tabler-sprite.svg"]))
+
+                    div.card-body
+                        h3.card-title Desktop images
+                        div.list-group.list-group-flush
+                            div.list-group-item
+                                div.row.flex.justify-items-center
+                                    div.col
+                                        h3: a.stretched-link(href="https://download.serpentos.com/snekvalidator-2.iso") snekvalidator-2.iso
+                                        p.text-muted Note, this ISO is incredibly rough around the edges and will likely only boot when using 
+                                            | Qemu or VirtualBox. The primary purpose is to demonstrate #[code moss] and #[code boulder]
+                                        strong SHA256SUM: 
+                                        code b0818cc508266f96611416247836e883bbc0c5b8a053598bed41d92a07843c82
+                                    div.col-auto
+                                        span.badge.bg-red prealpha
+                                        span.mx-2.badge x86_64
+            
+            // Docker images
+            div.col-md-6.col-12
+                div.card.mx-2 
+                    div.card-stamp
+                        div.card-stamp-icon
+                            svg
+                                use(xlink:href=format!"%s/static/%s#tabler-brand-docker"(relativeRoot, assets["tabler/tabler-sprite.svg"]))
+
+                    div.card-body
+                        h3.card-title Docker containers
+                        div.list-group.list-group-flush
+                            div.list-group-item
+                                div.row.flex.justify-items-center
+                                    div.col
+                                        h3: a.stretched-link(href="https://hub.docker.com/r/serpentos/base") serpentos/base
+                                        p.text-muted Simplistic image demonstrating package managment via #[code moss] and the challenges 
+                                            | when dealing with OverlayFS.
+                                        code docker run -ti --rm serpentos/base:latest
+                                    div.col-auto
+                                        span.badge.bg-red prealpha
+                                        span.mx-2.badge x86_64
