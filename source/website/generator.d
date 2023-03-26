@@ -36,6 +36,7 @@ import vibe.d;
 import website.markdownpage;
 import website.models;
 import core.internal.gc.impl.conservative.gc;
+import core.internal.gc.impl.manual.gc;
 
 /** 
  * Private mapping type to solve the dual-context ldc issue
@@ -353,7 +354,8 @@ private:
             ManualTemplate("index.dt", "index.html", "/"),
             ManualTemplate("team.dt", "team/index.html", "/team"),
             ManualTemplate("blog/index.dt", "blog/index.html", "/blog"),
-            ManualTemplate("blog/rss.dt", "blog/index.xml", "/blog")
+            ManualTemplate("blog/rss.dt", "blog/index.xml", "/blog"),
+            ManualTemplate("roadmap/index.dt", "roadmap/index.html", "/roadmap")
         ];
 
         static foreach (m; manualTemplates)
