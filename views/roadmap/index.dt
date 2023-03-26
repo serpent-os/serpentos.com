@@ -47,7 +47,7 @@ block content
 
                 // RC
                 div.card.mb-4.shadow-sm
-                    a(name="ga")
+                    a(name="general")
                     div.ribbon.bg-green
                         svg.icon(width="16px", height="16px")
                             use(xlink:href=format!"%s/static/%s#tabler-check"(relativeRoot, assets["tabler/tabler-sprite.svg"]))
@@ -68,7 +68,7 @@ block content
                         a(href="#dogfooding"): h4.m-0 Dogfooding
                         div.text-muted Improve the contributor and user experience
                     li.step-item
-                        a(href="#ga"): h4.m-0 General Availability
+                        a(href="#general"): h4.m-0 General Availability
                         div.text-muted Release Serpent OS to the world
 
 block scripts
