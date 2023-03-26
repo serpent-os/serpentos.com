@@ -70,7 +70,3 @@ block content
                     li.step-item
                         a(href="#general"): h4.m-0 General Availability
                         div.text-muted Release Serpent OS to the world
-
-block scripts
-
-    script(src=format!"%s/static/%s"(relativeRoot, assets["js/mainPage.js"]), defer, async, module="true")
