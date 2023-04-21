@@ -5,6 +5,7 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
+featuredImage: "/img/blog/snakes-on-a-boat/mothertruckingsnakes.webp"
 ---
 
 We had intended to get a blog post out a little bit quicker, but the last month has been extremely
