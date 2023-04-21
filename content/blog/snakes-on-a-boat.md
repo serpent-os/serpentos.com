@@ -9,7 +9,7 @@ featuredImage: "/img/blog/snakes-on-a-boat/mothertruckingsnakes.webp"
 ---
 
 We had intended to get a blog post out a little bit quicker, but the last month has been extremely
-chaotic. However, it has paid off immensely. As our friends at Solus [recently announced](https://getsol.us/2023/04/18/a-new-voyage/)
+action packed. However, it has paid off immensely. As our friends at Solus [recently announced](https://getsol.us/2023/04/18/a-new-voyage/)
 it is time to embark on a new voyage.
 
 <!--more-->
