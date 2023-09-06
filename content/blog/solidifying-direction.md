@@ -1,7 +1,7 @@
 ---
 title: "Solidifying the direction"
 date: 2023-06-02T20:08:50+01:00
-draft: false
+draft: true
 type: "post"
 authors: [ikey]
 categories: [news]
