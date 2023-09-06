@@ -23,7 +23,7 @@ to be acredited.
 Again, allow me to say I have thoroughly enjoyed my experience with D over the last 3 or so years,
 it has been truly illuminating for me as an engineer. With that said, we have also become responsible
 for an awful lot of code. As an engineering-led distribution + tooling project, our focus is that of
-secure, auditable, safe and reproducible paths. To that extent we pursued [DIP1000](https://github.com/dlang/DIPs/blob/master/DIPs/other/DIP1000.md) as far as practical and admit it has a way to go before addressing our immediate needs of memory safety.
+secure and auditable code paths. To that extent we pursued [DIP1000](https://github.com/dlang/DIPs/blob/master/DIPs/other/DIP1000.md) as far as practical and admit it has a way to go before addressing our immediate needs of memory safety.
 
 While we're quite happy to be an upstream for Linux distributions by way of release channels and tooling
 releases, we don't quite have the resources to also be an upstream for the numerous D packages we'd need to
@@ -35,7 +35,7 @@ D will realise its true potential.
 ## Rewarding contributors
 
 Our priorities have shifted somewhat since the announcement of our shared venture with Solus, and we must make
-architectural decisions based on the needs of all projects involved, including the existing contributor pool.
+architectural decisions based on the needs of all stakeholders involved, including the existing contributor pool.
 Additionally, care should be taken to be somewhat populist in our choice of stacks in order to give contributors
 industry-relevant experience to add to their résumé (CV).
 
@@ -56,7 +56,7 @@ that incorporate the requirements of being widely adopted/supported, robust ecos
 
 The new infrastructure will be brought up using widely available modules, and designed to be scalable from the outset
 as part of a Kubernetes deployment, with as minimal user interaction as needed. Our eventual plans include rebuilding
-the entire distribution from source with heavy caching once some part of th graph changes.
+the entire distribution from source with heavy caching once some part of the dependency graph changes.
 
 This infrastructure will then be extended to support the Solus 4 series for quality of life improvements to Solus developers,
 enabling a more streamlined dev workflow: TL;DR less time babysitting builds = more Serpent development focus.
