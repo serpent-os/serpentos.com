@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/looking-stage4-in-the-eye/FeaturedSD.webp"
 ---
 
 Well, we've made an awful lot of progress in these last few days. It wasn't
@@ -14,7 +13,7 @@ stage3 off the ground.
 
 <!--more-->
 
-{{<figure_screenshot_one image="looking-stage4-in-the-eye/FeaturedSD" caption="Building systemd the easy way">}}
+![Building systemd the easy way](../../static/img/blog/looking-stage4-in-the-eye/FeaturedSD.webp)
 
 # libc-support
 

@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/making-deltas-great-again-1/Featured.webp"
 ---
 
 In [Optimising Package Distribution](/blog/2021/03/16/optimising-package-distribution) we discussed some early
