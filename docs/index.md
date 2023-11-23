@@ -16,8 +16,7 @@ vision of how Linux should be distributed, using our next-generation content-add
 stateless design and modern approach to deployment. Our ideals and practices are founded on 20+ years of distribution
 engineering experience.
 
-    [:fontawesome-solid-gift: Sponsor us!](/){ .md-button }
-
+[:fontawesome-solid-gift: Sponsor us!](/){ .md-button }
 
 ![In action](static/Landing.webp)
 
