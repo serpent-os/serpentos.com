@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/performance-corner-small-changes-pack-a-punch/Featured.webp"
 ---
 
 Here we have another round of changes to make packages smaller and show just how much we care about performance and
@@ -121,7 +120,7 @@ Before: Layout [Records: 6812 Compression: Zstd, Savings: 86.20%, Size: 655.00 K
 After: Layout [Records: 6812 Compression: Zstd, Savings: 83.92%, Size: 539.26 KB]
 ```
 
-{{<figure_screenshot_one image="performance-corner-small-changes-pack-a-punch/Featured" caption="Planning out the Payload changes">}}
+![Planning payload changes](../../static/img/blog/performance-corner-small-changes-pack-a-punch/Featured.webp)
 
 # Hang On, Why am I Getting Faster Installation?
 

@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/performance-corner-faster-builds-smaller-packages/Featured.webp"
 ---
 
 `Performance Corner` is a new series where we highlight to you some changes in Serpent OS that may not be obvious, but
@@ -103,7 +102,7 @@ With these changes combined, building packages can take 12x less time in the ana
 the metadata and the overall package. We do expect the analyse time to increase in future as we add more dependency
 types, debug handling and stripping, but with the integrated parallel model, we can minimize the increase in time.
 
-{{<figure_screenshot_one image="performance-corner-faster-builds-smaller-packages/Featured" caption="">}}
+![Building](../../static/img/blog/performance-corner-faster-builds-smaller-packages/Featured.webp)
 
 # We're Not Done Yet
 
