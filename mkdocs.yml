@@ -25,15 +25,8 @@ plugins:
             - categories
             - tags 
 copyright: |
-    <div>Copyright &copy; 2023 Ikey Doherty, Serpent OS Developers</div>
-
-    <a href="#__consent">Change cookie settings</a>
+    Copyright &copy; 2023 Ikey Doherty, Serpent OS Developers
 extra:
-    consent:
-        title: Cookie consent
-        description: |
-            This website makes use of cookies to improve your experience
-            while navigating our website and documentation.
     generator: false
     social:
         - icon: fontawesome/brands/github
