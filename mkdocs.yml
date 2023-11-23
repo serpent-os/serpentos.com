@@ -17,6 +17,13 @@ plugins:
     - blog:
         authors: true
         post_date_format: full
+    - rss:
+        match_path: blog/posts/.* 
+        date_from_meta:
+            as_creation: date
+        categories:
+            - categories
+            - tags 
 copyright: |
     <div>Copyright &copy; 2023 Ikey Doherty, Serpent OS Developers</div>
 
