@@ -5,6 +5,7 @@ theme:
         - navigation.tabs
         - navigation.tabs.sticky
         - navigation.indexes
+        - navigation.footer
     name: material
     palette:
         scheme: slate
@@ -16,6 +17,26 @@ plugins:
     - blog:
         authors: true
         post_date_format: full
+copyright: |
+    <div>Copyright &copy; 2023 Ikey Doherty, Serpent OS Developers</div>
+
+    <a href="#__consent">Change cookie settings</a>
+extra:
+    consent:
+        title: Cookie consent
+        description: |
+            This website makes use of cookies to improve your experience
+            while navigating our website and documentation.
+    generator: false
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/serpent-os
+        - icon: fontawesome/brands/mastodon
+          link: https://fosstodon.org/@serpentos
+        - icon: fontawesome/brands/x-twitter
+          link: https://twitter.com/Serpent_OS
+        - icon: fontawesome/brands/youtube
+          link: https://www.youtube.com/channel/UCyGjpLXzRZdkD0Uc_uZJmaQ
 markdown_extensions:
   - pymdownx.critic
   - pymdownx.caret
