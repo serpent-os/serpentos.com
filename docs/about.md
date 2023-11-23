@@ -3,7 +3,8 @@ title: "About"
 date: 2021-06-22T22:07:23+10:00
 draft: false
 hide:
-  - navigation
+    - footer
+    - navigation
 ---
 
 # The key details you'll want to know

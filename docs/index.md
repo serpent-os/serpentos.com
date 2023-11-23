@@ -1,7 +1,8 @@
 ---
 hide:
-  - toc
-  - navigation
+    - toc
+    - navigation
+    - footer
 title: Home
 ---
 
