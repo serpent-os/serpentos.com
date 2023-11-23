@@ -24,6 +24,12 @@ plugins:
         categories:
             - categories
             - tags 
+    - mkdocs-nav-weight:
+        section_renamed: false
+        index_weight: -10
+        warning: true
+        reverse: false
+        headless_included: false
 copyright: |
     Copyright &copy; 2023 Ikey Doherty, Serpent OS Developers
 extra:
