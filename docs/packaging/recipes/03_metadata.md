@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # Metadata
 
 Recipes provide basic metadata to support discovery and automation.

@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # Upstreams
 
 The majority of packages are built using upstream release sources. While it is possible to create packages manually from local assets, the bulk of packages take an upstream tarball and build it.

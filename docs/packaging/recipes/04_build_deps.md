@@ -1,7 +1,3 @@
----
-sidebar_position: 4
----
-
 # Build dependencies
 
 Every build of a recipe by `boulder` will create an entirely new root, with only the absolute minimum support dependencies in place.

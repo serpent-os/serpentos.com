@@ -1,7 +1,3 @@
----
-sidebar_position: 5
----
-
 # Package definitions
 
 A recipe build can result in a number of packages being produced from a single source, through an automatic splitting system. Certain subpackages are already defined in the `boulder` project to ensure consistency of package splitting and names, whereas some may be explicitly defined in a recipe to fine-tune the results.
