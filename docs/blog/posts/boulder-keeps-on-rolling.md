@@ -13,7 +13,7 @@ a quick recap of some of the more important ones.
 
 <!--more-->
 
-{{<figure_screenshot_one image="boulder-keeps-on-rolling/Featured" caption="boulder hard at work">}}
+![Boulder hard at work](../../static/img/blog/boulder-keeps-on-rolling/Featured.webp)
 
 # Key Changes to Boulder
 

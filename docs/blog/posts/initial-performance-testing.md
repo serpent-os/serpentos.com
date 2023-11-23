@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/initial-performance-testing/Featured.webp"
 ---
 
 With further progress on `boulder`, we can now build native stone packages with some easy tweaks such as profile
@@ -100,7 +99,7 @@ Very astute of you to notice! `python` in its current state is an absolute minim
 However, I did an `analyze` run in `benchmarking-tools` where it became obvious that they were doing completely different
 things.
 
-{{<figure_screenshot_one image="initial-performance-testing/Featured" caption="Apples and Oranges comparison">}}
+![Apples and oranges comparison](../../static/img/blog/initial-performance-testing/Featured.webp)
 
 For now I'll simply be assuming this will sort itself out when `python` is built complete with all its functionality. And
 before anyone wants to point the finger at `clang`, you get the same result with `gcc`.

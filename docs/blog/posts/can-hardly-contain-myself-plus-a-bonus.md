@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/can-hardly-contain-myself-plus-a-bonus/Featured.webp"
 ---
 
 One of the core steps for building a package is setting up a minimal environment with only the required (and stated)
@@ -39,7 +38,7 @@ packages from an online repo. This ties in nicely with the `moss-container` work
 proper build process for Serpent OS. We are now one step closer to having a full distribution cycle from building
 packages and pushing those packages as system updates!
 
-{{<figure_screenshot_one image="can-hardly-contain-myself-plus-a-bonus/Featured" caption="Container with functioning device nodes">}}
+![Container with functioning device nodes](../../static/img/blog/can-hardly-contain-myself-plus-a-bonus/Featured.webp)
 
 # Check Out The Development
 

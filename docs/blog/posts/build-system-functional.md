@@ -17,8 +17,7 @@ Let's quickly catch up with those updates and see where we're headed next.
 
 <!--more-->
 
-{{<figure_screenshot_one image="build-system-functional/Featured" caption="Look at all the buildiness">}}
-
+![Look at all the buildiness](../../static/img/blog/build-system-functional/Featured.webp)
 
 # It lives!
 
@@ -54,7 +53,3 @@ is in place for this already, and it won't take much effort to support `moss ins
 Then we throw a few dozen packages in the mix, add some dependency handling, repo support, Bob's your
 uncle, and your aunt is downloading exclusive early-access images from our [Open Collective](https://opencollective.com/serpent-os) as soon
 as they're available. :O
-
-{{<giphy "skQCIMr5T0e0U">}}
-
-{{<oc>}}

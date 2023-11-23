@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/infrastructure-launched/Featured.webp"
 ---
 
 After many months and much work, our infrastructure is [finally online](https://dash.serpentos.com).

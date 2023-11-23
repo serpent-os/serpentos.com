@@ -15,7 +15,7 @@ post to share with the community.
 
 <!--more-->
 
-{{<figure_screenshot_one image="defining-moss/Featured" caption="Initial moss prototype CLI">}}
+![Initial moss prototype CLI](../../static/img/blog/defining-moss/Featured.webp)
 
 # Old, but new
 

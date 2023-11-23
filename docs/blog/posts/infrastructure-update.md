@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/infrastructure-update/Featured.webp"
 
 ---
 
@@ -85,7 +84,7 @@ searching for names/descriptions, etc.
 
 # Avalanche
 
-{{<figure_screenshot_one image="infrastructure-update/Featured" caption="Early version of Avalanche, in development">}}
+![Early version of avalanche, in development](../../static/img/blog/infrastructure-update/Featured.webp)
 
 Avalanche is a core component of our upcoming infrastructure, providing the
 service for running builds on a local node, and a controller to coordinate

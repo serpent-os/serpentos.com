@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/a-rolling-boulder-gathers-no-moss/Featured.webp"
 ---
 
 We actually did it. Super pleased to announce that `moss` is now capable
@@ -14,7 +13,7 @@ somewhere right?
 
 <!--more-->
 
-{{<figure_screenshot_one image="a-rolling-boulder-gathers-no-moss/Featured" caption="Transactional system roots + installation in moss">}}
+![Transactional system roots + installation in moss](../../static/img/blog/a-rolling-boulder-gathers-no-moss/Featured.webp)
 
 OK let's recap. A moss archive is super weird, and consists of multiple
 containers, or payloads. We use a strongly typed binary format, per-payload
@@ -69,7 +68,7 @@ Removal is quite the same as installation. We simply remove the package IDs
 from the new state selections (copied from the last state) and blit a new
 system root, finally updating the atomic `/usr` pointer.
 
-![Removal](/static/img/blog/a-rolling-boulder-gathers-no-moss/Removal.webp "Removal of packages with moss. Everything is a transaction")
+![Removal](../../static/img/blog/a-rolling-boulder-gathers-no-moss/Removal.webp "Removal of packages with moss. Everything is a transaction")
 
 # Tying it all together
 
@@ -96,5 +95,3 @@ Once the required features are in place, we'll work on the much needed
 pre alpha ISO :) If you fancy helping us get to that stage quicker, do
 check out our OpenCollective! (We won't limit prealpha availability,
 don't worry :))
-
-{{<oc>}}

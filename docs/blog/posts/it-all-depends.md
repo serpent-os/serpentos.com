@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/it-all-depends/Featured.webp"
 ---
 
 It all depends.. it really does. On shared libraries.. interpreters.. `pkg-config` providers
@@ -17,7 +16,7 @@ long time, so we didn't want to simply repeat history.
 
 <!--more-->
 
-{{<figure_screenshot_one image="it-all-depends/Featured" caption="Using updated moss">}}
+![Using updated moss](../../static/img/blog/it-all-depends/Featured.webp)
 
 
 Thanks to many improvements across our codebase, including `moss-deps`, we automatically analyse
@@ -42,8 +41,6 @@ is only possible with the amazing community support. The last few months have se
 feats, and we're now executing on our first public milestones. With your help, more and more hours can be
 spent getting us ready for release, and would probably help to insulate my shed office! (Spoiler: its
 plastic and electric heaters are expensive =))
-
-{{<oc>}}
 
 # The Milestones
 

@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/cleanups-complete/Featured.webp"
 ---
 
 Well, we're officially back to working around the clock. After spending
@@ -14,7 +13,7 @@ cleaned up, so we can begin working towards an MVP.
 
 <!--more-->
 
-{{<figure_screenshot_one image="cleanups-complete/Featured" caption="Lots and lots of work">}}
+![Lots and lots of work](../../static/img/blog/cleanups-complete/Featured.webp)
 
 # Codebase hygiene
 
