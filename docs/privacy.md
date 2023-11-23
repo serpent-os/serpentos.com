@@ -2,14 +2,17 @@
 title: "Privacy"
 date: 2020-08-22T02:17:16+01:00
 draft: false
-Callout: "Serpent OS will always respect your privacy"
-
+hide:
+  - navigation
 ---
+
+# Serpent OS will always respect your privacy.
+
 Our core policy, in laymans terms, is:
 
     We don't want or need your data.
     
-# Definitions
+## Definitions
 
 **Content Vs Personally Identifiable Data**: We identify content as willingly provided and becoming a central part of the platform. It is at the user's discretion if they provide their real name or not (except in the case of code contributions). By submitting content, you agree that it will remain part of the target platform (i.e. Phabricator) as long as it is consistent with community guidelines (in which case we may remove offensive content.)
 
@@ -44,7 +47,7 @@ c. Individuals have the right to access their personal data and any such request
 
 a. All data processed by Serpent OS must be done on one of the following lawful bases: consent, contract, legal obligation, vital interests, public task or legitimate interests. 
 b. Where consent is relied upon as a lawful basis for processing data, evidence of opt-in  consent shall be kept with the personal data. 
-c. Where communications are sent to individuals based on their consent, the option for the individual to revoke their consent should be clearly available and systems should be in place to ensure such revocation is reflected accurately.  
+c. Where communications are sent to individuals based on their consent, the option for the individual to revoke their consent should be clearly available and systems should be in place to ensure such revocation is reflected accurately.
 
 ## 5. Data minimisation
 
