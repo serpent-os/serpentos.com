@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/stage3-complete/Featured.webp"
 ---
 
 Another week, another milestone completed. We're pleased to announce that
@@ -57,15 +56,9 @@ patching has been done, so do **not** use in a production environment.
 
 The image is provided currently as a means to validate the LLVM/musl toolchain.
 
-{{<figure_screenshot_one image="stage3-complete/Featured" caption="Serpent OS stage3 Docker image">}}
-
 # Future ISO
 
 We cannot currently say when we'll **definitely** have an ISO, however we do
 know that some VM-specific images will arrive first. After that we'll focus
 on an installer (package selection based) and a default developer experience.
 All we can say is strap in, and enjoy the ride.
-
-# Updated Roadmap
-
-{{<roadmap_bootstrap>}}

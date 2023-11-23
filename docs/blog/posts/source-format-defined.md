@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/source-format-defined/Featured.webp"
 ---
 
 Following quickly on the heels of yesterday's announcement that the binary format has been defined, we've
@@ -17,7 +16,7 @@ along with instructions on how to build the package.
 The next step of course, is to implement the build tool, converting the source specification into a binary package
 that the end user can install. With our 2 formats defined, we can now go ahead and implement the build routines. 
 
-{{<figure_screenshot_one image="source-format-defined/Featured" caption="A very trivial package spec">}}
+![Very trivial package recipe](../../static/img/blog/source-format-defined/Featured.webp)
 
 # A YAML based format
 

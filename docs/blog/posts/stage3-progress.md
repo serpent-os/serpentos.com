@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/stage3-progress/screenshot.webp"
 ---
 
 Well, it's been a few days since we last spoke, so now it's time for a quick
@@ -13,7 +12,8 @@ roundup. Long story short, we're approaching the end of the stage3 bootstrap.
 
 <!--more-->
 
-{{<figure_screenshot_one image="stage3-progress/screenshot" caption="Fully functional chroot">}}
+![Fully functional chroot](../../static/img/blog/stage3-progress/screenshot.webp)
+
 
 In an effort to simplify our bootstrap process, we dropped the newly-introduced `stage2.5` and
 came up with a new strategy for `stage3`. In order to make it all work nicely, we bind-mount the

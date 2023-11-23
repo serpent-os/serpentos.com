@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/the-big-update/nspawn.webp"
 ---
 
 Well - we've got some big news! The past few weeks have been an incredibly busy

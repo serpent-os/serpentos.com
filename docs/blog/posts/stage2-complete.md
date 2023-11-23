@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/stage2-complete/Featured.webp"
 ---
 
 Just in case you thought we were sleeping behind the wheel, we've got
@@ -14,7 +13,7 @@ stage2 bootstrap.
 
 <!--more-->
 
-{{<figure_screenshot_one image="stage2-complete/Featured" caption="Complete build-target for ARMv8">}}
+![Complete build-target for ARMv8](../../static/img/blog/stage2-complete/ARMv8.webp)
 
 In order to simplify life, we greatly reduced the size of the `stage2` build component.
 This decision was taken to better support cross-compilation in the face of software that
@@ -72,7 +71,3 @@ simplest thing in the world to fork Serpent OS to one's liking or needs.
 
 If you want to support our work, you can jump onto our IRC channel (`#serpentOS` on freenode)
 or support us via the [Team page](/team).
-
-# Updated Roadmap
-
-{{<roadmap_bootstrap>}}
