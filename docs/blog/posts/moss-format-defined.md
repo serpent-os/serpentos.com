@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/moss-format-defined/Featured.webp"
 ---
 
 The core team have been hard at work lately implementing the [Moss package manager](https://github.com/serpent-linux/moss).
@@ -14,7 +13,7 @@ with you.
 
 <!--more-->
 
-{{<figure_screenshot_one image="moss-format-defined/Featured" caption="Development work on Moss">}}
+![Development work on moss](../../static/img/blog/moss-format-defined/Featured.webp)
 
 # Explaining the format
 

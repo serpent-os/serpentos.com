@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/out-of-the-bootstrap-towards-serpent-os/Featured.webp"
 ---
 
 The initial `stone` packages that will seed the first Serpent OS repo have now been finalized! This means that work
@@ -23,7 +22,7 @@ full working dependencies. This has been enabled by integrating dependencies int
 Of note is that it is already enabled for 32bit support, so we have you covered there. While this is the end of
 bootstrap, the fun has only just begun!
 
-{{<figure_screenshot_one image="out-of-the-bootstrap-towards-serpent-os/Featured" caption="The first install from the bootstrap">}}
+![The first install from the bootstrap](../../static/img/blog/out-of-the-bootstrap-towards-serpent-os/Featured.webp)
 
 # Where to Next?
 

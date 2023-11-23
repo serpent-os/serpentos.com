@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/moss-format-read-write-support/Featured.webp"
 ---
 
 It's been 8 days since our last blogpost and a lot of development work has happened
@@ -14,7 +13,7 @@ module to support read/write operations.. Which means installation is coming soo
 
 <!--more-->
 
-{{<figure_screenshot_one image="moss-format-read-write-support/Featured" caption="Development work on moss-format">}}
+![Development work on moss-format](../../static/img/blog/moss-format-read-write-support/Featured.webp)
 
 So, many commits have been made to the core repositories, however the most
 important project to focus on right now is `moss-format`, which we used to

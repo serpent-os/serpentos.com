@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/oxidised-moss/Featured.webp"
 ---
 
 Allow me to start this post by stating something very important to me: I absolutely love the
@@ -15,6 +14,8 @@ please do not interpret this post as an assassination piece.
 For a number of months now the Serpent OS project has stood rather still. While this could naively
 be attributed to our shared plans with [Solus](https://getsol.us) - a deeper, technical issue is
 to be acredited.
+
+![img](../../static/img/blog/oxidised-moss/Featured.png)
 
 <!--more-->
 

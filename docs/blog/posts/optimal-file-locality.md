@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/optimal-file-locality/Featured.webp"
 ---
 
 File locality in this post refers to the order of files in our content payload. Yes that's right, we're focused on the
@@ -95,7 +94,7 @@ sorted by their path order in their corresponding chunk:
 - **elf:** ELF files
 - **text:** text files (bash scripts, perl etc)
 
-{{<figure_screenshot_one image="optimal-file-locality/Featured" caption="Path order vs optimal order">}}
+![Path order vs optimal order](../../static/img/blog/optimal-file-locality/Featured.webp)
 
 As the chart shows, you can get some decent improvements from reordering files within the tarball when grouping files
 in logical chunks. At the highest compression level, the package is reduced by 0.83% without any impact on compression

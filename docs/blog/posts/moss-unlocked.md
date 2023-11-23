@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/moss-unlocked/Featured.webp"
 ---
 
 Well, it's not all doom and gloom these days. We've actually made some
@@ -14,7 +13,7 @@ share a progress update.
 
 <!--more-->
 
-{{<figure_screenshot_one image="moss-unlocked/Featured" caption="Extracting content from moss archives">}}
+![Extracting content from moss archives](../../static/img/blog/moss-unlocked/Featured.webp)
 
 
 # moss can now extract

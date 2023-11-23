@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/packaging-automation-next-steps/Featured.webp"
 ---
 
 Hot damn we've been busy lately. No, [really](https://gitlab.com/groups/serpent-os/-/activity).
@@ -19,8 +18,7 @@ Before we really start this blog post off, I'd like to thank everyone who is sup
 project! All of the [OpenCollective](https://opencollective.com/serpent-os) contributions will make it easier for me to work full
 time on Serpent OS =) Much love <3
 
-
-{{<figure_screenshot_one image="packaging-automation-next-steps/Featured" caption="Look at all the buildiness">}}
+![Look at all the buildiness](../../static/img/blog/packaging-automation-next-steps/Featured.webp)
 
 # But, but build _flavours_ ...
 
@@ -38,8 +36,6 @@ with automatic runtime dependencies and package splitting as standard.
 ..Doesn't mean we can't make packaging **even easier** though.
 
 # Build discovery
-
-{{<giphy "bjujfYVIqpLYA">}}
 
 Pointing boulder at an upstream source will perform a deep analysis of the sources to determine
 the build system type, build dependencies, metadata, licensing etc. Right now it's just getting
@@ -60,8 +56,6 @@ that each new package is as close to done on creation as possible, with review a
 to the developer.
 
 # License compliance
-
-{{<giphy "hWEPBwxwXSfUKD1Blo">}}
 
 A common pain in the arse when packaging for *any* Linux distribution is ensuring the package
 information is *compliant* in terms of licensing. As such we must know all of the licensing
@@ -107,6 +101,4 @@ to create our live repository, replacing the initial bootstrap repository from b
 At this point all of the tooling we have will come together to allow us all to very
 quickly iterate on packaging, polish up `moss` and race towards installed systems with
 online updates.
-
-{{<giphy "ZCZRQyuQNyzyU">}}
 

@@ -5,7 +5,6 @@ draft: false
 type: "post"
 authors: [sunnyflunk]
 categories: [news]
-featuredImage: "/img/blog/optimising-package-distribution/Featured.webp"
 ---
 
 Getting updates as fast as possible to users has made deltas a popular and sought after feature for distributing
@@ -39,7 +38,7 @@ above average in size (157.3MB uncompressed). The first trade-off for speed over
 incorporating `zstd` in moss over `xz`, where even with max compression `zstd` is already 5.6% larger than using `xz`.
 This is of course due to the amazing decompression speeds where `zstd` is magnitudes faster.
 
-{{<figure_screenshot_one image="optimising-package-distribution/Featured" caption="Compression levels with zstd">}}
+![Compression levels with zstd](../../static/img/blog/optimising-package-distribution/Featured.webp)
 
 With maximum compression, large packages can take over a minute to compress. With a moderate increase in size, one can
 reduce compression time by 2-10x. While making me happier as a developer, it does create extra network load during
