@@ -10,6 +10,10 @@ Uses `mkdocs` and material for mkdocs
     mkdocs serve
 ```
 
+### Publishing the site
+
+Build the site with `mkdocs build`, then deploy the `site/` directory to the appropriate dir on the webserver.
+
 ### License
 
 Copyright © 2020-2023 Serpent OS Developers
