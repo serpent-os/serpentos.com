@@ -1,0 +1,38 @@
+site_name: Serpent OS
+theme:
+    features:
+        - navigation.sections
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - navigation.indexes
+    name: material
+    palette:
+        scheme: slate
+        primary: black
+        accent: light blue
+    logo: static/logo_white.webp
+    favicon: static/favicon.png
+plugins:
+    - blog:
+        authors: true
+        post_date_format: full
+markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
