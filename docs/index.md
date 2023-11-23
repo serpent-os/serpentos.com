@@ -16,6 +16,9 @@ vision of how Linux should be distributed, using our next-generation content-add
 stateless design and modern approach to deployment. Our ideals and practices are founded on 20+ years of distribution
 engineering experience.
 
+    [:fontawesome-solid-gift: Sponsor us!](/){ .md-button }
+
+
 ![In action](static/Landing.webp)
 
 
@@ -24,9 +27,6 @@ engineering experience.
     We welcome all contributions at this stage of our development, as we transition from prototypes to deliverables,
     especially with our transition to Rust. With the integration of system triggers nearing, we'll begin to publish
     frequent desktop ISOs and OCI images for dog-fooding purposes.
-
-    [:fontawesome-solid-gift: Sponsor us!](/){ .md-button }
-
 
 ## :atom: Atomic transactions
 
