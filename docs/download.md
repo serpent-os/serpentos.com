@@ -24,4 +24,4 @@ hide:
 
     | Filename                                                              | Issued        | SHA256                                             |
     |-----------------------------------------------------------------------|---------------|----------------------------------------------------|
-    | [prototype.tar.zst](https://download.serpentos.com/prototype.tar.zst) | 2023-12-23  | `1504bd4414cd0a1d89aa765b407b8824d99de05760fc8039c221cf09cbbb3580` |
+    | [prototype.tar.zst](https://download.serpentos.com/prototype.tar.zst) | 2023-11-23  | `1504bd4414cd0a1d89aa765b407b8824d99de05760fc8039c221cf09cbbb3580` |
