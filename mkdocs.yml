@@ -1,4 +1,5 @@
 site_name: Serpent OS
+site_url: https://serpentos.com
 theme:
     features:
         - navigation.sections
