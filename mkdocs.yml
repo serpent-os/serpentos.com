@@ -9,9 +9,18 @@ theme:
         - navigation.footer
     name: material
     palette:
-        scheme: slate
-        primary: black
-        accent: light blue
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          toggle:
+                icon: material/brightness-7
+                name: Switch to dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: black
+          accent: light blue
+          toggle:
+            icon: material/brightness-4
+            name: Switch to light mode
     logo: static/logo_white.webp
     favicon: static/favicon.png
 plugins:
