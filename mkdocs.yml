@@ -53,6 +53,8 @@ extra:
           link: https://twitter.com/Serpent_OS
         - icon: fontawesome/brands/youtube
           link: https://www.youtube.com/channel/UCyGjpLXzRZdkD0Uc_uZJmaQ
+        - icon: fontawesome/solid/rss
+          link: /feed_rss_created.xml
 markdown_extensions:
   - pymdownx.critic
   - pymdownx.caret
