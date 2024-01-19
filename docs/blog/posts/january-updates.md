@@ -79,7 +79,7 @@ a large Hetzner node. This has actually worked remarkably well for a long time n
 with Serpent growing we do not wish to impact the *availability* and *stability* of the Solus
 update experience.
 
-Long story short, money from [GitHub Sponsors] (You guys! <3) is now paying for an AX52 server
+Long story short, money from [GitHub Sponsors](https://github.com/sponsors/ikeycode) (You guys! <3) is now paying for an AX52 server
 from Hetzner. It's sufficiently powerful that we're running a backup *builder* there as well as
 repo management and build controller.
 
