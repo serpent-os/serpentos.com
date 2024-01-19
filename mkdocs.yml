@@ -6,7 +6,6 @@ theme:
         - navigation.tabs
         - navigation.tabs.sticky
         - navigation.indexes
-        - navigation.instant
         - navigation.footer
     name: material
     palette:
@@ -41,7 +40,6 @@ plugins:
         warning: true
         reverse: false
         headless_included: false
-    - social
 copyright: |
     Copyright &copy; 2023 Ikey Doherty, Serpent OS Developers
 extra:
