@@ -22,6 +22,7 @@ hide:
 === "KVM Disks"
 
 
-    | Filename                                                              | Issued        | SHA256                                             |
-    |-----------------------------------------------------------------------|---------------|----------------------------------------------------|
-    | [prototype.tar.zst](https://download.serpentos.com/prototype.tar.zst) | 2023-11-23  | `1504bd4414cd0a1d89aa765b407b8824d99de05760fc8039c221cf09cbbb3580` |
+    | Filename                                                                  | Issued        | SHA256                                                             |
+    |---------------------------------------------------------------------------|---------------|--------------------------------------------------------------------|
+    | [prototype.tar.zst](https://download.serpentos.com/prototype.tar.zst)     | 2023-11-23    | `1504bd4414cd0a1d89aa765b407b8824d99de05760fc8039c221cf09cbbb3580` |
+    | [prototype-2.tar.zst](https://download.serpentos.com/prototype-2.tar.zst) | 2024-01-22    | `7f16acb36fed97e60bf1d1b4ea31b9e2baedf880c3873236f1d845a2cc196c3e` |
