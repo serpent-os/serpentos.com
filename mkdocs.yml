@@ -53,6 +53,15 @@ extra:
           link: https://twitter.com/Serpent_OS
         - icon: fontawesome/brands/youtube
           link: https://www.youtube.com/channel/UCyGjpLXzRZdkD0Uc_uZJmaQ
+        # handshake, users, street-view, newspaper, tags, blog, sitemap,
+        # people-arrows, user-group, tents, signs-post, people-group,
+        # people-carry-box, house-user, house-chimney-user, people-roof
+        - icon: fontawesome/solid/comments
+          link: https://matrix.to/#/#serpent-os-space:matrix.org
+        - icon: fontawesome/solid/users
+          link: https://forums.serpentos.com/
+        - icon: fontawesome/solid/hand-holding-heart
+          link: https://github.com/sponsors/ikeycode
         - icon: fontawesome/solid/rss
           link: /feed_rss_created.xml
 markdown_extensions:
