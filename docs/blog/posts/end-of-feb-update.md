@@ -114,7 +114,7 @@ announcing the prealpha image.
 
 Our next monthly blog post should return to its regular slot, with updates on the following topics:
 
- - Limiting `async` in moss to targeted areas
+ - Limiting `async` in moss to targeted areas (PR ready and pending review)
  - Life on Serpent: How baremetal testing + enabling is going.
 
  Until then, please, stay tuned!
