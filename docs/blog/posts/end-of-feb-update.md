@@ -46,7 +46,7 @@ some state based on the unified components of the installation.
     [:material-help-circle-outline: Triggers documentation](https://docs.serpentos.com/docs/category/triggers)
 
 
-Note that right now triggers are reexecuted for each transaction, and no caching support is yet in place.
+Note that right now triggers are re-executed for each transaction, and no caching support is yet in place.
 With that said, they're still very fast and we plan to add a store based cache to prevent unnecessary
 execution. One of the greatest benefits of our triggers is ensuring these actions run within the right
 context under a `namespace`, or container.
@@ -106,7 +106,7 @@ Serpent OS and associated tooling. As soon as this is out of the door we will im
 Serpent OS fully functioning on baremetal, with explicit targets in mind: the hardware that core developers
 are currently using.
 
-This images will be available but not promoted for general use - given their intended use as dogfooding systems.
+These images will be available but not promoted for general use - given their intended use as dogfooding systems.
 This is part of our shift to the `oxide-alpha-1` target milestone, which will be discussed further in our next post
 announcing the prealpha image.
 
