@@ -41,7 +41,7 @@ plugins:
         reverse: false
         headless_included: false
 copyright: |
-    Copyright &copy; 2023 Ikey Doherty, Serpent OS Developers
+    Copyright &copy; 2023-2024 Ikey Doherty, Serpent OS Developers
 extra:
     generator: false
     social:
