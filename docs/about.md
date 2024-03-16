@@ -9,8 +9,8 @@ hide:
 
 # The key details you'll want to know
 
-Serpent OS is building a pioneering Linux distribution, with a focus on cutting edge technologies to streamline performance
-and developer workflow. This enables users to get things done while reducing frictions for users to contribute. We make the
+Serpent OS is building a pioneering Linux distribution, with a focus on cutting-edge technologies to streamline performance
+and developer workflow. This enables users to get things done while reducing friction for users to contribute. We make the
 same tools that we use available to you to ensure you get the best experience.
 
 ## :material-star: Goals
@@ -19,13 +19,13 @@ same tools that we use available to you to ensure you get the best experience.
  - Get the most from your hardware
  - Enjoy a reliable experience
  - Improve your experience behind the scenes
- - Develop and contribute fast and efficiently
+ - Develop and contribute quickly and efficiently
  - Be part of a thriving community
  - Have fun while interacting with other users and contributors
  
 ## :material-hand-wave: Community
 
-The easiest way to join in on Matrix communications is via our dedicated [space](https://matrix.to/#/!trFJOzhpDUejJKnPYg:matrix.org)
+The easiest way to join in on Matrix communications is via our dedicated [space](https://matrix.to/#/!trFJOzhpDUejJKnPYg:matrix.org).
 
  - [Main Channel](https://matrix.to/#/#serpentos:matrix.org)
  - [Development Channel](https://matrix.to/#/#serpentos-dev:matrix.org)
