@@ -27,7 +27,7 @@ isolated containers.
 
 ## Who is Serpent OS for?
 
-Anyone. Whether you're a downstream, building containers or just enjoying Serpent OS itself for the simplicity of maintenence,
+Anyone. Whether you're a downstream, building containers or just enjoying Serpent OS itself for the simplicity of maintenance,
 there's something for everyone.
 
 As a project, we care deeply about **how things work** - so our primary goal is to improve the automation and tooling used
@@ -41,13 +41,13 @@ by our developers and contributors to streamline delivery of features and update
 
 ## Meet the tools
 
-We said we care deeply - and this is made a reality through our tooling. Whether its package builds, orchestration of updates,
-the package manager itself, each component is crafted with care and extensive experience, and fully open source.
+We said we care deeply - and this is made a reality through our tooling. Whether it's package builds, orchestration of updates,
+or the package manager itself, each component is crafted with care and extensive experience and is fully open source.
 
 ### :rocket: moss - blazing fast package management
 
 Whether you're using Linux for home or work, we've got you covered. Don't wait around for old package managers
-or bundles: turbocharge your installations and containers with [moss](https://github.com/serpent-os/moss-rs) and Serpent OS.
+or bundles; turbocharge your installations and containers with [moss](https://github.com/serpent-os/moss-rs) and Serpent OS.
 
 #### :atom: Atomic transactions
 
@@ -65,18 +65,18 @@ We leverage the fastest technologies and techniques to provide *ridiculously* fa
  
 #### :lock: Safer
 
- - :crab: Core tooling is written in Rust, with support tooling in the process of being ported. Memory safe, and extremely fast execution.
+ - :crab: Core tooling is written in Rust, with support tooling in the process of being ported. Memory safe with extremely fast execution.
  - :warning: Self-contained builds of essential system tools - moss can recover your system if you accidentally remove glibc!
 
 ### :hammer: boulder: A better way to package
 
-We've been building tools to build systems for a long time, and came to an obvious conclusion: Packaging is by and large,
-a set of *policies* applied to the final build artefacts of compliant source packages.
+We've been building tools to build systems for a long time and came to an obvious conclusion: Packaging is, by and large,
+a set of *policies* applied to the final build artifacts of compliant source packages.
 
 #### :superhero: Superpowered packaging
 
-Our simple  yet powerful `stone.yml` format makes it a breeze to create packages for Serpent OS. Whip them through [boulder](/boulder), our
-container-based build-tool, and have binary packages in no time.
+Our simple yet powerful `stone.yml` format makes it a breeze to create packages for Serpent OS. Whip them through [boulder](/boulder), our
+container-based build tool, and have binary packages in no time.
 
 No steep learning curve, just some YAML and an extremely intelligent package build system capable of automatically splitting packages into
 the correct subpackages and recording their dependencies. Heck, we can even generate a recipe from an upstream release! :astonished:
