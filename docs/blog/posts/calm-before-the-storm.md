@@ -8,7 +8,7 @@ categories: [news]
 ---
 
 It's that time of month again, and we have some details to share with you on boot management, as well as plans for real installs
-landing in May.Additionally, plans for "deferred updates" via mandatory reboots have been dropped!
+landing in May. Additionally, plans for "deferred updates" via mandatory reboots have been dropped!
 
 ![wip boot code](../../static/img/blog/calm-before-the-storm/Featured.webp)
 
