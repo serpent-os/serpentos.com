@@ -21,7 +21,7 @@ for the project as a whole. For some time now we've served as a technical beacon
 and technical solutions whilst awaiting a situation where a rebase is feasible.
 
 While we still look forwards to that future, the present day is the most important to us. Serpent OS must now transition from
-a collection of tools and promises into a daily driver with actual users. We still aim to cater the more developer/technical oriented
+a collection of tools and promises into a daily driver with actual users. We still aim to cater to the more developer/technical oriented
 end of the spectrum rather than a "desktop distro", and want to start this journey yesterday.
 
 The boot management code is currently landing over the coming days, and will be immediately followed by an incredibly rudimentary
@@ -59,18 +59,18 @@ In simple terms, one "state" == "one kernel candidate" (per type..) so all we *r
 way of the [Boot Loader Interface](https://systemd.io/BOOT_LOADER_INTERFACE/) and any `XBOOTLDR` partition. Then, map our "boot environment"
 into something `moss-boot` can convert into boot entries, and voila..
 
-At a more technical level it:
+At a more technical level, moss-boot will handle the following:
 
  - form candidate `cmdline` from filesystem snippets
  - auto-generate the `root=` parameter by probing the `/` partition (LVM2, etc)
  - record the `initrd` needed
- - compare and atomically write "missing" files in FAT-respective fashion (copy/unlink/rename)
- - garbage collect unused entries
+ - compare and atomically write "missing" files in FAT-respecting fashion (copy/unlink/rename)
+ - garbage collect unused boot entries
 
 ### Live atomic updates and kernels...
 
 An interesting, perhaps not widely considered result of upgrading a kernel, is filesystem path changes. If for any reason the kernel's module
-tree becomes inaccessible (say, updating to a new version) then it becomes impossible to load kernel modules. To remedy this, distributions will
+tree becomes inaccessible (say, due to updating to a new version) then it becomes impossible to load the old kernel modules. To remedy this, distributions will
 tend to leave multiple versions of the kernel on disk, invariably within mounted `/boot`.
 
 The approach Serpent OS is taking will mean that like Solus, `/boot` will not need to be premounted nor will any package ship files in that directory.
@@ -79,7 +79,7 @@ they are used.
 
 To solve the "missing version" issue, we will have `moss` record the qualified snapshot path (in `/.moss`) within the `/run` tree so that once the `/usr`
 tree has been swapped with a new transaction atomically, a patched `kmod` package will fall back to probing the suddenly orphaned kernel tree in the cached
-location.
+`/run` location.
 
 This will mean that the `/lib/modules` tree may not have the current kernel version, but the OS will still be usable while having had a live atomic update.
 Of course, to *use* the new kernel you must reboot. Unlike other atomic OS implementations, it will be up to *you* when you do so: no more deferred updates!
