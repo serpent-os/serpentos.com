@@ -47,7 +47,7 @@ or the package manager itself, each component is crafted with care and extensive
 ### :rocket: moss - blazing fast package management
 
 Whether you're using Linux for home or work, we've got you covered. Don't wait around for old package managers
-or bundles; turbocharge your installations and containers with [moss](https://github.com/serpent-os/moss-rs) and Serpent OS.
+or bundles; turbocharge your installations and containers with [moss](https://github.com/serpent-os/moss) and Serpent OS.
 
 #### :atom: Atomic transactions
 
@@ -75,7 +75,7 @@ a set of *policies* applied to the final build artifacts of compliant source pac
 
 #### :superhero: Superpowered packaging
 
-Our simple yet powerful `stone.yml` format makes it a breeze to create packages for Serpent OS. Whip them through [boulder](/boulder), our
+Our simple yet powerful `stone.yml` format makes it a breeze to create packages for Serpent OS. Whip them through [boulder](https://github.com/serpent-os/moss), our
 container-based build tool, and have binary packages in no time.
 
 No steep learning curve, just some YAML and an extremely intelligent package build system capable of automatically splitting packages into
