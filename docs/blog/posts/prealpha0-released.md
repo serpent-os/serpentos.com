@@ -11,6 +11,8 @@ Well, it didn't take us that long, **really** ... Our technical preview, *prealp
 
 ![wip boot code](../../static/img/blog/prealpha0-released/prealpha0.png)
 
+Head to our [download](/download) page to grab `serpent-os-prealpha-0.iso` now!
+
 <!--more-->
 
 This is a super rough version of Serpent OS that is *capable* of being installed on baremetal hardware and VMs that
