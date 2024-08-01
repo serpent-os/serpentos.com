@@ -12,6 +12,12 @@ hide:
 
     They should not yet be used in general production.
 
+=== "Installable ISOs"
+
+    | Filename                                                                              | Issued    |                                                             SHA256 |
+    |---------------------------------------------------------------------------------------|-----------|--------------------------------------------------------------------|
+    | [serpent-os-prealpha-0.iso](https://download.serpentos.com/serpent-os-prealpha-0.iso) |2024-08-01 | `a4ef4529614095cd76bd30ee73f3b00d7414a745fa96b11bc0483cee3d8f14b9` |
+
 === "KVM ISOs"
 
     | Filename                                                              | Issued        | SHA256                                             |

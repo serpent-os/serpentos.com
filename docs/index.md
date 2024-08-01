@@ -33,12 +33,6 @@ there's something for everyone.
 As a project, we care deeply about **how things work** - so our primary goal is to improve the automation and tooling used
 by our developers and contributors to streamline delivery of features and updates to our users.
 
-!!! danger "Serpent OS is in active, heavy development"
-
-    We welcome all contributions at this stage of our development, as we transition from prototypes to deliverables,
-    especially with our transition to Rust. With the integration of system triggers nearing, we'll begin to publish
-    frequent desktop ISOs and OCI images for dog-fooding purposes.
-
 ## Meet the tools
 
 We said we care deeply - and this is made a reality through our tooling. Whether it's package builds, orchestration of updates,
@@ -62,7 +56,7 @@ We leverage the fastest technologies and techniques to provide *ridiculously* fa
  - [xxHash](https://xxhash.com) for content addressable hashes. Zip!
  - [Zstandard](https://github.com/facebook/zstd) for package compression, kernel modules, firmware, etc.
  - Upcoming: [BLAKE3](https://github.com/BLAKE3-team/BLAKE3) for verification!
- 
+
 #### :lock: Safer
 
  - :crab: Core tooling is written in Rust, with support tooling in the process of being ported. Memory safe with extremely fast execution.
