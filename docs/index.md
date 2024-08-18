@@ -5,15 +5,31 @@ hide:
 title: Home
 ---
 
-# A new, yet familiar kind of Linux
+# An operating system should look after itself
 
-Serpent OS is a heavily engineering-led effort to redefine the *distribution* aspects of a Linux&reg; distro. Fed up with
-an all-or-nothing approach, i.e. classical package management or entirely image based, we set out to create a hybrid approach
-that blends the best of both worlds.
+We're creating Serpent OS, an independent Linux distribution built from the ground up to look after itself. Relying heavily
+on our Rust-based tooling, the distribution has a number of awesome features:
+
+ - Rebootless atomic updates - no more interruptions
+ - Offline rollback to older install (filesystem agnostic)
+ - Remains fully composable using **packages**, not container registries.
+ - Automatically managed `ESP`, `XBOOTLDR` partitions and boot entries
+ - Doesn't rely on AB partitions, ostree or overlayfs, thus not suffering the same limitations and performance issues.
+ - Stateless: Just nuke `/etc` & `/var` to factory reset. Packages should Just Work when installed.
+ - Preference for modern technology: We default to the [LLVM](https://llvm.org/) toolchain, [sudo-rs](https://github.com/trifectatechfoundation/sudo-rs), [Wayland](https://wayland.freedesktop.org/), [rustls](https://github.com/rustls/rustls), etc.
+ - Built by jaded experts: With decades of distribution engineering experience under our belts, we got tired of tweaking and just want the damn thing to work when it's installed.
+ - and much more
+
+[:fontawesome-solid-download: Try prealpha today](/download){ .md-button } [:fontawesome-solid-gift: Sponsor us!](https://github.com/sponsors/ikeycode){ .md-button }
+
+## What can I do with Serpent OS?
+
+Right now our **primary target** is the developer audience. Truthfully we're very quickly improving the tooling to better
+serve the distribution, which in turn will enable more workflows and users. We ship with both the GNOME Desktop and the COSMIC Desktop
+
 
 ![In action](static/Landing.webp)
 
-[:fontawesome-solid-gift: Sponsor us!](https://github.com/sponsors/ikeycode){ .md-button }
 
 ## What is Serpent OS?
 
@@ -24,14 +40,6 @@ recovery mechanisms, including on-disk offline rollbacks and system deduplicatio
 We acknowledge that updates can go wrong, despite striving to avoid breakage with our advanced tooling and processes. This
 is why we designed with recovery in mind - reboot to the last transaction, be confident with package triggers that run in
 isolated containers.
-
-## Who is Serpent OS for?
-
-Anyone. Whether you're a downstream, building containers or just enjoying Serpent OS itself for the simplicity of maintenance,
-there's something for everyone.
-
-As a project, we care deeply about **how things work** - so our primary goal is to improve the automation and tooling used
-by our developers and contributors to streamline delivery of features and updates to our users.
 
 ## Meet the tools
 
