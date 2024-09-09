@@ -1,0 +1,8 @@
+{{ $author := .Get 0 }}
+{{ $text := .Get 1 }}
+<blockquote class="blockquote">
+    <p class="mb-3">
+        {{ $text }}
+    </p>
+    <footer class="blockquote-footer">{{ $author }}</footer>
+</blockquote>

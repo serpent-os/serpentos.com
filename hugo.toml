@@ -1,0 +1,91 @@
+baseURL = 'https://serpentos.com/'
+title = 'Serpent OS'
+contentDir = 'content/en'
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = false
+# Configure how URLs look like per section.
+[permalinks]
+  blog = '/:section/:year/:month/:day/:slug/'
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.goldmark.parser.attribute]
+block = true
+
+[module]
+proxy = "direct"
+
+
+[[module.imports]]
+path = "github.com/google/docsy"
+
+[params.ui]
+navbar_logo = false
+ui_show = 1
+sidebar_menu_compact = true
+showLightDarkModeMenu = true
+
+[[menu.main]]
+    name = "About"
+    weight = 20
+    url = "/about"
+
+[[menu.main]]
+    name = "Community"
+    weight = 30
+    url = "/community"
+
+[[menu.main]]
+    name = "Download"
+    weight = 40
+    url = "/download"
+
+[[menu.main]]
+    name = "Documentation"
+    weight = 50
+    url = "/docs"
+
+[[params.links.user]]
+    name = "Matrix Space"
+    url = "https://matrix.to/#/!trFJOzhpDUejJKnPYg:matrix.org"
+    desc = "Discussions and support for Serpent OS in real time"
+    icon = "fa fa-circle-question"
+
+[[params.links.user]]
+
+    name = "GitHub Discussions"
+    url = "https://github.com/orgs/serpent-os/discussions"
+    desc = "Developer & user discussions"
+    icon = "fa fa-comments"
+
+[[params.links.user]]
+    name = "X / Twitter"
+    url = "https://x.com/serpent_os"
+    icon = "fab fa-twitter"
+    desc = "Latest updates and posts from the team"
+
+[[params.links.user]]
+    name = "Mastodon"
+    url = "https://fosstodon.org/@serpentos"
+    icon = "fab fa-mastodon"
+    desc = "Latest toots and thoughts from the team"
+
+[[params.links.developer]]
+
+    name = "GitHub"
+    url = "https://github.com/serpent-os"
+    desc = "Home of all Serpent OS repositories"
+    icon = "fab fa-github"
+
+[[params.links.developer]]
+    name = "Build"
+    url = "https://dash.serpentos.com/tasks"
+    desc = "Dashboard for current package builds"
+    icon = "fa fa-truck-fast"
+
+[[params.links.developer]]
+    name = "Sponsor"
+    url = "https://ko-fi.com/ikeydoherty"
+    desc = "Sponsor development and resources by buying the founder a coffee"
+    icon = "fa fa-heart"

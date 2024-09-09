@@ -1,0 +1,9 @@
+{
+  "title": "COSMIC Edition",
+  "screenshot": "/img/cosmic_prealpha.png",
+  "screenshot_desc": "Serpent OS COSMIC Edition",
+  "version": "0.4 (prealpha)",
+  "uri": "https://download.serpentos.com/serpent-os-prealpha-0.4-cosmic.iso",
+  "checksum": "https://download.serpentos.com/serpent-os-prealpha-0.4-cosmic.iso.sha256sum",
+  "desc": "Featuring the early-alpha [COSMIC Desktop](https://system76.com/cosmic), this live ISO demonstrates the potential of Rust on the desktop with a brand new compositor and desktop.\n\n**Excitement Warning**: This edition is subject to frequent potentially breaking changes in the desktop stack."
+}

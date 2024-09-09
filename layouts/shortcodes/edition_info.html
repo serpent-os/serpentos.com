@@ -1,0 +1,28 @@
+{{ $edition := .Get "id" }}
+{{ $color := .Get "color" }}
+{{ $json_file := path.Join "editions" $edition | printf "%s.json" }}
+{{ with resources.Get $json_file }}
+{{ with . | transform.Unmarshal }}
+{{ $img := .screenshot }}
+{{ $img_desc := .screenshot_desc }}
+{{ $version := .version }}
+{{ $title := .title }}
+{{ $desc := .desc }}
+{{ $uri := .uri }}
+{{ $hash := .checksum }}
+
+<img width="400px" class="float-start shadow-sm rounded me-5" src="{{ $img }}" alt="{{ $img_desc }}" />
+
+# {{ $title }} <small class="text-muted">{{ $version }}</small>
+
+{{ $desc }}
+
+<a class="btn btn-lg btn-{{ $color }} my-2" href="{{ $uri }}">
+Download now <i class="fas fa-download ms-2 "></i>
+</a>
+
+<a class="btn btn-lg btn-info my-2 mx-2" href="{{ $hash }}">
+Verify checksum <i class="fas fa-check-double ms-2 "></i>
+</a>
+{{ end }}
+{{ end }}
