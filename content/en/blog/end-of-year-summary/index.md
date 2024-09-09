@@ -10,7 +10,7 @@ Burning question - how long before we can use Serpent OS on our development syst
 It's a fair question - and one that requires context to answer. Let's start our
 new monthly update cycle with a recap of progress so far.
 
-![screenshot of moss](../../static/img/blog/end-of-year-summary/go_moss_go.webp)
+![screenshot of moss](featured.webp)
 
 ## Introducing tarkah
 
@@ -24,14 +24,14 @@ Firstly, a quote from Cory:
 
 > On the personal side, I'm on the west coast in the States, have a lovely wife, just had a baby girl and am enjoying my time with fatherhood and coding
 
-Chances are you know tarkah for his contributions to [:material-github: iced-rs](https://github.com/iced-rs/iced), and to [Solus](https://getsol.us). His contributions to
+Chances are you know tarkah for his contributions to [iced-rs](https://github.com/iced-rs/iced), and to [Solus](https://getsol.us). His contributions to
 the [moss-rs](https://github.com/serpent-os/moss-rs) project have been absolutely critical, and his patience essential as we got ourselves quickly up to
 speed with Rust. It is entirely fair to say that our Rust efforts would not have been possible without him!
 
 ## Rust Progress
 
 I think it is fair to say that people collectively facepalmed when we announced our plans
-to [adopt Rust](./oxidised-moss.md) - assuming this would be a huge set back. We're really
+to [adopt Rust](https://serpentos.com/blog/2023/09/06/oxidised-moss/) - assuming this would be a huge set back. We're really
 happy to report this is **not** the case, and we've made tremendous progress in this area.
 
 ### moss
@@ -51,21 +51,22 @@ supporting the original features and more!
 We now have a version-agnostic "stone" crate that is more efficient at reading packages than our original D code.
 In addition, it benefits from the memory safety promises of Rust.
 
-!!! info "Recap: What is moss?"
+{{< alert title="What is moss?" >}}
+  moss aims to **feel** like a traditional package manager while offering features typically only found in tools like [ostree](https://github.com/ostreedev/ostree). It is still *package* based and offers the same level of granularity and composition as classic package managers while still
+  managing to offer full OS deduplication, offline rollbacks and atomic updates.
 
-    moss aims to **feel** like a traditional package manager while offering features typically only found in tools like [ostree](https://github.com/ostreedev/ostree). It is still *package* based and offers the same level of granularity and composition as classic package managers while still
-    managing to offer full OS deduplication, offline rollbacks and atomic updates.
+  At a *technical level*, we have a custom binary package format that focuses on read performance, deduplication, strong types and error reduction.
+  Every operation in moss creates an entirely new filesystem tree composed of **hard links** to content addressable storage (Hash-based) which is
+  then "promoted" by swapping the host `/usr` with the staging tree using the `renameat2` system call. Phew!
 
-    At a *technical level*, we have a custom binary package format that focuses on read performance, deduplication, strong types and error reduction.
-    Every operation in moss creates an entirely new filesystem tree composed of **hard links** to content addressable storage (Hash-based) which is
-    then "promoted" by swapping the host `/usr` with the staging tree using the `renameat2` system call. Phew!
+{{< /alert >}}
 
 #### Virtual filesystem management
 
 OK, lets look at the problem: Every transaction in moss requires us to generate a new staging tree containing all of the directories and files for the
 `/usr` tree, using hard links, from content addressable storage. As one might expect, creating tens of thousands of new nodes is really, really slow!
 
-To alleviate this issue we created a [:material-github: vfs](https://github.com/serpent-os/moss-rs/tree/main/crates/vfs) crate in moss to optimise *how* we construct each
+To alleviate this issue we created a [vfs](https://github.com/serpent-os/moss-rs/tree/main/crates/vfs) crate in moss to optimise *how* we construct each
 transaction tree:
 
  - Organise all incoming registered paths into a specific order
@@ -88,7 +89,7 @@ repository and `moss sync` to go back to the official versions of packages.
 
 Generally speaking, when you `moss sync` you will be seeing new packages, however. :smile: This feature is being built to enable a future feature: exported states. Want to try a new edition? Sync to the lockfile. Need to quickly and reproducibly deploy containers from a locked down configuration? You get the idea.
 
-![moss sync](../../static/img/blog/end-of-year-summary/sync.webp)
+![moss sync](sync.webp)
 
 #### Fully `async`
 
@@ -104,19 +105,22 @@ At the time of writing our port of boulder hasn't quite *yet* caught up with the
 of the ground we covered with moss. With that said, we decided to step back and evaluate where we could improve upon
 the first version of boulder.
 
-!!! info "Recap: What is boulder?"
+{{< alert title="Recap: What is boulder?" >}}
+  Boulder is the tool we use to generate installable `.stone` packages from a YAML recipe, `stone.yml`.
+  The recipe contains machine-readable metadata in a declarative format, along with "steps" (instructions)
+  used to build the package.
 
-    Boulder is the tool we use to generate installable `.stone` packages from a YAML recipe, `stone.yml`.
-    The recipe contains machine-readable metadata in a declarative format, along with "steps" (instructions)
-    used to build the package.
+  Leveraging a series of intelligent patterns and helpers, boulder can analyse and collect the build artefacts
+  into the correct subpackages and automatically discover most runtime dependencies, thus vastly decreasing
+  the workload for the developer.
 
-    Leveraging a series of intelligent patterns and helpers, boulder can analyse and collect the build artefacts
-    into the correct subpackages and automatically discover most runtime dependencies, thus vastly decreasing
-    the workload for the developer.
+  <a class="btn btn-primary me-3 mb-4" href="/docs/packaging/recipes/">
+    Learn More <i class="fas fa-arrow-alt-circle-right ms-2"></i>
+  </a>
 
-    [:material-help-circle-outline: Recipe documentation](https://docs.serpentos.com/docs/category/recipes)
+{{< /alert >}}
 
-![boulder in action](../../static/img/blog/end-of-year-summary/boulder.webp)
+![boulder in action](boulder.webp)
 
 #### User namespaces (rootless)
 

@@ -14,7 +14,7 @@ For a number of months now the Serpent OS project has stood rather still. While 
 be attributed to our shared plans with [Solus](https://getsol.us) - a deeper, technical issue is
 to be acredited.
 
-![img](../../static/img/blog/oxidised-moss/Featured.png)
+![img](Featured.png)
 
 <!--more-->
 

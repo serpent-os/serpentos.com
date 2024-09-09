@@ -16,7 +16,7 @@ We're pleased to announce that over the course of this weekend, once testing has
 deploy the latest version of `boulder`, our packaging build tool. This has been given the Rust treatment,
 directly sharing the codebase with `moss`.
 
-![Boulder in action](../../static/img/blog/end-of-feb-update/BoulderAction.webp)
+![Boulder in action](featured.webp)
 
 <!-- more -->
 
@@ -28,7 +28,7 @@ Just like `moss` it makes use of `tokio` for async right where we need it, and i
 make life easier for our contributors. Far from being just a direct port of the proof of concept, it adds
 new tools to empower developers, such as **breakpoints in packaging recipes**.
 
-![Breakpoints, in recipes](../../static/img/blog/end-of-feb-update/BoulderBreakpoints.webp)
+![Breakpoints, in recipes](BoulderBreakpoints.webp)
 
 ## Triggers, integrated!
 
@@ -36,14 +36,17 @@ After much discussion we finally integrated support for *triggers* in `moss`. Th
 that are executed at different stages of package management operations to finalize or "bake"
 some state based on the unified components of the installation.
 
-!!! info "Find out more about triggers"
+{{< alert title="Find out more about triggers" >}}
 
-    In order for triggers to be *useful*, they need to be shipped in packages installed on client machines.
-    These are easy-to-write `yaml` files that live in either `/usr/share/moss/triggers/sys.d` or within
-    `/usr/share/moss/triggers/tx.d`, depending on their scope.
+In order for triggers to be *useful*, they need to be shipped in packages installed on client machines.
+These are easy-to-write `yaml` files that live in either `/usr/share/moss/triggers/sys.d` or within
+`/usr/share/moss/triggers/tx.d`, depending on their scope.
 
-    [:material-help-circle-outline: Triggers documentation](https://docs.serpentos.com/docs/category/triggers)
+<a class="btn btn-primary me-3 mb-4" href="/docs/packaging/recipes/triggers/">
+  Learn More <i class="fas fa-arrow-alt-circle-right ms-2"></i>
+</a>
 
+{{< /alert >}}
 
 Note that right now triggers are re-executed for each transaction, and no caching support is yet in place.
 With that said, they're still very fast and we plan to add a store based cache to prevent unnecessary
@@ -64,14 +67,15 @@ We're now happily using systemd `userdb` user and group drop-in records via `nss
 the default users + groups (including `users`) group with centrally managed, fixed UIDs and GIDs in our
 git recipes.
 
-!!! info "Find out more about system users"
+{{< alert title="Find out more about system users" >}}
+In order to make management of users easier, we employ a specific systemd mechanism that makes
+drop-in user and group records automatically "appear" to applications that use the proper libc APIs.
+These are JSON format files that live in `/usr/lib/userdb` and are exposed to applications via `nss`.
 
-    In order to make management of users easier, we employ a specific systemd mechanism that makes
-    drop-in user and group records automatically "appear" to applications that use the proper libc APIs.
-    These are JSON format files that live in `/usr/lib/userdb` and are exposed to applications via `nss`.
-
-    [:material-help-circle-outline: Users documentation](https://docs.serpentos.com/docs/category/system-users)
-
+<a class="btn btn-primary me-3 mb-4" href="/docs/packaging/recipes/system-accounts/">
+  Learn More <i class="fas fa-arrow-alt-circle-right ms-2"></i>
+</a>
+{{< /alert >}}
 
 ## GNOME Desktop
 

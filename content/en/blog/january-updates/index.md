@@ -13,7 +13,7 @@ finally shifted our butts over to our own server (again).
 While this isn't quite as chunky a news update as the last post, we rather hope you appreciate
 the regularity of the news.
 
-![moss in action](../../static/img/blog/january-updates/Featured.webp)
+![moss in action](Featured.webp)
 
 <!-- more -->
 
@@ -64,7 +64,7 @@ With all of the migration work, our builds have also resumed. In the space of a 
 builds. Ok, not a huge number, but we also have 15 outstanding pull requests to our new recipes repo!
 
 In order to make life not only simpler for us, but for Solus in its future role as a source-derivative of Serpent, we've
-unified all of our git recipe repos into a new single repo, [:material-github: recipes](https://github.com/serpent-os/recipes).
+unified all of our git recipe repos into a new single repo, [recipes](https://github.com/serpent-os/recipes).
 
 ## Improved hosting
 

@@ -4,11 +4,12 @@ date: 2022-12-24T01:32:04Z
 draft: false
 authors: [ikey]
 categories: [news]
-featuredImage: "/img/blog/lift-off/Featured.webp"
 ---
 
 Enough of this "2 years" nonsense. We're finally ready for lift off. It is with *immense pleasure* we can
 finally announce that Serpent OS has transitioned from a promise to a deliverable. Bye bye, phantomware!
+
+![featured image](Featured.webp)
 
 ### We exist
 

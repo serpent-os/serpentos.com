@@ -9,7 +9,7 @@ categories: [news]
 Despite a brief excursion out of the country for a first-in-a-lifetime holiday, I'm happily back at the desk to bring you up to date with the
 latest goings in Serpent OS. TLDR: Loads of awesome, baremetal is enabled, ISO cycle in next couple of weeks.
 
-![GNOME on Serpent OS](../../static/img/blog/the-march-of-progress/Gnome.webp)
+![GNOME on Serpent OS](Gnome.webp)
 
 <!-- more -->
 
@@ -35,7 +35,7 @@ speed up in the raw generation of each `.stone` package.
     It relies on clone-based user namespaces, so is fully "rootless". Please migrate immediately to the new Rust based tool. Not only is it more advanced,
     it is significantly faster at generating the raw `.stone` packages.
 
-![Comparison](../../static/img/blog/the-march-of-progress/Featured.webp)
+![Comparison](Featured.webp)
 
 Other, quite awesome changes:
 
@@ -66,7 +66,7 @@ generate desktop ISOs in under 20 seconds, and install the full GNOME desktop to
 Rather than extensively widen our repository at this point we've opted for further low-level enabling of components required for the developer
 experience desktop. This includes Network Manager, the desktop kernel package, Vulkan + mesa integration, etc.
 
-![Gnome Software](../../static/img/blog/the-march-of-progress/GnomeSW.webp)
+![Gnome Software](GnomeSW.webp)
 
 As well as enabling core applications and features such as GNOME Software and Flatpak, we've also enabled preliminary usage on baremetal booting
 hardware. Note, this isn't yet installable but we do plan to offer early access installable images to our [sponsors](https://github.com/sponsors/ikeycode)!
