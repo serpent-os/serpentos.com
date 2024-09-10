@@ -1,0 +1,32 @@
+{{ $group := .Get 0 }}
+{{ $yml_file := path.Join "macros" "actions" $group | printf "%s.yaml" }}
+{{ with resources.Get $yml_file }}
+{{ with . | transform.Unmarshal }}
+<table class="table table-responsive table-bordered">
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+</thead>
+<tbody>
+{{ range $action := .actions }}
+{{ range $name, $props := $action }}
+<tr><td><code>{{ $name }}</code></td>
+<td>{{ $props.description }}</td>
+
+<td>
+{{ with $props.example }}
+{{ transform.Highlight . "shell" }}
+{{ end }}
+</td>
+
+</tr>
+{{ end }}
+{{ end }}
+</tbody>
+</table>
+
+{{ end }}
+{{ end }}
