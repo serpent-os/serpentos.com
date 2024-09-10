@@ -5,4 +5,4 @@ description = "meson build system"
 weight = 40
 +++
 
-{{< render_macro_actions "meson" >}}
+{{% render_macro_actions "meson" %}}

@@ -5,4 +5,4 @@ description = "misc helpers"
 weight = 50
 +++
 
-{{< render_macro_actions "misc" >}}
+{{% render_macro_actions "misc" %}}

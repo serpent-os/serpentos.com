@@ -5,4 +5,4 @@ description = "perl module packaging"
 weight = 60
 +++
 
-{{< render_macro_actions "perl" >}}
+{{% render_macro_actions "perl" %}}

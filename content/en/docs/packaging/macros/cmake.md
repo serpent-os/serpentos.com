@@ -6,4 +6,4 @@ description = "cmake build system"
 weight = 30
 +++
 
-{{< render_macro_actions "cmake" >}}
+{{% render_macro_actions "cmake" %}}

@@ -5,4 +5,7 @@ description = "autotools macros"
 weight = 10
 +++
 
-{{< render_macro_actions "autotools" >}}
+The `autotools` macros are used for projects that supply
+a `Makefile`, and potentially a `./configure` script.
+
+{{% render_macro_actions "autotools" %}}

@@ -5,4 +5,4 @@ description = "python packaging"
 weight = 70
 +++
 
-{{< render_macro_actions "python" >}}
+{{% render_macro_actions "python" %}}
