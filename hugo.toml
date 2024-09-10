@@ -22,6 +22,7 @@ path = "github.com/google/docsy"
 
 [params]
 github_repo = "https://github.com/serpent-os/serpentos.com"
+offlineSearch = true
 
 [params.ui]
 navbar_logo = false
