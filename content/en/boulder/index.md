@@ -21,6 +21,6 @@ To do so, we created `stone.yaml`. This YAML file contains some basic metadata, 
 steps complete with centrally configured **macros** for easily creating package builds in a distro-consistent fashion.
 It is designed as a successor to the `package.yml` format from the [ypkg](https://github.com/getsolus/ypkg) tool in [Solus](https://getsol.us).
 
-For more information, please see the [packaging documentation](https://docs.serpentos.com/docs/packaging/intro)
+For more information, please see the [packaging documentation](/docs/packaging/)
 
 {{% /blocks/section %}}
