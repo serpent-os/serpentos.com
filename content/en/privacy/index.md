@@ -73,7 +73,7 @@ toc_hide: true
 
   - [PayPal](https://www.paypal.com/uk/webapps/mpp/ua/privacy-full)
   - [Tenor](https://tenor.com/legal-terms)
-  - [Twitter](https://twitter.com/en/privacy)
+  - [X / Twitter](https://x.com/en/privacy)
   - [YouTube](https://policies.google.com/privacy?hl=en-US)
   - [GitHub](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement)
 

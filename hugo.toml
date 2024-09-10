@@ -66,7 +66,7 @@ showLightDarkModeMenu = true
 [[params.links.user]]
     name = "X / Twitter"
     url = "https://x.com/serpent_os"
-    icon = "fab fa-twitter"
+    icon = "fab fa-x-twitter"
     desc = "Latest updates and posts from the team"
 
 [[params.links.user]]
