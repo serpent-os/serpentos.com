@@ -30,7 +30,7 @@ If an update doesn't work, it won't be applied. Thanks to atomic updates, we've 
 
 
 {{% blocks/feature icon="fas fa-hammer" title="Awesome tooling" url="/tooling" %}}
-We pack a whole stack of tooling, from boot management right up to the the package manager. Packaging is easy again. And fast.
+We pack a whole stack of tooling, from boot management right up to the package manager. Packaging is easy again. And fast.
 {{% /blocks/feature %}}
 
 
