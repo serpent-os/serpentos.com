@@ -12,7 +12,7 @@ toc_hide: true
 </a>
 <p class="lead mt-5">Building everyone's OS, but a little bit better.</p>
 {{< blocks/link-down color="info" >}}
-{{< asciinema_big id="674951" >}}
+{{< asciinema_big id="676811" >}}
 
 {{< /blocks/cover >}}
 
