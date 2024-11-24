@@ -23,6 +23,7 @@ path = "github.com/google/docsy"
 [params]
 github_repo = "https://github.com/serpent-os/serpentos.com"
 offlineSearch = true
+description = "Serpent OS is a modern, powerful, and open-source operating system that aims to be the best in class."
 
 [params.ui]
 navbar_logo = false
