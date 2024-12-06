@@ -14,7 +14,7 @@ Let's get you up to speed 🚀
 Serpent OS is a modern Linux distribution using atomic updates, cutting-edge tooling and rock-solid reliability. Built by industry veterans with decades of experience, it represents the next evolution in Linux distributions - delivering a safe and efficient system 🐍
 {{% /blocks/lead %}}
 
-{{% blocks/section color="light" %}}
+{{% blocks/section color="background" %}}
 Our fully atomic system leverages the [LLVM](https://llvm.org/) toolchain and libc++ by default, delivering superior diagnostics and package diversity. We're not afraid to challenge convention - thoughtfully replacing traditional components with modern alternatives that prioritize safety and reliability.
 
 We closely follow the work of organizations dedicated to making software safer, including the [Prossimo project](https://www.memorysafety.org/) and their Memory Safety initiative, the [Tweede Golf](https://tweedegolf.nl/en) team, and the [Trifecta Tech Foundation](https://trifectatech.org/). By monitoring and adopting innovations from these pioneers, we can integrate proven solutions like memory-safe replacements for critical system components.
@@ -50,7 +50,7 @@ Get productive fast with built-in tools like [Zed Editor](https://zed.dev/), [Pt
 
 {{% /blocks/section %}}
 
-{{% blocks/section color="dark" %}}
+{{% blocks/section color="background" %}}
 
 ## For contributors
 

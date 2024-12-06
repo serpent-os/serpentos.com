@@ -18,13 +18,13 @@ toc_hide: true
 
 {{< /blocks/cover >}}
 
-{{% blocks/lead color="light" %}}
+{{% blocks/lead %}}
 Status: **Prealpha** 0.4 now [available](/blog/2024/08/01/serpent-os-prealpha0-released/)!
 
 Given the prealpha tag, you may not yet want to use Serpent OS as your production environment of choice. That's OK. We'll get things ready around here a bit quicker, just for you.
 {{% /blocks/lead %}}
 
-{{% blocks/section type="row" color="primary" %}}
+{{% blocks/section type="row" color="background" %}}
 {{% blocks/feature icon="fa-bolt" title="Lightning Fast Performance" %}}
 Built from the ground up with performance in mind, featuring optimized compilation settings and efficient system architecture.
 {{% /blocks/feature %}}
@@ -39,14 +39,14 @@ Modern desktop experience with sane defaults and thoughtful integration, making 
 
 {{% /blocks/section %}}
 
-{{% blocks/section color="" %}}
+{{% blocks/section color="background" %}}
 <h2 class="text-center pb-3">Changing how we distribute Linux</h2>
 <p class="text-center pb-4">Get live atomic updates that let you see changes immediately - our architecture doesn't require reboots just to apply updates. While certain updates like kernels will still need a reboot, we've combined proven concepts into a cohesive system where updates either fully complete or safely roll back, keeping your system running reliably.</p>
 {{< asciinema id="676811" >}}
 {{% /blocks/section %}}
 
 
-{{% blocks/section type="row" color="dark" %}}
+{{% blocks/section type="row" color="background" %}}
 {{% blocks/feature icon="fa-box-archive" title="moss - Package Management" url="/moss" %}}
 Our atomic package manager swaps the entire /usr directory during system updates, ensuring a stateless, bulletproof upgrade process. Updates either succeed completely or not at all.
 {{% /blocks/feature %}}
