@@ -51,6 +51,11 @@ showLightDarkModeMenu = true
     weight = 50
     url = "/docs"
 
+[[menu.main]]
+    name = "Sponsor"
+    weight = 60
+    url = "/sponsor"
+
 [[params.links.user]]
     name = "Matrix Space"
     url = "https://matrix.to/#/!trFJOzhpDUejJKnPYg:matrix.org"
@@ -65,9 +70,9 @@ showLightDarkModeMenu = true
     icon = "fa fa-comments"
 
 [[params.links.user]]
-    name = "X / Twitter"
-    url = "https://x.com/serpent_os"
-    icon = "fab fa-x-twitter"
+    name = "Bluesky"
+    url = "https://bsky.app/profile/serpentos.bsky.social"
+    icon = "fab fa-bluesky"
     desc = "Latest updates and posts from the team"
 
 [[params.links.user]]
@@ -91,6 +96,6 @@ showLightDarkModeMenu = true
 
 [[params.links.developer]]
     name = "Sponsor"
-    url = "https://ko-fi.com/ikeydoherty"
-    desc = "Sponsor development and resources by buying the founder a coffee"
+    url = "/sponsor"
+    desc = "Dollars for developers"
     icon = "fa fa-heart"
