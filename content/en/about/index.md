@@ -40,8 +40,8 @@ Want a rolling release distribution that just works? We're building Serpent OS t
 Get access to thousands of applications right out of the box with built-in [Flathub](https://flathub.org) support. Install your favourite apps with just a few clicks.
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fa-solid fa-desktop" title="Modern GNOME Desktop" %}}
-Enjoy a clean, intuitive [GNOME](https://www.gnome.org/) desktop environment that combines visual appeal with powerful functionality. Work efficiently with a thoughtfully designed interface.
+{{% blocks/feature icon="fa-solid fa-desktop" title="Choice of Modern Desktops" %}}
+Choose between the clean, intuitive [GNOME](https://www.gnome.org/) desktop environment or the innovative [COSMIC](https://cosmic.system76.com/) desktop. Both combine visual appeal with powerful functionality for an efficient workflow.
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-solid fa-code" title="Developer Ready" %}}
