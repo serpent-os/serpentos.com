@@ -11,15 +11,29 @@ date = 2024-12-06T09:14:20Z
 {{% blocks/section color="background" %}}
 Let's be straight - building an OS from scratch is no small feat 🚀, and our sponsors' support has been instrumental in making this possible. Their backing isn't just about infrastructure costs - it's about enabling us to build something meaningful in the Linux ecosystem.
 
-While we're actively exploring project-wide funding solutions for the future, for now we've kept things straightforward with two options:
-
-- [GitHub Sponsors](https://github.com/sponsors/ikeycode) - For those who prefer the Git way 💻
-- [Ko-fi](https://ko-fi.com/ikeydoherty) - Perfect for one-off contributions ☕
-
 Your support helps cover our hosting costs and allows us to dedicate more time to making Serpent OS exceptional 🐍. Currently, we're operating through our founder's accounts for infrastructure and development needs, with plans to scale as we grow.
+{{% /blocks/section %}}
 
-Interested in larger-scale sponsorship? Whether you're representing a company or have other support ideas in mind (hardware, hosting, etc.), reach out to Ikey at ikey@serpentos.com to discuss possibilities.
-{{% /blocks/lead %}}
+{{% blocks/section type="row" color="background" %}}
+{{% blocks/feature icon="fab fa-github" title="GitHub Sponsors" %}}
+Support us directly through GitHub's sponsorship program - perfect for those who prefer the Git way
+
+[Become a GitHub Sponsor](https://github.com/sponsors/ikeycode)
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fa fa-coffee" title="Ko-fi" %}}
+Make one-off contributions through Ko-fi - ideal for quick, simple donations
+
+[Support on Ko-fi](https://ko-fi.com/ikeydoherty)
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fa fa-building" title="Large-Scale Sponsorship" %}}
+Representing a company or have other support ideas? (hardware, hosting, etc.)
+Contact us to discuss possibilities.
+
+[Email ikey@serpentos.com](mailto:ikey@serpentos.com)
+{{% /blocks/feature %}}
+{{% /blocks/section %}}
 {{% blocks/section color="dark" %}}
 ## Notable Sponsors 🏆
 
