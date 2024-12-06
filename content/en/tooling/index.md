@@ -14,10 +14,9 @@ Here at Serpent OS, we love good tooling. Our language of choice is [Rust](https
 for creating lightning quick tooling with high cadence feature work and minimal debt. Our belief
 is that by providing great tooling, the overall maintainer load is greatly reduced, allowing everyone
 to enjoy a greater developer and user experience.
-
 {{% /blocks/lead %}}
 
-{{% blocks/section type="row" color="info" %}}
+{{% blocks/section type="row" color="background" %}}
 
 {{% blocks/feature icon="fa fa-box-archive" title="**moss** - package management" url="/moss" %}}
 The star of the show is certainly moss, the package and system management tool. With **atomic updates** and
