@@ -37,23 +37,18 @@ showLightDarkModeMenu = true
     url = "/about"
 
 [[menu.main]]
-    name = "Community"
-    weight = 30
-    url = "/community"
-
-[[menu.main]]
     name = "Download"
-    weight = 40
+    weight = 30
     url = "/download"
 
 [[menu.main]]
     name = "Documentation"
-    weight = 50
+    weight = 40
     url = "/docs"
 
 [[menu.main]]
     name = "Sponsor"
-    weight = 60
+    weight = 50
     url = "/sponsor"
 
 [[params.links.user]]
