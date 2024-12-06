@@ -37,15 +37,15 @@ Want a rolling release distribution that just works? We're building Serpent OS t
 
 {{% blocks/section color="background" type="row" %}}
 {{% blocks/feature icon="fa-solid fa-store" title="Flathub Integration" %}}
-Get access to thousands of applications right out of the box with built-in Flathub support. Install your favourite apps with just a few clicks.
+Get access to thousands of applications right out of the box with built-in [Flathub](https://flathub.org) support. Install your favourite apps with just a few clicks.
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-solid fa-desktop" title="Modern GNOME Desktop" %}}
-Enjoy a clean, intuitive GNOME desktop environment that combines visual appeal with powerful functionality. Work efficiently with a thoughtfully designed interface.
+Enjoy a clean, intuitive [GNOME](https://www.gnome.org/) desktop environment that combines visual appeal with powerful functionality. Work efficiently with a thoughtfully designed interface.
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa-solid fa-code" title="Developer Ready" %}}
-Get productive fast with built-in tools like Zed Editor, Ptyxis terminal, and Starship prompt. We've carefully curated and configured a development environment that just works.
+Get productive fast with built-in tools like [Zed Editor](https://zed.dev/), [Ptyxis](https://gitlab.gnome.org/chergert/ptyxis) terminal, and [Starship](https://starship.rs/) prompt. We've carefully curated and configured a development environment that just works.
 {{% /blocks/feature %}}
 
 {{% /blocks/section %}}
