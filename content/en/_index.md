@@ -10,7 +10,7 @@ toc_hide: true
 <a class="btn btn-lg btn-secondary me-3 mb-4" href="/download">
   Download <i class="fas fa-download ms-2 "></i>
 </a>
-<p class="lead mt-5">Building everyone's OS, but a little bit better.</p>
+<p class="lead mt-5">Redefining Linux for the modern era.</p>
 <a class="btn btn-sm btn-outline-light mt-3 mb-5" href="/sponsor">
   <i class="fas fa-heart me-2"></i> Sponsor Serpent OS
 </a>
