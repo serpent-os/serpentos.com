@@ -24,23 +24,38 @@ As we continuously evaluate and adopt the best solutions, our architectural deci
 This is the future of Linux distribution design, built on a foundation of experience and innovation.
 {{% /blocks/section %}}
 
-{{% blocks/section color="dark" %}}
-
-## For developers
-
-Want to develop carefree? With our powerful yet simple boulder recipes, packaging becomes a joy, not a chore. Our stateless design keeps system files strictly in `/usr`, making atomic updates reliable and predictable. Package management is safe, efficient and fast thanks to our [tooling](/tooling). Check out our [docs](/docs) to see how we make development delightfully straightforward. 🛠️
-
-{{< asciinema id="674948" >}}
-
-{{% /blocks/section %}}
-
 {{% blocks/section color="background" %}}
-## For users
+## Daily driver
 
 Want a rolling release distribution that just works? We're building Serpent OS to be the system that gets out of your way and lets you focus on what matters. Our atomic updates mean you can keep rolling forward without the usual headaches - no manual interventions, no update anxiety. When we say rolling release, we mean it should be as simple as running an update and getting back to work. Join us on this journey as we continuously improve and refine the experience.
 
 <div class="text-center">
   <img class="img-fluid" src="gnome_prealpha_dark.png" />
 </div>
+
+{{% /blocks/section %}}
+
+{{% blocks/section color="background" type="row" %}}
+{{% blocks/feature icon="fa-solid fa-store" title="Flathub Integration" %}}
+Get access to thousands of applications right out of the box with built-in Flathub support. Install your favourite apps with just a few clicks.
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fa-solid fa-desktop" title="Modern GNOME Desktop" %}}
+Enjoy a clean, intuitive GNOME desktop environment that combines visual appeal with powerful functionality. Work efficiently with a thoughtfully designed interface.
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fa-solid fa-code" title="Developer Ready" %}}
+Get productive fast with built-in tools like Zed Editor, Ptyxis terminal, and Starship prompt. We've carefully curated and configured a development environment that just works.
+{{% /blocks/feature %}}
+
+{{% /blocks/section %}}
+
+{{% blocks/section color="dark" %}}
+
+## For contributors
+
+Want to be part of something amazing? Serpent OS is a community-driven project where everyone can make a meaningful impact. Our powerful yet simple boulder recipes make packaging accessible to newcomers, while our clean stateless design and predictable `/usr` layout helps you understand exactly how changes will impact the system. Whether you're interested in packaging, development, documentation, testing, or community support - check out our [docs](/docs) to see how easy it is to join our growing community and help shape the future of Linux distributions. 🛠️
+
+{{< asciinema id="674948" >}}
 
 {{% /blocks/section %}}

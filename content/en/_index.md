@@ -12,33 +12,51 @@ toc_hide: true
 </a>
 <p class="lead mt-5">Building everyone's OS, but a little bit better.</p>
 {{< blocks/link-down color="info" >}}
-{{< asciinema_big id="676811" >}}
 
 {{< /blocks/cover >}}
 
-{{% blocks/lead color="background" %}}
+{{% blocks/lead color="light" %}}
 Status: **Prealpha** 0.4 now [available](/blog/2024/08/01/serpent-os-prealpha0-released/)!
 
 Given the prealpha tag, you may not yet want to use Serpent OS as your production environment of choice. That's OK. We'll get things ready around here a bit quicker, just for you.
 {{% /blocks/lead %}}
 
-{{% blocks/lead color="light" %}}
-🎄✨ Ho ho ho! A magical holiday surprise is heading your way! 🎁 Stay tuned... 🌟
-{{% /blocks/lead %}}
+{{% blocks/section type="row" color="primary" %}}
+{{% blocks/feature icon="fa-bolt" title="Lightning Fast Performance" %}}
+Built from the ground up with performance in mind, featuring optimized compilation settings and efficient system architecture.
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fa-shield-alt" title="Rock-Solid Stability" %}}
+Atomic updates and stateless design ensure your system remains reliable and recoverable, even after interrupted updates.
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fa-user-check" title="User-Friendly Experience" %}}
+Modern desktop experience with sane defaults and thoughtful integration, making Linux accessible without compromising on power.
+{{% /blocks/feature %}}
+
+{{% /blocks/section %}}
+
+{{% blocks/section color="" %}}
+<h2 class="text-center pb-3">Changing how we distribute Linux</h2>
+<p class="text-center pb-4">Get live atomic updates that let you see changes immediately - our architecture doesn't require reboots just to apply updates. While certain updates like kernels will still need a reboot, we've combined proven concepts into a cohesive system where updates either fully complete or safely roll back, keeping your system running reliably.</p>
+{{< asciinema id="676811" >}}
+{{% /blocks/section %}}
+
 
 {{% blocks/section type="row" color="dark" %}}
-{{% blocks/feature icon="fa-arrows-rotate" title="Fearless Updates"  %}}
-If an update doesn't work, it won't be applied. Thanks to atomic updates, we've got you covered. Better again, it's available instantly.
+{{% blocks/feature icon="fa-box-archive" title="moss - Package Management" url="/moss" %}}
+Our atomic package manager swaps the entire /usr directory during system updates, ensuring a stateless, bulletproof upgrade process. Updates either succeed completely or not at all.
 {{% /blocks/feature %}}
 
-
-{{% blocks/feature icon="fas fa-hammer" title="Awesome tooling" url="/tooling" %}}
-We pack a whole stack of tooling, from boot management right up to the package manager. Packaging is easy again. And fast.
+{{% blocks/feature icon="fa-trowel" title="boulder - Build System" url="/boulder" %}}
+Lightning-quick package building with powerful caching and a familiar YAML-based recipe format. Designed for scalability and consistent distro-wide builds.
 {{% /blocks/feature %}}
 
-
-{{% blocks/feature icon="fas fa-screwdriver" title="Modern internals" %}}
-We like new, and we like safe. The majority of our tooling is written in Rust, and we default to the LLVM toolchain for most of our packages.
+{{% blocks/feature icon="fa-hard-drive" title="blsforme - Boot Management" url="https://github.com/serpent-os/blsforme" %}}
+Automated boot management that just works. Seamlessly handles your EFI System Partition and boot entries without manual intervention.
 {{% /blocks/feature %}}
 
+<div class="text-center mt-4">
+<p>These are just some highlights of our tooling. <a href="/tooling">Discover our full suite of tools</a>, including the Lichen installer and more.</p>
+</div>
 {{% /blocks/section %}}
