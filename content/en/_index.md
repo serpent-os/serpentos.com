@@ -3,7 +3,7 @@ title: Serpent OS
 toc_hide: true
 ---
 
-{{< blocks/cover title="Serpent OS" image_anchor="bottom" height="min" >}}
+{{< blocks/cover title="Serpent OS" image_anchor="bottom" height="full" >}}
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/about">
   Learn More <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
