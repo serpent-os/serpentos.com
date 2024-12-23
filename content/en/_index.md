@@ -19,9 +19,9 @@ toc_hide: true
 {{< /blocks/cover >}}
 
 {{% blocks/lead color="dark" %}}
-Status: **Prealpha** 0.4 now [available](/blog/2024/08/01/serpent-os-prealpha0-released/)!
+Status: **Alpha 1** (`0.24.5`) is now [available](/blog/2024/12/23/serpent-os-enters-alpha//)!
 
-Given the prealpha tag, you may not yet want to use Serpent OS as your production environment of choice. That's OK. We'll get things ready around here a bit quicker, just for you.
+
 {{% /blocks/lead %}}
 
 {{% blocks/section type="row" color="background" %}}

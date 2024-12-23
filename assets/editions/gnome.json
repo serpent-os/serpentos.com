@@ -1,9 +1,9 @@
 {
   "title": "GNOME Edition",
-  "screenshot": "/img/gnome_prealpha_dark.png",
+  "screenshot": "/img/gnome_alpha.png",
   "screenshot_desc": "Serpent OS GNOME Edition",
-  "version": "0.4 (prealpha)",
-  "uri": "https://download.serpentos.com/serpent-os-prealpha-0.4.iso",
-  "checksum": "https://download.serpentos.com/serpent-os-prealpha-0.4.iso.sha256sum",
+  "version": "0.24.5 (alpha)",
+  "uri": "https://download.serpentos.com/serpent-os-0.24.5-gnome.iso",
+  "checksum": "https://download.serpentos.com/serpent-os-0.24.5-gnome.iso.sha256sum",
   "desc": "A conservative option, this live ISO defaults to the latest stable [GNOME Desktop](https://www.gnome.org/). Emphasis is placed on integration with GTK applications and a cohesive user experience."
 }
