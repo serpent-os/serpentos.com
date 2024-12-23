@@ -33,7 +33,7 @@ The alpha release introduces several key features and improvements that enhance 
 
 ### Hardware support
 
-We've rounded out our hardware support, now including patches for ASUS devices and Surfac devices. Additonally, we now have the NVIDIA driver available in the repositories.
+We've rounded out our hardware support, now including patches for ASUS devices and Surface devices. Additonally, we now have the NVIDIA driver available in the repositories.
 Note we only offer [open-gpu-kernel-modules](https://github.com/NVIDIA/open-gpu-kernel-modules), which we prebuild against our `linux-desktop` package to streamline
 installation.
 
