@@ -3,7 +3,7 @@ title: Serpent OS
 toc_hide: true
 ---
 
-{{< blocks/cover title="Serpent OS" image_anchor="bottom" height="full" >}}
+{{< blocks/cover title="Serpent OS" image_anchor="bottom" height="min" color="background" >}}
 <a class="btn btn-lg btn-primary me-3 mb-4" href="/about">
   Learn More <i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
@@ -18,7 +18,7 @@ toc_hide: true
 
 {{< /blocks/cover >}}
 
-{{% blocks/lead %}}
+{{% blocks/lead color="dark" %}}
 Status: **Prealpha** 0.4 now [available](/blog/2024/08/01/serpent-os-prealpha0-released/)!
 
 Given the prealpha tag, you may not yet want to use Serpent OS as your production environment of choice. That's OK. We'll get things ready around here a bit quicker, just for you.

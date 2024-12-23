@@ -3,11 +3,8 @@ title: About Serpent OS
 linkTitle: About
 ---
 
-{{% blocks/cover title="About Serpent OS" image_anchor="bottom" height="min" %}}
-
-Let's get you up to speed 🚀
-{.mt-5}
-
+{{% blocks/cover title="About" color="background" height="min" %}}
+About Serpent OS
 {{% /blocks/cover %}}
 
 {{% blocks/lead %}}

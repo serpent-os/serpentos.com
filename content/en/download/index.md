@@ -2,11 +2,9 @@
 title: Download
 ---
 
-{{% blocks/cover title="Download" image_anchor="bottom" height="min" %}}
+{{% blocks/cover title="Download" image_anchor="bottom" height="min" color="background" %}}
 
 Grab the latest release now 🚀
-
-> **And keep an eye out for a special gift coming this holiday season!** 🎄 ✨
 
 {{% /blocks/cover %}}
 
