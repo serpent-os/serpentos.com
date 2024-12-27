@@ -29,7 +29,8 @@ mkdir -pv repos/serpent-os/
 pushd repos/serpent-os
 git clone https://github.com/serpent-os/recipes
 popd
-ln -sv ~/repos/serpent-os/recipes/tools/helpers.sh ~/.bashrc.d/90-serpent-helpers.sh
+mkdir -pv ~/.bashrc.d/
+ln -sv ~/repos/serpent-os/recipes/tools/helpers.bash ~/.bashrc.d/90-serpent-helpers.bash
 ```
 
 
