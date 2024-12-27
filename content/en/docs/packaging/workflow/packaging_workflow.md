@@ -9,14 +9,14 @@ description = "Building and testing `stone.yaml` recipe build artifacts"
 Before the system can build recipes, a few prerequisites need to be installed and a new directory 
 for storing local build artefacts needs to be set up.
 
-## Installing `build-essentials`
+## Installing the `build-essential` package
 
-We maintain a `build-essentials` metapackage that should contain the basics for getting started
+We maintain a `build-essential` metapackage that should contain the basics for getting started
 with packaging on Serpent OS.
 
 ```bash
 sudo moss sync -u
-sudo moss it build-essentials
+sudo moss it build-essential
 ```
 
 ## Activating the Serpent OS helper scripts
