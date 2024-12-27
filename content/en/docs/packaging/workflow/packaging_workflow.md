@@ -38,10 +38,11 @@ ln -sv ~/repos/serpent-os/recipes/tools/helpers.sh ~/.bashrc.d/90-serpent-helper
 Since `boulder` uses user-namespaces to set up isolated build roots, it is necessary to set this up
 first:
 
-$ sudo touch /etc/sub{uid,gid}
-$ sudo usermod --add-subuids 1000000-1065535 --add-subgids 1000000-1065535 root
-$ sudo usermod --add-subuids 1065536-1131071 --add-subgids 1065536-1131071 "$USER"
-
+```bash
+sudo touch /etc/sub{uid,gid}
+sudo usermod --add-subuids 1000000-1065535 --add-subgids 1000000-1065535 root
+sudo usermod --add-subuids 1065536-1131071 --add-subgids 1065536-1131071 "$USER"
+```
 
 ## Understanding moss-format repositories
 
@@ -99,9 +100,19 @@ Boulder will need to have its list of "build profiles" be updated before it will
 
 ```bash
 boulder profile list
+# output
+default-x86_64:
+ - volatile = https://packages.serpentos.com/volatile/x86_64/stone.index [0]
+# add new local-x86_64 build profile
 boulder profile add --repo name=volatile,uri=https://packages.serpentos.com/volatile/x86_64/stone.index,priority=0 local-x86_64
 boulder profile update --repo name=local,uri=file://${HOME}/.cache/local_repo/x86_64/stone.index,priority=100 local-x86_64
 boulder profile list
+# output
+default-x86_64:
+ - volatile = https://packages.serpentos.com/volatile/x86_64/stone.index [0]
+local-x86_64:
+ - volatile = https://packages.serpentos.com/volatile/x86_64/stone.index [0]
+ - local = file:///home/ermo/.cache/local_repo/x86_64/stone.index [10]
 ```
 
 
@@ -112,11 +123,16 @@ default:
 
 ```bash
 moss repo list
+# output
+ - unstable = https://dev.serpentos.com/volatile/x86_64/stone.index [0]
+# add repositories
 moss repo add volatile https://packages.serpentos.com/volatile/x86_64/stone.index -p 10
-moss repo disable volatile 
 moss repo add local file://${HOME}/.cache/local_repo/x86_64/stone.index -p 100
-moss repo disable local
 moss repo list
+# output
+ - unstable = https://dev.serpentos.com/volatile/x86_64/stone.index [0]
+ - volatile = https://packages.serpentos.com/volatile/x86_64/stone.index [10]
+ - local = file:///home/ermo/.cache/local_repo/x86_64/stone.index [100]
 ```
 
 In the above priority tower, moss-format packages would first get resolved via the `local`
@@ -129,12 +145,33 @@ repository is where new `.stone` packages land right after being built, which me
 can potentially be in an undefined and volatile state when building large build queues (hence the
 name).
 
+```bash
+moss repo disable volatile 
+moss repo disable local
+moss repo list
+# output
+ - unstable = https://dev.serpentos.com/volatile/x86_64/stone.index [0]
+ - volatile = https://packages.serpentos.com/volatile/x86_64/stone.index [10] (disabled)
+ - local = file:///home/ermo/.cache/local_repo/x86_64/stone.index [100] (disabled)
+```
+
 However, when testing locally built packages, they _must_ be built against the `local-x86_64` boulder
 build profile, which in turns relies on the `volatile` repostiory via the boulder `local-x86_64`
 build profile.
 
 Hence, when testing locally built packages, you may need to _**temporarily**_ enable the `volatile`
 repository for moss to resolve from.
+
+```bash
+moss repo enable volatile 
+moss repo enable local
+moss repo list
+# output
+ - unstable = https://dev.serpentos.com/volatile/x86_64/stone.index [0]
+ - volatile = https://packages.serpentos.com/volatile/x86_64/stone.index [10]
+ - local = file:///home/ermo/.cache/local_repo/x86_64/stone.index [100]
+```
+
 
 ## Building recipes using the `local-x86_64` profile
 
@@ -166,9 +203,13 @@ for each package recipe sequentially.
 Testing your package(s) is now as simple as:
 
 - Enabling (or disabling) the relevant moss-format repositories with:
-  `sudo moss repo enable/disable <the repository>`
+  ```bash
+  sudo moss repo enable/disable <the repository>
+  ```
 - Updating moss' view of the enabled moss-format repository indices with:
-  `sudo moss sync -u`
+  ```bash
+  sudo moss sync -u
+  ```
 
 
 ## Cleaning the local repository
