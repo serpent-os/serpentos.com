@@ -5,6 +5,21 @@ This repository hosts the [hugo](https://gohugo.io) based website of [Serpent OS
 
 We make use of [docsy](https://docsy.dev) for the theme.
 
+## Prerequisites
+
+Build the extended version of `hugo` (and make sure `~/go/bin` is in your PATH):
+
+```bash
+CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest
+```
+
+Install `npm`:
+
+```bash
+# This is how would do it on Serpent OS
+sudo moss it 'binary(npm)'
+```
+
 ## Building
 
 Assuming `hugo` is in your path, you'll need to get `postcss-cli` available:
