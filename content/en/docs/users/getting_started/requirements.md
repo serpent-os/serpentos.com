@@ -8,7 +8,7 @@ weight = 10
 ## Minimum System Requirements
 
 {{< alert color="info" >}}
-BOIS/CSM mode is not supported. Please ensure that your system is set to UEFI mode.
+BIOS/CSM mode is not supported. Please ensure that your system is set to UEFI mode.
 {{< /alert >}}
 
 - **Architecture:** x86_64
