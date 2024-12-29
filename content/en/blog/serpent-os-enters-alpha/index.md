@@ -1,7 +1,9 @@
-+++
-title = 'Serpent OS Enters Alpha'
-date = 2024-12-23T04:56:15Z
-+++
+---
+title: Serpent OS Enters Alpha
+date: 2024-12-23T04:56:15Z
+authors: [ikey]
+categories: [news]
+---
 
 Following a successful prealpha phase, we're excited to announce that Serpent OS has now entered the alpha stage of development. This milestone marks a significant step forward in the project's journey.
 While the usual disclaimers apply, as a certain level of project *fluidity is to be expected*, we invite you to explore the latest alpha release and experience the cutting-edge features and improvements we've introduced.

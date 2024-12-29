@@ -1,7 +1,9 @@
-+++
-title = 'Alpha Refresh Available'
-date = 2024-12-29T16:45:48Z
-+++
+---
+title: Alpha Refresh Available
+date: 2024-12-29T16:45:48Z
+authors: [ikey]
+categories: [news]
+---
 
 In response to feedback from the community, we're issuing a refresh of the Alpha 1 release, `0.24.6`. This refresh includes a number of key updates and improvements, including:
 
