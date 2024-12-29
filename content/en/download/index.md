@@ -11,8 +11,3 @@ Grab the latest release now 🚀
 {{% blocks/section color="background" %}}
 {{% edition_info id="gnome" color="secondary" %}}
 {{% /blocks/section %}}
-
-{{% blocks/section color="primary" %}}
-{{% edition_info id="cosmic" color="secondary" %}}
-
-{{% /blocks/section %}}

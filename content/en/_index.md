@@ -19,7 +19,7 @@ toc_hide: true
 {{< /blocks/cover >}}
 
 {{% blocks/lead color="dark" %}}
-Status: **Alpha 1** (`0.24.5`) is now [available](/blog/2024/12/23/serpent-os-enters-alpha//)!
+Status: **Alpha 1** (`0.24.6`) is now [available](/blog/2024/12/29/alpha-refresh-available/)!
 
 
 {{% /blocks/lead %}}
