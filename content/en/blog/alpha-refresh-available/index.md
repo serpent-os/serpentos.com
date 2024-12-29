@@ -24,8 +24,8 @@ Frequently in Team Serpent we joke that `moss` is the "systemd of package manage
  - Executes **transactional triggers** in a namespace (container) with RW `/usr` and RO binds of `/etc` and `/var` ...
  - Executes **system triggers** postblit, with dependency ordering..
  - Via blsforme, manages the ESP, XBOOTLDR, boot entries, sync and promotion of bootloader, kernel and assets, initrds..
- - Entirely zero configuration. No `/etc/default/grub`, no remembering your `root={}`, its determined automatically.
- - Basically does all the work of OS provisioning, barring disk mounting and partitioning. Lichen is basically a thin wrapper of moss.
+ - Entirely zero configuration. No `/etc/default/grub`, no remembering your `root={}`, it's determined automatically.
+ - Basically does all the work of OS provisioning, barring disk mounting and partitioning. Our installer, lichen, is basically a thin wrapper of moss.
 
 We've had no debugging capabilites around the boot management, so we've landed `moss boot status` command. It's super primitive
 but does offer an insight into the introspection capabilites of blsforme. In this simple screenshot, moss/blsforme are supporting the
@@ -59,7 +59,7 @@ VM or hardware is incorrectly configured.
 
 Lichen is due to recieve some love in the next few cycles, so please be aware of the following limitations:
 
- - A **pre configured** GPT disk is required before `lichen` is launched
+ - A **pre-configured** GPT disk is required before `lichen` is launched
  - A working internet connection is also required, this is a **network installer**
  - A FAT32 formatted EFI System Partition is required (marked as `esp` in gparted)
  - For optimal usage, or when your ESP is tiny, please create an `XBOOTLDR` partition:
