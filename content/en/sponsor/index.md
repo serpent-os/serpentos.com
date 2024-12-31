@@ -13,6 +13,8 @@ Enable us to enable you 🚀
 Let's be straight - building an OS from scratch is no small feat, and our sponsors' support has been instrumental in making this possible. Their backing isn't just about infrastructure costs - it's about enabling us to build something meaningful in the Linux ecosystem.
 
 Your support helps cover our hosting costs and allows us to dedicate more time to making Serpent OS exceptional. Currently, we're operating through our founder's accounts for infrastructure and development needs, with plans to scale as we grow.
+
+Learn more about how we want to [invest in the future](/blog/2024/12/31/investing-in-the-future/).
 {{% /blocks/section %}}
 
 {{% blocks/section type="row" color="background" %}}

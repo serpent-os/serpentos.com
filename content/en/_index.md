@@ -21,7 +21,7 @@ toc_hide: true
 {{% blocks/lead color="dark" %}}
 Status: **Alpha 1** (`0.24.6`) is now [available](/blog/2024/12/29/alpha-refresh-available/)!
 
-
+Want to invest in the future of Serpent OS? [Find out how](/blog/2024/12/31/investing-in-the-future/)
 {{% /blocks/lead %}}
 
 {{% blocks/section type="row" color="background" %}}
