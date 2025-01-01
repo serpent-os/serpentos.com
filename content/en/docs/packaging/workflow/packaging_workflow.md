@@ -50,7 +50,7 @@ the following commands:
 
 ```bash
 # create a new tab or open a new terminal
-gotoserpentroot
+gotoserpentrepo
 just create-local
 just index-local
 ```
@@ -71,9 +71,8 @@ default-x86_64:
   - volatile = https://packages.serpentos.com/volatile/x86_64/stone.index [0]
 
 # add new local-x86_64 build profile
-boulder profile add \ 
-  --repo name=volatile,uri=https://packages.serpentos.com/volatile/x86_64/stone.index,priority=0 local-x86_64 \
-  --repo name=local,uri=file://${HOME}/.cache/local_repo/x86_64/stone.index,priority=100 local-x86_64
+boulder profile add --repo name=volatile,uri=https://packages.serpentos.com/volatile/x86_64/stone.index,priority=0 local-x86_64
+boulder profile add --repo name=local,uri=file://${HOME}/.cache/local_repo/x86_64/stone.index,priority=100 local-x86_64
 boulder profile list
 # output
 default-x86_64:
@@ -86,7 +85,7 @@ local-x86_64:
 
 ### Enabling `moss` to install local repository packages
 
-Listing and adding moss-format repositories containing stone.index files done as follows:
+Listing and adding moss-format repositories containing stone.index files is done as follows:
 
 
 ```bash
@@ -94,8 +93,8 @@ moss repo list
 # output
  - unstable = https://dev.serpentos.com/volatile/x86_64/stone.index [0]
 # add repositories
-moss repo add volatile https://packages.serpentos.com/volatile/x86_64/stone.index -p 10
-moss repo add local file://${HOME}/.cache/local_repo/x86_64/stone.index -p 100
+sudo moss repo add volatile https://packages.serpentos.com/volatile/x86_64/stone.index -p 10
+sudo moss repo add local file://${HOME}/.cache/local_repo/x86_64/stone.index -p 100
 moss repo list
 # output
  - unstable = https://dev.serpentos.com/volatile/x86_64/stone.index [0]
@@ -123,8 +122,8 @@ Therefore, it can be useful to disable moss-format repositories without deleting
 from the local system:
 
 ```bash
-moss repo disable volatile 
-moss repo disable local
+sudo moss repo disable volatile 
+sudo moss repo disable local
 moss repo list
 # output
  - unstable = https://dev.serpentos.com/volatile/x86_64/stone.index [0]
@@ -143,8 +142,8 @@ Hence, when testing locally built packages, you may need to _**temporarily**_ en
 repository for moss to resolve from.
 
 ```bash
-moss repo enable volatile 
-moss repo enable local
+sudo moss repo enable volatile 
+sudo moss repo enable local
 moss repo list
 # output
  - unstable = https://dev.serpentos.com/volatile/x86_64/stone.index [0]
