@@ -12,22 +12,23 @@ Enable us to enable you 🚀
 {{% blocks/section color="background" %}}
 Let's be straight - building an OS from scratch is no small feat, and our sponsors' support has been instrumental in making this possible. Their backing isn't just about infrastructure costs - it's about enabling us to build something meaningful in the Linux ecosystem.
 
-Your support helps cover our hosting costs and allows us to dedicate more time to making Serpent OS exceptional. Currently, we're operating through our founder's accounts for infrastructure and development needs, with plans to scale as we grow.
+Your support helps cover our hosting costs and allows us to dedicate more time to making Serpent OS exceptional. You can either contribue via our project-wide Ko-fi account, or via Ikey's GitHub sponsors. We're still in the process of establishing a structure that
+would give us access to organisation-wide Github Sponsors.
 
 Learn more about how we want to [invest in the future](/blog/2024/12/31/investing-in-the-future/).
 {{% /blocks/section %}}
 
 {{% blocks/section type="row" color="background" %}}
-{{% blocks/feature icon="fab fa-github" title="GitHub Sponsors" %}}
-Support us directly through GitHub's sponsorship program - perfect for those who prefer the Git way
+{{% blocks/feature icon="fa fa-coffee" title="Ko-fi" %}}
+Currently the preferred method of support for the project as a whole.
 
-[Become a GitHub Sponsor](https://github.com/sponsors/ikeycode)
+[Support on Ko-fi](https://ko-fi.com/serpent-os)
 {{% /blocks/feature %}}
 
-{{% blocks/feature icon="fa fa-coffee" title="Ko-fi" %}}
-Make one-off contributions through Ko-fi - ideal for quick, simple donations
+{{% blocks/feature icon="fab fa-github" title="GitHub Sponsors" %}}
+Support Ikey directly through GitHub's sponsorship program.
 
-[Support on Ko-fi](https://ko-fi.com/ikeydoherty)
+[Become a GitHub Sponsor](https://github.com/sponsors/ikeycode)
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fa fa-building" title="Large-Scale Sponsorship" %}}
