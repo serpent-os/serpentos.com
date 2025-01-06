@@ -222,7 +222,7 @@ Often, it will be prudent to clean out the local repository after the associated
 accepted upstream.
 
 ```bash
-gotoserpentroot
+gotoserpentrepo
 just clean-local
 sudo moss repo disable volatile
 sudo moss repo disable local
