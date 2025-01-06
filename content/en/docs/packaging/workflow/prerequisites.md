@@ -32,7 +32,7 @@ git clone https://github.com/serpent-os/recipes
 
 ```
 
-After the recipes/ git repositori has been cloned, symlink helpers.bash into `~/.bashrcd.d/`:
+After the recipes/ git repository has been cloned, symlink helpers.bash into `~/.bashrcd.d/`:
 
 ```bash
 popd
@@ -40,14 +40,14 @@ mkdir -pv ~/.bashrc.d/
 ln -sv ~/repos/serpent-os/recipes/tools/helpers.bash ~/.bashrc.d/90-serpent-helpers.bash
 ```
 
-Finally, execute the following in a new a new terminal tab:
+Finally, execute the following in a new terminal tab:
 
 ```bash
 cd ~
 gotoserpentroot
 ```
 
-If the helpers script has been correctly loaded, the `gotoserpentroot` command should switch to
+If the helpers script has been correctly loaded, the `gotoserpentrepo` command should switch to
 the directory containing the recipes/ git repository clone.
 
 
