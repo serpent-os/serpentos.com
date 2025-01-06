@@ -84,6 +84,25 @@ local-x86_64:
  - local = file:///home/ermo/.cache/local_repo/x86_64/stone.index [100]
 ```
 
+Behind the scenes, `boulder` builds and saves an appropriately named build profile to `~/.config/boulder/profile.d/`.
+
+This is what `local-x86_64.yaml` should look like after the above commands have been run successfully:
+
+```yaml
+local-x86_64:
+  repositories:
+    local:
+      description: ''
+      uri: file:///home/ermo/.cache/local_repo/x86_64/stone.index
+      priority: 100
+      active: true
+    volatile:
+      description: ''
+      uri: https://packages.serpentos.com/volatile/x86_64/stone.index
+      priority: 0
+      active: true
+```
+
 
 ### Enabling `moss` to install local repository packages
 
