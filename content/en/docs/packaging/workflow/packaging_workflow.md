@@ -73,7 +73,7 @@ default-x86_64:
 # add new local-x86_64 build profile
 boulder profile add \
   --repo name=volatile,uri=https://packages.serpentos.com/volatile/x86_64/stone.index,priority=0 \
-  --repo name=local,uri=file://${HOME}/.cache/local_repo/x86_64/stone.index,priority=100 local-x86_64 \
+  --repo name=local,uri=file://${HOME}/.cache/local_repo/x86_64/stone.index,priority=100 \
   local-x86_64
 boulder profile list
 # output
