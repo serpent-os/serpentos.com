@@ -71,8 +71,10 @@ default-x86_64:
   - volatile = https://packages.serpentos.com/volatile/x86_64/stone.index [0]
 
 # add new local-x86_64 build profile
-boulder profile add --repo name=volatile,uri=https://packages.serpentos.com/volatile/x86_64/stone.index,priority=0 local-x86_64
-boulder profile add --repo name=local,uri=file://${HOME}/.cache/local_repo/x86_64/stone.index,priority=100 local-x86_64
+boulder profile add \
+  --repo name=volatile,uri=https://packages.serpentos.com/volatile/x86_64/stone.index,priority=0 \
+  --repo name=local,uri=file://${HOME}/.cache/local_repo/x86_64/stone.index,priority=100 local-x86_64 \
+  local-x86_64
 boulder profile list
 # output
 default-x86_64:
@@ -158,7 +160,7 @@ To actually build a recipe, it is recommended that new packagers start out by bu
 
 ```bash
 # Go into the root of the serpent recipe directory 
-gotoserpentroot
+gotoserpentrepo
 # change to the directory holding the nano recipe
 chpkg nano
 # bump the release number in the nano recipe

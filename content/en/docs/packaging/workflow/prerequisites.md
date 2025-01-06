@@ -6,7 +6,7 @@ description = "Prerequisites for building packages on Serpent OS"
 +++
 
 To set up a Serpent OS system to be able to build package recipes, a few prerequisites need to be
-installed, and a new directory for storing local build artefacts needs to be set up.
+installed, and a new directory for storing local build artifacts needs to be set up.
 
 ## Installing the `build-essential` package
 
