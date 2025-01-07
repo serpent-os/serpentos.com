@@ -18,6 +18,7 @@ sudo moss sync -u
 sudo moss it build-essential
 ```
 
+
 ## Activating the Serpent OS helper scripts
 
 The easiest way to create a local repository is to use the helper script distributed with the
@@ -29,7 +30,6 @@ Start by cloning the recipes/ git repository:
 mkdir -pv repos/serpent-os/
 pushd repos/serpent-os
 git clone https://github.com/serpent-os/recipes
-
 ```
 
 After the recipes/ git repository has been cloned, symlink helpers.bash into `~/.bashrcd.d/`:
@@ -44,11 +44,25 @@ Finally, execute the following in a new terminal tab:
 
 ```bash
 cd ~
-gotoserpentroot
+gotoserpentrepo
 ```
 
 If the helpers script has been correctly loaded, the `gotoserpentrepo` command should switch to
 the directory containing the recipes/ git repository clone.
+
+
+### Setting up git hooks and linters
+
+The `just` command runner should have been installed as part of `build-essential`.
+
+Run the following:
+
+```bash
+gotoserpentrepo
+just lint
+```
+
+This will setup git hooks that will lint for the most common packaging errors upon git commit, as well as fill out commit message templates for you to edit as appropriate.
 
 
 ## Adding /etc/subuid and /etc/subgid entries
