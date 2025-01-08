@@ -59,7 +59,7 @@ Run the following:
 
 ```bash
 gotoserpentrepo
-just lint
+just init
 ```
 
 This will setup git hooks that will lint for the most common packaging errors upon git commit, as well as fill out commit message templates for you to edit as appropriate.
