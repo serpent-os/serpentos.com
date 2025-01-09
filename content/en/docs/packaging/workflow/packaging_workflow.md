@@ -104,7 +104,7 @@ local-x86_64:
 ```
 
 
-### Enabling `moss` to install local repository packages
+### Making `moss` use the local repository
 
 Listing and adding moss-format repositories containing stone.index files is done as follows:
 
