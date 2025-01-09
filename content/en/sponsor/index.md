@@ -22,7 +22,7 @@ Learn more about how we want to [invest in the future](/blog/2024/12/31/investin
 {{% blocks/feature icon="fa fa-coffee" title="Ko-fi" %}}
 Currently the preferred method of support for the project as a whole.
 
-[Support on Ko-fi](https://ko-fi.com/serpent-os)
+[Support on Ko-fi](https://ko-fi.com/serpentos)
 {{% /blocks/feature %}}
 
 {{% blocks/feature icon="fab fa-github" title="GitHub Sponsors" %}}
