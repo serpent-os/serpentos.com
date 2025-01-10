@@ -1,8 +1,8 @@
 +++
-title = 'Packaging: Basic Workflow'
+title = 'Basic Packaging Workflow'
 date = 2025-01-10T01:37:00Z
 weight = 10
-description = "Getting started with packaging for Serpent OS"
+description = "Building packages locally and testing them"
 +++
 
 
