@@ -1,19 +1,19 @@
 +++
-title = 'Packaging Workflow'
-date = 2024-12-27T16:25:00Z
+title = 'Packaging: Basic Workflow'
+date = 2025-01-10T01:37:00Z
 weight = 10
-description = "Building and testing `stone.yaml` recipe build artifacts"
+description = "Getting started with packaging for Serpent OS"
 +++
 
 
 Once the [prerequisites](../prerequisites) have been handled, it is time to learn how to install
-newly built local moss-format .stone packages.
+newly built local moss-format `.stone` packages.
 
 
 ## Understanding moss-format repositories
 
 When building and testing packages locally, boulder (and moss) can be configured to consult a local
-moss-format repository containing `.stone` build artifacts and a `stone.index` local repository
+moss-format repository containing moss-format `.stone` packages and a `stone.index` local repository
 index.
 
 ### `stone.index` files
