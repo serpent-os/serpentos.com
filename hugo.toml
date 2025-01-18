@@ -26,7 +26,7 @@ offlineSearch = true
 description = "Serpent OS is a modern, powerful, and open-source operating system that aims to be the best in class."
 
 [params.ui]
-navbar_logo = false
+navbar_logo = true
 ui_show = 1
 sidebar_menu_compact = true
 showLightDarkModeMenu = true
