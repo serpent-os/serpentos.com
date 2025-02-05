@@ -38,6 +38,27 @@ Contact us to discuss possibilities.
 [Email ikey@serpentos.com](mailto:ikey@serpentos.com)
 {{% /blocks/feature %}}
 {{% /blocks/section %}}
+
+{{% blocks/section type="row" color="background" %}}
+{{% blocks/feature icon="fab fa-bitcoin" title="Bitcoin" %}}
+Support us with BTC:
+
+`bc1plpg6n9h8jm8t2y44v6p7n64w3zuc8d90an6llngf8lccxa5ful3qtnjyte`
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fa fa-coins" title="Monero" %}}
+Support us with XMR:
+
+`47i8vvGHYBzdbaPk996HxBUyqUSviGMQuh9Hvu1AjyCn76j3M8GBdaojVepSjWfGKJLsPsnoMFm2Kgr9w1GWVGTy3q5PJNR`
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fa fa-coins" title="Solana" %}}
+Support us with SOL:
+
+`4bjefxtUuk33X16UiyX86H5zgEKatzDAtG8s36n8HBgx`
+{{% /blocks/feature %}}
+{{% /blocks/section %}}
+
 {{% blocks/section color="dark" %}}
 ## Notable Sponsors 🏆
 
