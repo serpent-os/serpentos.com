@@ -45,7 +45,7 @@ and you have the power to help us make it.
 ### 💰 Funding
 
 OK, so how can folks help? The most obvious one is funding, so we'll get that out of the way first. Right now
-it's possible to support us via [Ko-fi](https://ko-fi.com/serpentos) or [GitHub Sponsors](https://github.com/sponsors/ikeycode).
+it's possible to support us via [Ko-fi](https://ko-fi.com/AerynOS) or [GitHub Sponsors](https://github.com/sponsors/ikeycode).
 For the sake of transparency, as noted on the [Sponsor](/sponsor) page, we haven't got an established company
 or business bank account. In time, we're looking towards something more cooperative. For now, the reality is
 the daily running and development largely falls on me.
