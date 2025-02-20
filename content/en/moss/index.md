@@ -21,7 +21,7 @@ scaffolding and design we can then **immediately** activate the new transaction 
 requiring a reboot:
 
   -  Generate new `/usr` under `/.moss/root`
-  - "Activate" via a `renameat2()` (`ATOMIC_EXCHANGE`) call to swap live `/usr` with `/.moss/root/$ID`
+  - "Activate" via a `renameat2()` (`RENAME_EXCHANGE`) call to swap live `/usr` with `/.moss/root/$ID`
 
 In order to achieve this, we mandated that any package build must only contain files in `/usr`, which also
 means all packages in Serpent OS are **stateless**. That also adds some complexities such as running transactional
