@@ -1,7 +1,11 @@
+**This project is no longer active**
+
+---
+
 serpentos.com
 --------------
 
-This repository hosts the [hugo](https://gohugo.io) based website of [Serpent OS](https://serpentos.com)
+This repository hosts the [hugo](https://gohugo.io) based website of Serpent OS.
 
 We make use of [docsy](https://docsy.dev) for the theme.
 
